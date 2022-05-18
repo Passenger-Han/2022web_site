@@ -93,12 +93,57 @@
             color: white;
         }
 
-        /* section layout */
-        .section_wrap {
-            background-color: pink;
+        /* section 01 layout */
+        .sc01_wrap {
             width: 1440px;
-            height: 300px;
             margin: 0 auto;
+            padding: 120px 0 120px 0;
+        }
+
+        .sc01_wrap> h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 55px;
+            margin-bottom: 50px;
+        }
+
+        .sc01_wrap> .content_wrap> div {
+            width: 700.5px;
+            float: left;
+            margin-right: 39px;
+        }
+
+        .sc01_wrap> .content_wrap> div:last-child {
+            margin-right: 0;
+        }
+
+        .sc01_wrap .con_item> div {
+            float: left;
+        }
+
+        .sc01_wrap .con_item> div.img {
+            background-color: #f6f6f6;
+            border-radius: 50%;
+            margin-right: 39px;
+        }
+
+        .sc01_wrap .con_item> div.img> img {
+            display: block;
+        }
+
+        .sc01_wrap .con_item> div.text_wrap {
+            padding-top: 30px;
+        }
+
+        .sc01_wrap .con_item> div.text_wrap> h3 {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .sc01_wrap .con_item> div.text_wrap> p {
+            font-size: 18px;
+            color: #7C7C7C;
         }
     </style>
 </head>
@@ -123,8 +168,76 @@
             <h2>중소벤처기업진흥공단<br>온라인수출지원사업</h2>
         </div>
     </div>
-    <section class="section_wrap">
-
+    <section class="sc01_wrap">
+        <h2>해외 마켓 전문가가<br>수출을 도와드립니다</h2>
+        <div class="content_wrap cleanfloat">
+            <div class="con_item cleanfloat">
+                <div class="img">
+                    <img src="images/logo_amazon.png" alt="">
+                </div>
+                <div class="text_wrap">
+                    <h3>아마존 입점</h3>
+                    <p>
+                        전 세계 3억명의 아마존 고객을 대상으로<br>
+                        고객사의 온라인 스토어를 오픈 및 운영 대행
+                    </p>
+                </div>
+            </div>
+        <div class="content_wrap cleanfloat">
+            <div class="con_item cleanfloat">
+                <div class="img">
+                    <img src="images/logo_alibaba.png" alt="">
+                </div>
+                <div class="text_wrap">
+                    <h3>알리바바 입점</h3>
+                    <p>
+                        글로벌 최대 온라인 B2B 플랫폼 알리바바닷컴의 공식파트너<br>
+                        알리바바 입점 및 운영 대행
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <div style="width: 1440px; margin: 0 auto;">
+        <hr style="opacity: 0.2;">
+    </div>
+
+    <section class="sc01_wrap">
+        <h2>해외 마켓 전문가가<br>수출을 도와드립니다</h2>
+        <div class="content_wrap cleanfloat">
+            <div class="con_item cleanfloat">
+                <div class="img">
+                    <img src="images/logo_amazon.png" alt="">
+                </div>
+                <div class="text_wrap">
+                    <h3>아마존 입점</h3>
+                    <p>
+                        전 세계 3억명의 아마존 고객을 대상으로<br>
+                        고객사의 온라인 스토어를 오픈 및 운영 대행
+                    </p>
+                </div>
+            </div>
+        <div class="content_wrap cleanfloat">
+            <div class="con_item cleanfloat">
+                <div class="img">
+                    <img src="images/logo_alibaba.png" alt="">
+                </div>
+                <div class="text_wrap">
+                    <h3>알리바바 입점</h3>
+                    <p>
+                        글로벌 최대 온라인 B2B 플랫폼 알리바바닷컴의 공식파트너<br>
+                        알리바바 입점 및 운영 대행
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <div style="background-color: burlywood; padding: 14px 52px; display: inline-block; border-radius: 26px;">
+        상담하기
+    </div>
+    -->
 </body>
 </html>
