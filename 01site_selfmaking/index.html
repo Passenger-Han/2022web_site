@@ -4,21 +4,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>가비아 글로벌 - Gabia Global</title>
+    <style>
+        /* initial settings */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 15px;
+            letter-spacing: -0.75px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .cleanfloat:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #333;
+        }
+
+        /* background filling */
+
+        /* header layout */
+        .hder {
+            background-color: wheat;
+            width: 1440px;
+            line-height: 60px;
+            margin: 0 auto;
+            /* padding: 10px 0; */
+        }
+
+        .hder h1 {
+            float: left;
+        }
+
+        .hder .nav_bar {
+            float: right;
+            width: 540px;
+        }
+
+        .nav_bar li {
+            float: left;
+            width: calc((540px - (40px * 3)) / 4);
+            margin-right: 40px;
+        }
+
+        .nav_bar li:last-child {
+            margin-right: 0;
+        }
+
+        .nav_bar li a {
+            display: block;
+            text-align: center;
+        }
+
+        /* crucial banner layout */
+        .crucial_banner {
+            background: url(images/210611_bg.jpg);
+            height: 643px;
+        }
+
+        /*         
+        .banner_visual {
+            width: 1440px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 44px;
+            
+            color: #EEE;
+        }
+        */
+
+        .banner_visual {
+            width: 1440px;
+            margin: 0 auto;
+
+            color: #EEE;
+        }
+
+        .banner_visual h2 {
+            font-size: 50px;
+            line-height: 120%;
+            margin-bottom: 28px;
+        }
+
+        .banner_visual p {
+            font-size: 19px;
+            font-weight: 100;
+        }
+
+        .banner_visual .banner_button {
+            color: white;
+
+            padding: 14px 52px;
+            border: 1px solid white;
+            border-radius: 23px;
+        }
+
+        .banner_visual .banner_button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <header class="header_wrap cleanfloat">
+    <header class="hder cleanfloat">
         <h1>
-            <img src="../01site/images/logo.png" alt="">
+            <a href="#">
+                <img src="../01site/images/logo.png" alt="">
+            </a>
         </h1>
-        <nav>
-            <ul>
-                <li>아마존 입점</li>
-                <li>알리바바 입점</li>
-                <li>쇼핑몰 제작</li>
-                <li>국내몰 운영</li>
+        <nav class="nav_bar">
+            <ul class="cleanfloat">
+                <li><a href="#">아마존 입점</a></li>
+                <li><a href="#">알리바바 입점</a></li>
+                <li><a href="#">쇼핑몰 제작</a></li>
+                <li><a href="#">국내몰 운영</a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="crucial_banner">
+        <div class="banner_visual">
+            <img src="images/210611_logo.png" alt="">
+            <h2>
+                중소벤처기업진흥공단<br>
+                온라인수출지원사업 공식 수행기관 선정
+            </h2>
+            <p>2016년부터 7년 연속 선정, 가비아GNS</p>
+            <div>
+                <a class="banner_button" href="#">자세히보기</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

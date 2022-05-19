@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가비아 글로벌</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <style>
         /* initial settings */
         * {
@@ -16,20 +16,29 @@
         }
 
         body {
+            font-size: 15px;
             font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        h2 {
+            font-size: 40px; !important;
+        }
+
+        h3 {
+            font-size: 22px; !important;
+        }
+
+        img {
+            display: block;
         }
 
         li {
             list-style: none;
         }
 
-        a:link {
+        a:link, a:visited {
             color: #333;
             text-decoration: none;
-        }
-
-        a:visited {
-            color: #333;
         }
 
         a:hover {
@@ -43,18 +52,39 @@
             clear: both;
         }
 
+        /* common usage */
+        .p-y50 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            !important;
+        }
+
+        /* background filling */
+        /* background filling */
+        /* background filling */
+        .bg02 {
+            background-color: beige;
+        }
+
+        .bg03 {
+            background-image: url(images/bg_ask.jpg);
+        }
 
         /* header layout */
         .header_wrap {
             /* background-color: skyblue; */
             width: 1440px;
+            line-height: 60px;
             margin: 0 auto;
         }
 
         .header_wrap> h1 {
             width: 168px;
-            line-height: 60px;
             float: left;
+        }
+
+        .header_wrap> h1 img {
+            display: initial;
         }
 
         .nav_bar {
@@ -85,12 +115,30 @@
             width: 1440px;
             height: 643px;
             margin: 0 auto;
-            padding-top: 160px;
+            padding-top: 120px;
+
+            letter-spacing: -0.75px;
+        }
+
+        .visual_wrap> .visual img {
+            margin-bottom: 28px;
         }
 
         .visual_wrap> .visual> h2 {
             font-size: 50px;
+            font-weight: 500;
             color: white;
+            line-height: 60px;
+
+            margin-bottom: 28px;
+        }
+
+        .visual p {
+            font-size: 19px;
+            font-weight: 100;
+            color: white;
+
+            margin-bottom: 48px;
         }
 
         /* section 01 layout */
@@ -145,6 +193,79 @@
             font-size: 18px;
             color: #7C7C7C;
         }
+
+        /* section 02 layout */
+        .sc02_wrap {
+            width: 1440px;
+            margin: 0 auto;
+        }
+
+        .sc02_wrap> .lft {
+            float: left;
+            width: 452px;
+        }
+
+        .sc02_wrap> .lft h2 {
+            letter-spacing: -0.025em;
+        }
+
+        .sc02_wrap> .rht {
+            float: left;
+            width: 988px;
+        }
+
+        .sc02_wrap> .rht li {
+            /* width: 488px; */
+            float: left;
+            margin-right: 12px;
+            margin-bottom: 12px;
+        }
+
+        .sc02_wrap> .rht li:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .sc02_wrap> .rht li:last-child {
+            width: 100%;
+        }
+
+        /* section 03 layout */
+        .sc03_wrap {
+            color: white;
+            text-align: center;
+        }
+
+        .sc03_wrap h2 {
+            letter-spacing: -0.75px;
+            margin-bottom: 24px;
+        }
+
+        .sc03_wrap p {
+            font-size: 20px;
+            font-weight: 100;
+            letter-spacing: -0.75px;
+            margin-bottom: 24px;
+        }
+
+        #phone_number {
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+
+        a.button {
+            font-weight: 300;
+            color: white;
+            padding: 12px 52px;
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 26px;
+        }
+
+        .sc03_wrap a:hover {
+            background-color: white;
+            font-weight: 300;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -165,7 +286,17 @@
     </header>
     <div class="visual_wrap">
         <div class="visual">
-            <h2>중소벤처기업진흥공단<br>온라인수출지원사업</h2>
+            <img src="images/210611_logo.png" alt="">
+            <h2>
+                중소벤처기업진흥공단<br>
+                온라인수출지원사업 공식 수행기관 선정   
+            </h2>
+            <p>
+                2016년부터 7년 연속 선정, 가비아CNS
+            </p>
+            <a href="" class="button">
+                자세히보기
+            </a>
         </div>
     </div>
     <section class="sc01_wrap">
@@ -233,6 +364,35 @@
             </div>
         </div>
     </section>
+
+    <div class="bg02 p-y50">
+        <section class="sc02_wrap cleanfloat">
+            <div class="lft">
+                <h2>
+                    가비아 글로벌이<br>
+                    더 특별한 이유
+                </h2>
+            </div>
+            <div class="rht">
+                <ul>
+                    <li><img src="images/Frame 21.png" alt=""></li>
+                    <li><img src="images/Frame 21.png" alt=""></li>
+                    <li><img src="images/Frame 21.png" alt=""></li>
+                    <li><img src="images/Frame 21.png" alt=""></li>
+                    <li><img src="images/Frame 29.png" alt=""></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="bg03 p-y50">
+        <div class="sc03_wrap">
+            <h2>간단한 궁금증이라도 지금 바로 확인해보세요</h2>
+            <p>가비아CNS의 해외 마켓 전문가가 답변을 드립니다.</p>
+            <h2 id="phone_number">000-0000-0000</h2>
+            <a class="button" href="#">상담하기</a>
+        </div>
+    </div>
 
     <!--
     <div style="background-color: burlywood; padding: 14px 52px; display: inline-block; border-radius: 26px;">
