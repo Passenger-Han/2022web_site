@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- bxSlider.js -->
+    <script src="js/jquery.bxslider.js"></script>
+    <!-- bxSlider.css -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     <style>
         /* initial settings */
         * {
@@ -106,16 +112,19 @@
         }
 
         /* visual layout */
+        /*
         .visual_wrap {
             background-image: url(images/210611_bg.jpg);
             height: 643px;
         }
+        */
 
         .visual_wrap> .visual {
+            /*
             width: 1440px;
             height: 643px;
+            */
             margin: 0 auto;
-            padding-top: 120px;
 
             letter-spacing: -0.75px;
         }
@@ -267,6 +276,18 @@
             color: black;
         }
     </style>
+    <script>
+        $(document).ready(function(){
+            $(".bxslider").bxSlider({
+                mode: "fade",
+                pager: true,
+                controls: false,
+                auto: true,
+                stopAutoOnClick: true,
+                pause: 6000
+            })
+        });
+    </script>
 </head>
 <body>
     <header class="header_wrap cleanfloat">
@@ -286,17 +307,10 @@
     </header>
     <div class="visual_wrap">
         <div class="visual">
-            <img src="images/210611_logo.png" alt="">
-            <h2>
-                중소벤처기업진흥공단<br>
-                온라인수출지원사업 공식 수행기관 선정   
-            </h2>
-            <p>
-                2016년부터 7년 연속 선정, 가비아CNS
-            </p>
-            <a href="" class="button">
-                자세히보기
-            </a>
+            <ul class="bxslider">
+                <li><img src="images/210611_bg.jpg" alt=""></li>
+                <li><img src="images/210616_bg.jpg" alt=""></li>
+            </ul>
         </div>
     </div>
     <section class="sc01_wrap">
