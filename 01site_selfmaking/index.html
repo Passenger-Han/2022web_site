@@ -25,11 +25,11 @@
             list-style: none;
         }
 
-        .cleanfloat:after {
+        /* .cleanfloat:after {
             content: "";
             display: block;
             clear: both;
-        }
+        } */
 
         a:link {
             color: #333;
@@ -44,35 +44,41 @@
 
         /* header layout */
         .hder {
-            background-color: wheat;
+            /* background-color: beige; */
             width: 1440px;
-            line-height: 60px;
             margin: 0 auto;
-            /* padding: 10px 0; */
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
+
+        /* .hder .logo_wrap {
+        } */
 
         .hder h1 {
-            float: left;
+            font-size: 1rem;
         }
 
-        .hder .nav_bar {
-            float: right;
-            width: 540px;
+        .nav_bar {
+            width: 500px;
+            padding: 0 20px;
+            /* margin-left: auto; */
+        }
+
+        .nav_bar ul {
+            display: flex;
+            justify-content: space-between;
         }
 
         .nav_bar li {
-            float: left;
-            width: calc((540px - (40px * 3)) / 4);
-            margin-right: 40px;
+            /* text-align : center; */
         }
 
-        .nav_bar li:last-child {
-            margin-right: 0;
-        }
-
-        .nav_bar li a {
+        .nav_bar a {
+            line-height: 60px;
             display: block;
-            text-align: center;
         }
 
         /* crucial banner layout */
@@ -81,27 +87,13 @@
             height: 643px;
         }
 
-        /*         
-        .banner_visual {
-            width: 1440px;
-            margin: 0 auto;
-
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 44px;
-            
-            color: #EEE;
-        }
-        */
-
         .banner_visual {
             width: 1440px;
             margin: 0 auto;
 
             color: #EEE;
         }
-
+/* 
         .banner_visual h2 {
             font-size: 50px;
             line-height: 120%;
@@ -124,16 +116,18 @@
         .banner_visual .banner_button:hover {
             background-color: white;
             color: black;
-        }
+        } */
     </style>
 </head>
 <body>
     <header class="hder cleanfloat">
-        <h1>
-            <a href="#">
-                <img src="../01site/images/logo.png" alt="">
-            </a>
-        </h1>
+        <div class="logo_wrap">
+            <h1>
+                <a href="#">
+                    <img src="../01site/images/logo.png" alt="">
+                </a>
+            </h1>
+        </div>
         <nav class="nav_bar">
             <ul class="cleanfloat">
                 <li><a href="#">아마존 입점</a></li>
