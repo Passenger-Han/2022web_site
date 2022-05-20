@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>가비아 글로벌 - Gabia Global</title>
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- bxSlider -->
+    <script src="js/jquery.bxslider.js"></script>
+    <!-- bxSlider CSS -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     <style>
         /* initial settings */
         * {
             margin: 0;
             padding: 0;
+
+            box-sizing: border-box;
         }
 
         body {
+            color: #333;
             font-family: 'Noto Sans KR', sans-serif;
             font-size: 15px;
             letter-spacing: -0.75px;
@@ -25,131 +34,179 @@
             list-style: none;
         }
 
-        /* .cleanfloat:after {
-            content: "";
+        img {
             display: block;
-            clear: both;
-        } */
+        }
 
         a:link {
-            color: #333;
-            text-decoration: none;
+            color: inherit;
+            text-decoration: inherit;
         }
 
         a:visited {
-            color: #333;
+            color: inherit;
         }
 
-        /* background filling */
+        /* commonly used */
+        .cleanfloat:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
 
-        /* header layout */
-        .hder {
-            /* background-color: beige; */
+        .layout-1440 {
             width: 1440px;
+        }
+
+        .m-0a {
             margin: 0 auto;
-            padding: 0 20px;
+        }
+
+        .p-y60 {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .btn {
+            padding: 13px 50px;
+            font-size: 15px;
+            font-weight: 100;
+            border: 1px solid #fff;
+            border-radius: 25px;
+            transition: 0.66s;
+        }
+
+        .btn:hover {
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* header layouts */
+        #hder {
+            background-color: beige;
+            padding: 0px 20px;
+            width: 1440px;
+            height: 60px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        /* .hder .logo_wrap {
-        } */
-
-        .hder h1 {
-            font-size: 1rem;
-        }
-
-        .nav_bar {
-            width: 500px;
-            padding: 0 20px;
-            /* margin-left: auto; */
-        }
-
-        .nav_bar ul {
-            display: flex;
-            justify-content: space-between;
-        }
-
         .nav_bar li {
-            /* text-align : center; */
+            margin-left: 2em;
+            float: left;
         }
 
-        .nav_bar a {
-            line-height: 60px;
+        .nav_bar li a {
+            padding: 0 1em;
+
             display: block;
+            line-height: 60px;
+            text-align: center;
         }
 
-        /* crucial banner layout */
-        .crucial_banner {
-            background: url(images/210611_bg.jpg);
-            height: 643px;
+        .nav_bar li:first-child {
+            margin-left: 0;
         }
 
-        .banner_visual {
-            width: 1440px;
-            margin: 0 auto;
-
-            color: #EEE;
+        /* crucial banner layouts */
+        #crucial_banner .slide li{
+            position: relative;
         }
-/* 
-        .banner_visual h2 {
+
+        #crucial_banner .txt_wrap {
+            position: absolute;
+            top: calc(643px - 80%);
+            color: #FFF;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            gap: 30px;
+        }
+
+        #crucial_banner .txt_wrap img {
+            width: fit-content;
+        }
+
+        #crucial_banner .txt_wrap h2 {
             font-size: 50px;
-            line-height: 120%;
-            margin-bottom: 28px;
+            line-height: 62px;
         }
 
-        .banner_visual p {
+        #crucial_banner .txt_wrap p {
             font-size: 19px;
             font-weight: 100;
         }
 
-        .banner_visual .banner_button {
-            color: white;
-
-            padding: 14px 52px;
-            border: 1px solid white;
-            border-radius: 23px;
+        #crucial_banner .txt_wrap a {
+            margin-top: 30px;
+            font-weight: 100;
         }
 
-        .banner_visual .banner_button:hover {
-            background-color: white;
-            color: black;
-        } */
+        .bx-wrapper .bx-pager{
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+        }
+
+        /* section 01 layouts */
     </style>
+    <script>
+        $(document).ready(function(){
+            $('.slide').bxSlider({
+                controls: false,
+                auto: true,
+                pause: 6000
+            })
+        })
+    </script>
 </head>
 <body>
-    <header class="hder cleanfloat">
+    <header id="hder" class="m-0a">
         <div class="logo_wrap">
-            <h1>
-                <a href="#">
-                    <img src="../01site/images/logo.png" alt="">
-                </a>
-            </h1>
+            <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
         </div>
         <nav class="nav_bar">
             <ul class="cleanfloat">
                 <li><a href="#">아마존 입점</a></li>
                 <li><a href="#">알리바바 입점</a></li>
                 <li><a href="#">쇼핑몰 제작</a></li>
-                <li><a href="#">국내몰 운영</a></li>
+                <li><a href="#">국내몰 제휴</a></li>
             </ul>
         </nav>
     </header>
-
-    <div class="crucial_banner">
-        <div class="banner_visual">
-            <img src="images/210611_logo.png" alt="">
-            <h2>
-                중소벤처기업진흥공단<br>
-                온라인수출지원사업 공식 수행기관 선정
-            </h2>
-            <p>2016년부터 7년 연속 선정, 가비아GNS</p>
-            <div>
-                <a class="banner_button" href="#">자세히보기</a>
-            </div>
+    <div id="crucial_banner">
+        <div class="banner_wrap">
+            <ul class="slide">
+                <li>
+                    <div class="layout-1440 m-0a">
+                        <div class="txt_wrap">
+                            <img src="images/210611_logo.png" alt="">
+                            <h2>중소벤처기업진흥공단<br>온라인수출지원사업 공식 수행기관 선정</h2>
+                            <p>2016년부터 7년 연속 선정, 가비아CNS</p>
+                            <a href="#" class="btn">자세히보기</a>
+                        </div>
+                    </div>
+                    <img src="images/210611_bg.jpg" alt="">
+                </li>
+                <li>
+                    <div class="layout-1440 m-0a">
+                        <div class="txt_wrap">
+                            <img src="images/210611_logo.png" alt="">
+                            <h2>알리바바닷컴<br>GGS 멤버십 할인</h2>
+                            <p>골드서플라이어(GGS) 멤버십 및 GGS 플러스 멤버십 단기 할인 프로모션</p>
+                            <a href="#" class="btn">자세히보기</a>
+                        </div>
+                    </div>
+                    <img src="images/210616_bg.jpg" alt="">
+                </li>
+            </ul>
         </div>
     </div>
+    <section>
+        
+    </section>
 </body>
 </html>
