@@ -14,145 +14,7 @@
     <script src="js/jquery.bxslider.js"></script>
     <!-- bxSlider CSS -->
     <link rel="stylesheet" href="css/jquery.bxslider.css">
-    <style>
-        /* initial settings */
-        * {
-            margin: 0;
-            padding: 0;
-
-            box-sizing: border-box;
-        }
-
-        body {
-            color: #333;
-            font-family: 'Noto Sans KR', sans-serif;
-            font-size: 15px;
-            letter-spacing: -0.75px;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        img {
-            display: block;
-        }
-
-        a:link {
-            color: inherit;
-            text-decoration: inherit;
-        }
-
-        a:visited {
-            color: inherit;
-        }
-
-        /* commonly used */
-        .cleanfloat:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        .layout-1440 {
-            width: 1440px;
-        }
-
-        .m-0a {
-            margin: 0 auto;
-        }
-
-        .p-y60 {
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
-
-        .btn {
-            padding: 13px 50px;
-            font-size: 15px;
-            font-weight: 100;
-            border: 1px solid #fff;
-            border-radius: 25px;
-            transition: 0.66s;
-        }
-
-        .btn:hover {
-            color: #333;
-            background-color: #fff;
-        }
-
-        /* header layouts */
-        #hder {
-            background-color: beige;
-            padding: 0px 20px;
-            width: 1440px;
-            height: 60px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav_bar li {
-            margin-left: 2em;
-            float: left;
-        }
-
-        .nav_bar li a {
-            padding: 0 1em;
-
-            display: block;
-            line-height: 60px;
-            text-align: center;
-        }
-
-        .nav_bar li:first-child {
-            margin-left: 0;
-        }
-
-        /* crucial banner layouts */
-        #crucial_banner .slide li{
-            position: relative;
-        }
-
-        #crucial_banner .txt_wrap {
-            position: absolute;
-            top: calc(643px - 80%);
-            color: #FFF;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            gap: 30px;
-        }
-
-        #crucial_banner .txt_wrap img {
-            width: fit-content;
-        }
-
-        #crucial_banner .txt_wrap h2 {
-            font-size: 50px;
-            line-height: 62px;
-        }
-
-        #crucial_banner .txt_wrap p {
-            font-size: 19px;
-            font-weight: 100;
-        }
-
-        #crucial_banner .txt_wrap a {
-            margin-top: 30px;
-            font-weight: 100;
-        }
-
-        .bx-wrapper .bx-pager{
-            position: absolute;
-            bottom: 30px;
-            width: 100%;
-        }
-
-        /* section 01 layouts */
-    </style>
+    <link rel="stylesheet" href="css/style.css">
     <script>
         $(document).ready(function(){
             $('.slide').bxSlider({
@@ -205,8 +67,109 @@
             </ul>
         </div>
     </div>
-    <section>
-        
+    <section id="sc01_wrap">
+        <div class="sc01 layout-1440 m-0a">
+            <div class="sc_mod">
+                <h2>해외 마켓 전문가가<br>수출을 도와드립니다</h2>
+                <ul class="card_con">
+                    <li class="cleanfloat">
+                        <img src="images/logo_amazon.png" alt="그림">
+                        <div>
+                            <h3>아마존 입점</h3>
+                            <p>전 세계 3억명의 아마존 고객을 대상으로<br>고객사의 온라인 스토어를 오픈 및 운영 대행</p>
+                        </div>
+                    </li>
+                    <li class="cleanfloat">
+                        <img src="images/logo_alibaba.png" alt="그림">
+                        <div>
+                            <h3>알리바바 입점</h3>
+                            <p>글로벌 최대 온라인 B2B 플랫폼 알리바바닷컴의 공식파트너<br>알리바바 입점 및 운영 대행</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sc_mod">
+                <h2>글로벌 쇼핑몰 제작,<br>국내몰 운영도 가능합니다</h2>
+                <ul class="card_con">
+                    <li class="cleanfloat">
+                        <img src="images/logo_shoppingmall.png" alt="그림">
+                        <div>
+                            <h3>쇼핑몰 제작</h3>
+                            <p>글로벌 솔루션 (마젠토, 우커머스) 기반의 글로벌 쇼핑몰 제작<br>국내 쇼핑몰 (가비아 퍼스트몰)</p>
+                        </div>
+                    </li>
+                    <li class="cleanfloat">
+                        <img src="images/logo_domestic.png" alt="그림">
+                        <div>
+                            <h3>국내몰 운영</h3>
+                            <p>자사몰 운영대행<br>제휴 판매 채널 입점 및 운영 대행</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="sc02_wrap">
+        <div class="sc02 layout-1440 m-0a">
+            <h2>가비아 글로벌이<br>더 특별한 이유</h2>
+            <ul class="card2_con">
+                <li>
+                    <div class="img_case">
+                        <img src="images/ico_special1.png" alt="">
+                    </div>
+                    <p>중진공 온라인 수출사업<br>6년 연속 공식 수행기관</p>
+                </li>
+                <li>
+                    <div class="img_case">
+                        <img src="images/ico_special2.png" alt="">
+                    </div>
+                    <p>알리바바 닷컴 한국 공식 파트너<br>2019년 한국 파트너사<br>종합 평가 1위</p>
+                </li>
+                <li>
+                    <div class="img_case">
+                        <img src="images/ico_special3.png" alt="">
+                    </div>
+                    <p>중소벤처기업부 지정<br>수출유망중소기업</p>
+                </li>
+                <li>
+                    <div class="img_case">
+                        <img src="images/ico_special4.png" alt="">
+                    </div>
+                    <p>수출바우처 사업<br>공식 수행기관</p>
+                </li>
+                <li>
+                    <div class="img_case">
+                        <img src="images/ico_special5.png" alt="">
+                    </div>
+                    <p>산업통상자원부, 한국무역협회 지정<br>전문무역상사</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="sc03_wrap">
+        <div class="sc03 m-0a">
+            <h2>간단한 궁금증이라도 지금 바로 확인해보세요</h2>
+            <p>가비아CNS의 해외 마켓 전문가가 답변을 드립니다.</p>
+            <h2>000-0000-0000</h2>
+            <p>
+                <a href="#" class="btn">상담하기</a>
+            </p>
+        </div>
+    </section>
+    <section id="sc04_wrap" class="layout-1440 m-0a">
+        <h2>가비아 글로벌의 새소식</h2>
+        <ul class="info_con">
+            <li class="info">
+                <img src="images/info01 (4).jpeg" alt="그림">
+                <div class="cleanfloat">
+                    <a href="#" class="info_btn">새소식</a>
+                    <a href="#" class="info_btn">공지</a>
+                </div>
+                <h3></h3>
+                <p></p>
+                <p></p>
+            </li>
+        </ul>
     </section>
 </body>
 </html>

@@ -1,3 +1,7 @@
+20220523 18:20
+    - 01site_selfmaking:
+        - progressing..
+
 20220520 18:18
     - 01site_selfmaking:
         - header realigned by using flex mechanisms.
