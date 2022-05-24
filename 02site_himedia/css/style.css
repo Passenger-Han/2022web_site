@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* site settings */
+/* ------------- */
+body {
+    /* fonts */
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #939393;
+}
+
+/* header settings */
+/* ------------- */
+.hder_top {
+    width: 980px; margin: 0 auto;
+}
+
+.hder_top ul {
+    float: right;
+}
+
+.hder_top li {
+    float: left;
+}
+
+.hder_top li a {
+    display: block;
+    padding: 7px 10px;
+    font-size: 12px; line-height: 12px;
+}
