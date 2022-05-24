@@ -1,3 +1,9 @@
+20220524 18:20
+    - 01site_selfmaking:
+        - need to learn how I should resize images..
+    - 02site_himedia:
+        - making header + menu..
+
 20220523 18:20
     - 01site_selfmaking:
         - progressing..
