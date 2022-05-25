@@ -114,3 +114,38 @@ body {
 .gnb_bar ul li:last-child {
     border-right: 1px solid #336DAC;
 }
+
+/* crucial banner layouts */
+/* ---------------------- */
+.visual_wrap { /* background 에 대한 여러 속성들 */
+    
+    /*
+    background-image: url(../images/main_bg01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #213C6B;
+    */
+
+    background: #213C6B url(../images/main_bg01.jpg) no-repeat center; /* 위와 같다 */
+}
+
+.visual_wrap .visual {
+    width: 980px; height: 400px; margin: 0 auto;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.visual_wrap .visual .visual_text {
+    position: absolute; top: 80px;
+    color: #EFF0EE; font-size: 20px;
+}
+
+.visual_wrap .visual h3 {
+    font-size: 76.6px; line-height: 80px; letter-spacing: 0.34em;
+    margin-bottom: 10px;
+}
+
+.visual_wrap .visual img {
+    position: absolute; right: 0;
+}
