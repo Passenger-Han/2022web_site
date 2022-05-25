@@ -1,3 +1,7 @@
+20220525 18:23
+    - 02site_practice:
+        - too slow O<-<
+
 20220524 18:20
     - 01site_selfmaking:
         - need to learn how I should resize images..

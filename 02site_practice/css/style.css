@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* header layouts */
+/* -------------- */
+
+/* utility menu layouts */
+/* -------------------- */
+.upper_wrap {
+    border-bottom: 1px solid #dddddd;
+}
+
+.util_wrap {
+    width: 980px; margin: 0 auto;
+}
+
+.util_wrap .util ul {
+    float: right;
+}
+
+.util_wrap .util li {
+    float: left;
+    position: relative;
+}
+
+.util_wrap .util li:after {
+    content: "";
+    display: block;
+    width: 1px; height: 0.75em; background-color: #dddddd;
+    position: absolute; right: 0; top: 0.5em;
+}
+
+.util_wrap .util li:last-child::after {
+    display: none;
+}
+
+.util_wrap .util li a {
+    display: block;
+    color: #888888; font-size: 0.75em; padding: 0.48em 0.66em;
+}
+
+/* title, toggle menu layouts */
+/* -------------------------- */
+.title {
+    width: 980px; margin: 0 auto;
+    position: relative;
+    display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+
+.toggle_starter_btn_wrap {
+    width: 3.5em; height: 3.5em; border: 1px solid #dddddd;
+    position: absolute; right: 0;
+}
