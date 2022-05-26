@@ -131,9 +131,8 @@ body {
 
 .visual_wrap .visual {
     width: 980px; height: 400px; margin: 0 auto;
-    overflow: hidden;
-
     position: relative;
+    overflow: hidden;
 }
 
 .visual_wrap .visual .visual_text {

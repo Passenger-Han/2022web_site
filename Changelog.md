@@ -1,3 +1,8 @@
+20220526 18:21
+    - 02site_practice:
+        - float, position, flex.. too hard to use them all fluently..
+        - What makes publishers better?
+
 20220525 18:23
     - 02site_practice:
         - too slow O<-<
