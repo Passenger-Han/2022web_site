@@ -1,344 +1,394 @@
 @charset "UTF-8";
-        /* initial settings */
-        * {
-            margin: 0;
-            padding: 0;
-
-            box-sizing: border-box;
-        }
-
-        body {
-            color: #333;
-            font-family: 'Noto Sans KR', sans-serif;
-            font-size: 15px;
-            letter-spacing: -0.75px;
-        }
-
-        img {
-            width: fit-content;
-            height: fit-content;
-        }
-
-        h2 {
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 56px;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a:link {
-            color: inherit;
-            text-decoration: inherit;
-        }
-
-        a:visited {
-            color: inherit;
-        }
-
-        /* commonly used */
-        .cleanfloat:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        .layout-1440 {
-            width: 1440px;
-        }
-
-        .m-0a {
-            margin: 0 auto;
-        }
-
-        .p-y60 {
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
-
-        .btn {
-            padding: 13px 50px;
-            font-size: 15px;
-            font-weight: 100;
-            border: 1px solid #fff;
-            border-radius: 25px;
-            transition: 0.66s;
-        }
-
-        .btn:hover {
-            color: #333;
-            background-color: #fff;
-        }
-
-        /* header layouts */
-        #hder {
-            padding: 0px 20px;
-            width: 1440px;
-            height: 60px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        #hder h1 img {
-            display: block;
-        }
-
-        .nav_bar li {
-            margin-left: 2em;
-            float: left;
-        }
-
-        .nav_bar li a {
-            padding: 0 1em;
-
-            display: block;
-            line-height: 60px;
-            text-align: center;
-        }
-
-        .nav_bar li:first-child {
-            margin-left: 0;
-        }
-
-        /* crucial banner layouts */
-        #crucial_banner .slide li{
-            position: relative;
-        }
-
-        #crucial_banner .txt_wrap {
-            position: absolute;
-            top: calc(643px - 80%);
-            color: #FFF;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            gap: 30px;
-        }
-
-        #crucial_banner .txt_wrap img {
-            width: fit-content;
-        }
-
-        #crucial_banner .txt_wrap h2 {
-            font-size: 50px;
-            line-height: 62px;
-        }
-
-        #crucial_banner .txt_wrap p {
-            font-size: 19px;
-            font-weight: 100;
-        }
-
-        #crucial_banner .txt_wrap a {
-            margin-top: 30px;
-            font-weight: 100;
-        }
-
-        .bx-wrapper .bx-pager{
-            position: absolute;
-            bottom: 30px;
-            width: 100%;
-        }
-
-        /* section 01 layouts */
-        .sc_mod {
-            padding: 130px 0;
-            border-top: 1px solid #EDEDED;
-        }
-
-        .sc_mod:first-child {
-            border-top: none;
-        }
-
-        .sc_mod h2 {
-            text-align: center;
-            font-size: 40px;
-            letter-spacing: -0.75px;
-            line-height: 56px;
-        }
-
-        .card_con {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 100px;
-            padding: 0 52px;
-        }
-
-        .card_con li {
-            width: 50%;
-        }
-
-        .card_con .cleanfloat img, .card_con .cleanfloat div {
-            float: left;
-        }
-
-        .card_con .cleanfloat img {
-            background-color: #EDEDED;
-            border-radius: 50%;
-        }
-
-        .card_con .cleanfloat div {
-            margin-left: 28px;
-            padding: 20px 0;
-            height: 161px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-
-        .card_con h3 {
-            font-size: 22px; font-weight: 500;
-        }
-
-        .card_con h3::after {
-            margin-left: 0.5em;
-            content: url("../images/Vector-arrow-right.png");
-        }
-
-        .card_con p {
-            font-size: 18px; font-weight: 100; color: #7C7C7C;
-        }
-
-        /* section 02 layout */
-        #sc02_wrap {
-            background: #F6F6F6;
-            padding: 130px 0;
-        }
-
-        .sc02 {
-            /* padding: 0 40px; */
-
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .sc02 h2 {
-
-        }
-
-        .card2_con {
-            width: calc(1440px - 30%);
-
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: space-around;
-            gap: 16px;
-        }
-
-        .card2_con li {
-            background-color: #FFF;
-            border-radius: 6px;
-
-            width: calc(50% - 8px);
-            height: 140px;
-            display: flex;
-            align-items: center;
-            justify-items: center;
-            justify-content: space-around;
-        }
-
-        .card2_con li:last-child {
-            width: 100%;
-        }
-
-        .card2_con .img_case {
-            width: 50%;
-            text-align: center;
-        }
-
-        .img_case img {
-            display: inline-block;
-        }
-
-        .card2_con p {
-            width: 50%;
-        }
-
-        .card2_con p {
-            font-size: 18px; font-weight: 100; color: #7C7C7C;
-        }
-
-        /* section 03 layout */
-        #sc03_wrap {
-            background-image: url(../images/bg_ask.jpg);
-            height: 392px;
-        }
-
-        .sc03 {
-            padding-top: calc((392px - 236px) / 2);
-            color: #FFF; text-align: center;
-        }
-
-        .sc03 h2 {
-            margin-bottom: 24px;
-        }
-
-        .sc03 p {
-            font-size: 18px; font-weight: 100;
-            margin-bottom: 24px;
-        }
-
-        /* section 04 layout */
-        #sc04_wrap {
-            padding: 130px 20px 80px;
-        }
-
-        #sc04_wrap> h2 {
-            margin-bottom: 40px;
-        }
-
-        .info_con {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .info {
-            width: 320px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: 10px;
-        }
-
-        .info .img_wrap {
-            max-height: 172px;
-            overflow: hidden;
-        }
-
-        .info .img_wrap img {
-            width: 100%;
-            /* height: 100%; */
-            object-fit: cover;
-        }
-
-        .info .info_btn {
-            font-size: 13px; color: #7C7C7C;
-            border: 1px solid #DDDDDD; border-radius: 8px;
-            padding: 4px 7px;
-        }
-
-        .info .info_texts {
-            line-height: 1.6;
-        }
-
-        .info .info_texts h3 {
-            font-size: 16px;
-        }
-
-        /* h3 태그가 p 태그와 동일하게 작동한다. child 선택할 때 주의할 것!!! */
-        .info .info_texts p:nth-child(2) {
-            font-size: 15px; color: #7C7C7C;
-        }
-
-        .info .info_texts p:nth-child(3) {
-            font-size: 14px; color: #7C7C7C;
-        }
+/* initial settings */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.75px;
+}
+
+img {
+    width: fit-content;
+    height: fit-content;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+li {
+    list-style: none;
+}
+
+a:link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+/* commonly used */
+.cleanfloat:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.layout-1440 {
+    width: 1440px;
+}
+
+.m-0a {
+    margin: 0 auto;
+}
+
+.p-y60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.btn {
+    padding: 13px 50px;
+    font-size: 15px;
+    font-weight: 100;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    transition: 0.66s;
+}
+
+.btn:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+/* header layouts */
+#hder {
+    padding: 0px 20px;
+    width: 1440px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hder h1 img {
+    display: block;
+}
+
+.nav_bar li {
+    margin-left: 2em;
+    float: left;
+}
+
+.nav_bar li a {
+    padding: 0 1em;
+
+    display: block;
+    line-height: 60px;
+    text-align: center;
+}
+
+.nav_bar li:first-child {
+    margin-left: 0;
+}
+
+/* crucial banner layouts */
+#crucial_banner .slide li{
+    position: relative;
+}
+
+#crucial_banner .txt_wrap {
+    position: absolute;
+    top: calc(643px - 80%);
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 30px;
+}
+
+#crucial_banner .txt_wrap img {
+    width: fit-content;
+}
+
+#crucial_banner .txt_wrap h2 {
+    font-size: 50px;
+    line-height: 62px;
+}
+
+#crucial_banner .txt_wrap p {
+    font-size: 19px;
+    font-weight: 100;
+}
+
+#crucial_banner .txt_wrap a {
+    margin-top: 30px;
+    font-weight: 100;
+}
+
+.bx-wrapper .bx-pager{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+/* section 01 layouts */
+.sc_mod {
+    padding: 130px 0;
+    border-top: 1px solid #EDEDED;
+}
+
+.sc_mod:first-child {
+    border-top: none;
+}
+
+.sc_mod h2 {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: -0.75px;
+    line-height: 56px;
+}
+
+.card_con {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 0 52px;
+}
+
+.card_con li {
+    width: 50%;
+}
+
+.card_con .cleanfloat img, .card_con .cleanfloat div {
+    float: left;
+}
+
+.card_con .cleanfloat img {
+    background-color: #EDEDED;
+    border-radius: 50%;
+}
+
+.card_con .cleanfloat div {
+    margin-left: 28px;
+    padding: 20px 0;
+    height: 161px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card_con h3 {
+    font-size: 22px; font-weight: 500;
+}
+
+.card_con h3::after {
+    margin-left: 0.5em;
+    content: url("../images/Vector-arrow-right.png");
+}
+
+.card_con p {
+    font-size: 18px; font-weight: 100; color: #7C7C7C;
+}
+
+/* section 02 layout */
+#sc02_wrap {
+    background: #F6F6F6;
+    padding: 130px 0;
+}
+
+.sc02 {
+    /* padding: 0 40px; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sc02 h2 {
+
+}
+
+.card2_con {
+    width: calc(1440px - 30%);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    gap: 16px;
+}
+
+.card2_con li {
+    background-color: #FFF;
+    border-radius: 6px;
+
+    width: calc(50% - 8px);
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+.card2_con li:last-child {
+    width: 100%;
+}
+
+.card2_con .img_case {
+    width: 50%;
+    text-align: center;
+}
+
+.img_case img {
+    display: inline-block;
+}
+
+.card2_con p {
+    width: 50%;
+}
+
+.card2_con p {
+    font-size: 18px; font-weight: 100; color: #7C7C7C;
+}
+
+/* section 03 layout */
+#sc03_wrap {
+    background-image: url(../images/bg_ask.jpg);
+    height: 392px;
+}
+
+.sc03 {
+    padding-top: calc((392px - 236px) / 2);
+    color: #FFF; text-align: center;
+}
+
+.sc03 h2 {
+    margin-bottom: 24px;
+}
+
+.sc03 p {
+    font-size: 18px; font-weight: 100;
+    margin-bottom: 24px;
+}
+
+/* section 04 layout */
+#sc04_wrap {
+    padding: 130px 20px 80px;
+}
+
+#sc04_wrap> h2 {
+    margin-bottom: 40px;
+}
+
+.info_con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.info .img_wrap {
+    max-height: 172px;
+    overflow: hidden;
+}
+
+.info .img_wrap img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.info .info_btn {
+    font-size: 13px; color: #7C7C7C;
+    border: 1px solid #DDDDDD; border-radius: 8px;
+    padding: 4px 7px;
+}
+
+.info .info_texts {
+    line-height: 1.6;
+}
+
+.info .info_texts h3 {
+    font-size: 16px;
+}
+
+/* h3 태그가 p 태그와 동일하게 작동한다. child 선택할 때 주의할 것!!! */
+.info .info_texts p:nth-child(2) {
+    font-size: 15px; color: #7C7C7C;
+}
+
+.info .info_texts p:nth-child(3) {
+    font-size: 14px; color: #7C7C7C;
+}
+
+
+/* footer layouts */
+.footer_wrap {
+    background-color: #F6F6F6;
+    padding: 60px 0 0 0;
+}
+
+.footer_left, .footer_right li {
+    float: left;
+}
+
+.footer_left p {
+    font-size: 19px; letter-spacing: -0.75px; line-height: 27px;
+}
+
+.footer_left h3 {
+    font-size: 32px; letter-spacing: -0.75px; line-height: 45px;
+    font-weight: 500;
+}
+
+.footer_left .btn_static {
+    margin-top: 36px;
+
+    display: inline-block; padding: 13px 50px;
+    color: #fff; font-size: 15px; font-weight: 100;
+    background-color: #333; border: none; border-radius: 25px;
+}
+
+.footer_right {
+    width: 50%;
+    float: right;
+}
+
+.footer_right li {
+    width: calc(100% / 3);
+}
+
+.footer_right li h4 {
+    margin-bottom: 12px;
+    font-size: 15px; font-weight: 700; letter-spacing: -0.75px; line-height: 22.5px;
+}
+
+.footer_right li p {
+    font-size: 14px; letter-spacing: -0.75px; line-height: 25px;
+}
+
+.footer_right li img {
+    width: 36px;
+}
