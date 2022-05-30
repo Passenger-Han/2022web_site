@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* fonts settings */
+body {
+    /* google fonts, Noto Sans KR */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 1em = 16px */
+.fonts-gnbOnly {
+    font-size: 1.1875em; font-weight: 700;
+    line-height: 100%; letter-spacing: -8%;
+}
+
+.fonts-headline {
+    font-size: 5em; font-weight: 700;
+    line-height: 100%; letter-spacing: -4%;
+}
+
+.fonts-largest {
+    font-size: 2.75em; font-weight: 700;
+    line-height: 140%; letter-spacing: -5%;
+}
+
+.fonts-larger {
+    font-size: 1.5em; font-weight: 400;
+    line-height: 100%; letter-spacing: -12%;
+}
+
+.fonts-large {
+    font-size: 1.125em; font-weight: 400;
+    line-height: 160%; letter-spacing: -3%;
+}
+
+.fonts-article {
+    font-size: 0.875em; font-weight: 400;
+    line-height: 165%; letter-spacing: 1.5%;
+}
+
+.fonts-mini {
+    font-size: 0.6875em; font-weight: 400;
+    line-height: 180%; letter-spacing: -5%;
+}
+
+/* header, gnb layouts */
+.hder {
+    max-width: 1216px;
+}
+
+.hder h1 {
+    float: left;
+}
+
+.hder nav {
+    float: right;
+}
+
+.hder nav li {
+    background-color: pink;
+    float: left;
+    padding: 1.75em 3.125em;
+}
+
+/* crucial banner layouts */
+.crucial_wrap {
+    background-color: whitesmoke;
+    height: 55rem;
+}
+
+.crucial_text {
+    max-width: 37.5%;
+}
