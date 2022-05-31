@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiMEDIA</title>
-    <!-- Google Fonts - Nanum Gothic -->
+    <title>하이미디어 - HiMEDIA</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <!-- CSS settings -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSSs -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
-    <header id="hder_wrap">
-        <div class="hder_top_wrap">
-            <div class="hder_top">
-                <nav class="hder_top_menu cleanfloat">
+    <!-- header -->
+    <header class="hder_wrap">
+        <div class="upper_wrap">
+            <div class="util_wrap">
+                <nav class="util cleanfloat">
                     <ul class="cleanfloat">
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Join</a></li>
@@ -29,37 +31,205 @@
                 </nav>
             </div>
         </div>
-        <div class="logo_main">
-            <div class="logo_box">
+        <div class="title_wrap">
+            <div class="title">
                 <h1><a href="#">하이미디어</a></h1>
+                <div class="toggle_starter_btn_wrap">
+                    <div class="toggle_starter_btn"></div>
+                    <div class="toggle_starter_btn"></div>
+                    <div class="toggle_starter_btn"></div>
+                </div>
             </div>
-            <div class="toggle_menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <div class="gnb_wrap">
-            <nav class="gnb_bar">
-                <ul>
-                    <li><a href="#">회사소개</a>
-                    <li><a href="#">제품소개</a>
-                    <li><a href="#">사업영역</a>
-                    <li><a href="#">고객센터</a>
-                    <li><a href="#">사회공헌</a>
-                    <li><a href="#">인재채용</a>
-                </ul>
-            </nav>
         </div>
     </header>
+
+    <!-- gnb -->
+    <div class="gnb_wrap">
+        <nav class="gnb">
+            <ul class="cleanfloat">
+                <li><a href="#">MENU1</a></li>
+                <li><a href="#">MENU2</a></li>
+                <li><a href="#">MENU3</a></li>
+                <li><a href="#">MENU4</a></li>
+                <li><a href="#">MENU5</a></li>
+                <li><a href="#">MENU6</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- crucial banner -->
     <div class="visual_wrap">
         <div class="visual">
             <div class="visual_text">
-                <h3>NEXT<br>ENERGY</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <h2>NEXT<br>ENERGY</h2>
+                <p>하이미디어는 친환경 에너지 기술을 선도하여<br>미래를 향해 도약하고 자랍니다.</p>
             </div>
-            <img src="images/main_slider_img.png" alt="빛나는 전구 픽토그램_투명도 있음">
+            <div class="visual_attach">
+                <img src="images/main_slider_img.png" alt="밝게 불이 들어온 백열전구-투명도있음">
+            </div>
         </div>
     </div>
+
+    <!-- belt icon -->
+    <div class="belt_wrap">
+        <ul class="belt cleanfloat">
+            <li>
+                <div class="belt_icon">
+                    <img src="images/icon01.png" alt="태양 픽토그램">
+                </div>
+                <div class="belt_text">
+                    <h3>사회공헌</h3>
+                    <p>소외된 이웃과 함께합니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="belt_icon">
+                    <img src="images/icon02.png" alt="펼쳐진 책 픽토그램">
+                </div>
+                <div class="belt_text">
+                    <h3>윤리경영</h3>
+                    <p>공정한 경쟁을 추구합니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="belt_icon">
+                    <img src="images/icon03.png" alt="사람 픽토그램">
+                </div>
+                <div class="belt_text">
+                    <h3>인재채용</h3>
+                    <p>열정 넘치는 인재를 모십니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="belt_icon">
+                    <img src="images/icon04.png" alt="지구 픽토그램">
+                </div>
+                <div class="belt_text">
+                    <h3>기업문화</h3>
+                    <p>유자의 가치를 소개합니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="belt_icon">
+                    <img src="images/icon05.png" alt="막대그래프 픽토그램">
+                </div>
+                <div class="belt_text">
+                    <h3>비전</h3>
+                    <p>유자는 미래를 선도합니다.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- card section -->
+    <section class="card_wrap">
+        <div class="card_group sc01">
+            <ul class="cleanfloat">
+                <li class="card">
+                    <div class="card_img">
+                        <img src="images/content_img01.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+                    </div>
+                    <div class="card_text">
+                        <h3>회사 개요</h3>
+                        <p>
+                            유자에너지는 태양열발전 등 그린에너지와 바이오 사업을 통해 신성장동력을 강화하고 있습니다다다다다다다다다다
+                        </p>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="card_img">
+                        <img src="images/content_img02.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+                    </div>
+                    <div class="card_text">
+                        <h3>사업분야</h3>
+                        <p>
+                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다. 장기적인 비전을 통한 끊임없는 성장장장장장장장장장장장
+                        </p>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="card_img">
+                        <img src="images/content_img03.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+                    </div>
+                    <div class="card_text">
+                        <h3>환경경영</h3>
+                        <p>
+                            유자에너지는 태양열발전 등 그린에너지와 바이오 사업을 통해 신성장동력을 강화하고 있습니다.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="card_group sc02">
+            <ul class="cleanfloat">
+                <li class="card">
+                    <div class="card_img">
+                        <img src="images/content_icon01.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+                    </div>
+                    <div class="card_text">
+                        <h3>사보</h3>
+                        <p>
+                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.
+                        </p>
+                        <a href="#">자세히보기→</a>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="card_img">
+                        <img src="images/content_icon02.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+                    </div>
+                    <div class="card_text">
+                        <h3>찾아오시는 길</h3>
+                        <p>
+                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.
+                        </p>
+                        <a href="#">자세히보기→</a>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="card_img">
+                        <img src="images/content_icon03.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+                    </div>
+                    <div class="card_text">
+                        <h3>제품정보</h3>
+                        <p>
+                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.
+                        </p>
+                        <a href="#">자세히보기→</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_upper_wrap">
+            <div class="footer_upper">
+                <nav class="footer_btn cleanfloat">
+                    <ul class="cleanfloat">
+                        <li><a href="#">개인정보 취급방침</a></li>
+                        <li><a href="#">이메일주소 무단 수집 거부</a></li>
+                        <li><a href="#">패밀리 사이트</a></li>
+                    </ul>
+                    <div class="footer_top_jump">
+                        <a href="#"><img src="images/Arrow_Direction-Up.png" alt="상단으로"></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="footer_lower_wrap">
+            <div class="footer_lower">
+                <div class="footer_lower_text cleanfloat">
+                    <h3>하이미디어</h3>
+                    <p>
+                        대표 : 홍길동 사업자등록번호 : 000-00-0000 주소 : 서울시 영등포구 여의도동 1234567<br>
+                        TEL : 02-0000-0000 FAX : 02-0000-0000 E-mail : abcde@abcde.com<br>
+                        Copyright(c)2015. himedia. All right reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

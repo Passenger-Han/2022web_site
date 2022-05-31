@@ -1,103 +1,132 @@
 @charset "UTF-8";
-/* header layouts */
-/* -------------- */
-
-/* utility menu layouts */
-/* -------------------- */
-.upper_wrap {
-    border-bottom: 1px solid #dddddd;
+/* site settings */
+/* ------------- */
+body {
+    /* fonts */
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #939393;
 }
 
-.util_wrap {
+/* header settings */
+/* ------------- */
+.hder_top_wrap {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.hder_top {
     width: 980px; margin: 0 auto;
 }
 
-.util_wrap .util ul {
+.hder_top ul {
     float: right;
 }
 
-.util_wrap .util li {
+.hder_top li {
     float: left;
     position: relative;
 }
 
-.util_wrap .util li:after {
+.hder_top li::after {
     content: "";
+    background-color: #dcdcdc;
     display: block;
-    width: 1px; height: 0.75em; background-color: #dddddd;
-    position: absolute; right: 0; top: 0.5em;
+    width: 1px; height: 11px;
+    position: absolute; top: 8px; right: 0;
 }
 
-.util_wrap .util li:last-child::after {
+.hder_top li:last-child::after {
     display: none;
 }
 
-.util_wrap .util li a {
+.hder_top li a {
     display: block;
-    color: #888888; font-size: 0.75em; padding: 0.48em 0.66em;
+    padding: 7px 10px;
+    font-size: 12px; line-height: 12px;
 }
 
-/* title, toggle menu layouts */
-/* -------------------------- */
-
-.title_wrap {
-    padding: 2em;
+#hder_wrap h1 {
+    display: block;
+    text-align: center;
 }
 
-.title_wrap .title {
-    width: 980px; margin: 0 auto;
+#hder_wrap h1 a {
+    color: #000;
+}
+
+#hder_wrap .logo_main {
+    width: 980px; height: 75px;
+    margin: 0 auto;
     position: relative;
-    display: flex; flex-direction: row; justify-content: center; align-items: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.toggle_starter_btn_wrap {
-    width: 3.5em; height: 3.5em; border: 1px solid #dddddd; padding: 1.25em 0;
-    position: absolute; right: 0;
-
-    display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+#hder_wrap .logo_box {
+    
 }
 
-.toggle_starter_btn_wrap .toggle_starter_btn {
-    width: 1.25em; height: 2px;
-    background-color: #000;
+#hder_wrap .toggle_menu {
+    width: 48px; height: 48px;
+    padding: 14px;
+    border: 1px solid #dcdcdc;
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-/* gnb layouts */
-/* ----------- */
+.toggle_menu div {
+    background-color: #676767;
+    width: 100%; height: 2px;
+}
+
 .gnb_wrap {
+    height: 45px;
     background-color: #1D5DA4;
 }
 
-.gnb_wrap .gnb {
-    width: 980px; margin: 0 auto;
-    font-size: 0.9375em; /* 15px */ color: #FFF;
+.gnb_wrap .gnb_bar {
+    width: 980px;
+    margin: 0 auto;
 }
 
-.gnb_wrap .gnb li {
+.gnb_bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gnb_bar ul li {
     width: calc(100% / 6);
     border-left: 1px solid #336DAC;
-
-    float: left;
 }
 
-.gnb_wrap .gnb li:last-child {
+.gnb_bar ul li a {
+    color: #FFF; font-size: 15px; line-height: 45px; text-align: center;
+    display: block;
+}
+
+.gnb_bar ul li:last-child {
     border-right: 1px solid #336DAC;
 }
 
-.gnb_wrap .gnb li a {
-    line-height: 3em;
-    display: flex; align-items: center; justify-content: center;
-}
-
 /* crucial banner layouts */
-.visual_wrap {
-    background: #213C6B url(../images/main_bg01.jpg) no-repeat center;
+/* ---------------------- */
+.visual_wrap { /* background 에 대한 여러 속성들 */
+    
     /*
     background-image: url(../images/main_bg01.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #213c6b;
+    background-color: #213C6B;
     */
+
+    background: #213C6B url(../images/main_bg01.jpg) no-repeat center; /* 위와 같다 */
 }
 
 .visual_wrap .visual {
@@ -107,200 +136,15 @@
 }
 
 .visual_wrap .visual .visual_text {
-    color: #FFF; font-size: 0.9375em; line-height: 160%; letter-spacing: -0.075em;
-    position: absolute; left: 0; top: 6.25em;
+    position: absolute; top: 80px;
+    color: #EFF0EE; font-size: 20px;
 }
 
-.visual_wrap .visual h2 {
-    margin-bottom: 1.9375rem;
-    font-size: 4.5625em; line-height: 106%; letter-spacing: 0.38em;
+.visual_wrap .visual h3 {
+    font-size: 76.6px; line-height: 80px; letter-spacing: 0.34em;
+    margin-bottom: 10px;
 }
 
-.visual_wrap .visual .visual_attach {
+.visual_wrap .visual img {
     position: absolute; right: 0;
-}
-
-/* belt layouts */
-.belt_wrap {
-    background-color: #EEEEEE;
-}
-
-.belt_wrap .belt {
-    width: 980px; margin: 0 auto;
-    display: flex; justify-content: center;
-}
-
-.belt_wrap .belt li {
-    width: 196px; height: 196px; padding: 20px 0;
-}
-
-.belt_wrap .belt li:nth-child(1) {background-color: #7C99B9;}
-.belt_wrap .belt li:nth-child(2) {background-color: #4F74A1;}
-.belt_wrap .belt li:nth-child(3) {background-color: #4B8CE0;}
-.belt_wrap .belt li:nth-child(4) {background-color: #3DB5F2;}
-.belt_wrap .belt li:nth-child(5) {background-color: #95C8FF;}
-
-.belt_wrap .belt .belt_icon {
-    text-align: center;
-}
-
-.belt_wrap .belt .belt_text {
-    margin-top: 0.4rem;
-    color: #FFFFFF; font-size: 0.91em; text-align: center; letter-spacing: -0.08em; white-space: nowrap;
-}
-
-.belt_wrap .belt .belt_text h3 {
-    font-size: 1.125em; letter-spacing: -0.06em;
-    margin-bottom: 0.4rem;
-}
-
-/* card layouts */
-.card_wrap {
-    width: 980px; margin: 0 auto;
-}
-
-.card_wrap .card_group {
-    margin-top: 3.1875rem;
-}
-
-.card_wrap .card_group {
-    margin-bottom: 3.1875rem;
-}
-
-.card_wrap .card_group li {
-    width: calc((100% - 50px) / 3); margin-right: 25px;
-    float: left;
-}
-
-.card_wrap .card_group li:nth-child(3n) {
-    margin-right: 0;
-}
-
-/* ----- card section 01 */
-.card_wrap .card_group.sc01 .card_img img {
-    display: block;
-}
-
-.card_wrap .card_group.sc01 .card_text {
-    padding: 0.9375rem;
-    border: 1px solid #EAEAEA; border-top: none;
-    color: #414141; font-size: 0.825em; line-height: 1.525em; letter-spacing: -0.08em;
-}
-
-.card_wrap .card_group.sc01 .card_text p {
-    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
-}
-
-.card_wrap .card_group.sc01 .card_text h3 {
-    font-size: 1.25em; letter-spacing: -0.06em;
-    margin-bottom: 0.4rem;
-}
-
-/* ----- card section 02 */
-.card_wrap .card_group.sc02 .card {
-    padding: 0.25rem 0; border: 1px solid #EAEAEA;
-    position: relative;
-    overflow: hidden;
-}
-
-.card_wrap .card_group.sc02 .card_img {
-    position: absolute; right: -1rem;
-}
-
-.card_wrap .card_group.sc02 .card_text, .card_group.sc02 .card a {
-    width: 50%; padding: 20px 14px;
-    color: #414141; font-size: 0.825em; line-height: 1.525em; letter-spacing: -0.08em;
-}
-
-.card_group.sc02 .card a {
-    display: block;
-    width: 100%; padding: 0; margin-top: 1em;
-}
-
-.card_wrap .card_group.sc02 .card_text h3 {
-    font-size: 1.25em; letter-spacing: -0.06em;
-    margin-bottom: 0.5rem;
-}
-
-/* footer layouts */
-.footer_upper_wrap {
-    background-color: #4D4D4D;
-}
-
-.footer_lower_wrap {
-    background-color: #5E5E5E;
-}
-
-.footer_upper, .footer_lower {
-    width: 980px; margin: 0 auto;
-}
-
-/* footer upper section */
-.footer_upper {
-    color: #CCCCCC; font-size: 0.8125em;
-}
-
-.footer_upper .footer_btn ul {
-    float: left;
-}
-
-
-
-.footer_upper .footer_btn ul li {
-    float: left;
-    position: relative;
-}
-
-.footer_upper .footer_btn ul a {
-    display: block;
-    line-height: 2.125em;
-    padding: 0.8125em 1.1875em;
-}
-
-.footer_upper .footer_btn ul li::after {
-    content: "";
-    display: block;
-    width: 1px; height: 1.125em;
-    background-color: #717171;
-    position: absolute; right: 0; top: 1.25em;
-}
-
-.footer_upper .footer_btn ul li:last-child::after {
-    display: none;
-}
-
-.footer_upper .footer_btn .footer_top_jump {
-    float: right;
-    width: 4rem; height: 3.046875rem;
-    background-color: #404040; color: #949494;
-}
-
-.footer_upper .footer_btn .footer_top_jump a {
-    display: block;
-    padding: 1rem 1.2075rem;
-}
-
-.footer_upper .footer_btn .footer_top_jump img {
-    margin: 0 auto;
-}
-
-/* footer lower section */
-
-.footer_lower {
-    padding: 1.625em 0;
-}
-
-.footer_lower .footer_lower_text {
-    
-}
-
-.footer_lower .footer_lower_text h3,
-.footer_lower .footer_lower_text p {
-    color: #CCCCCC; font-size: 0.8125em; line-height: 1.5em;
-    float: left;
-}
-
-.footer_lower .footer_lower_text h3 {
-    font-size: 1.25em; line-height: 3em;
-    margin-right: 3.9375rem;
 }

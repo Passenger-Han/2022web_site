@@ -1,12 +1,6 @@
 @charset "UTF-8";
-/* initial settings */
 * {
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0; padding: 0; box-sizing: border-box;
 }
 
 li {
@@ -17,7 +11,6 @@ a:link, a:visited {
     color: inherit; text-decoration: inherit;
 }
 
-/* float cleaning */
 .cleanfloat::after {
     content: "";
     display: block;
