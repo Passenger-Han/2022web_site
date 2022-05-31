@@ -3,6 +3,7 @@
 body {
     /* google fonts, Noto Sans KR */
     font-family: 'Noto Sans KR', sans-serif;
+    color: #1E1E1E;
 }
 
 /* 1em = 16px */
@@ -31,8 +32,13 @@ body {
     line-height: 160%; letter-spacing: -3%;
 }
 
+.fonts-title {
+    font-size: 1.3125em; font-weight: 700;
+    line-height: 165%; letter-spacing: 1.5%;
+}
+
 .fonts-article {
-    font-size: 0.875em; font-weight: 400;
+    font-size: 0.9375em; font-weight: 400;
     line-height: 165%; letter-spacing: 1.5%;
 }
 
@@ -41,13 +47,24 @@ body {
     line-height: 180%; letter-spacing: -5%;
 }
 
-/* header, gnb layouts */
-.hder {
-    max-width: 1280px;
+.fonts-white {
+    color: #FFFFFF;
 }
 
+.yellow-stick-short {
+    background-color: #FFD44A;
+    width: 5rem; height: 0.375rem;
+}
+
+/* images display */
+img {
+    display: block;
+}
+
+/* header, gnb layouts */
 .hder h1 {
     float: left;
+    top: 50%; transform: translateY(-49%); left: 0.5em;
 }
 
 .hder nav {
@@ -55,17 +72,57 @@ body {
 }
 
 .hder nav li {
-    background-color: pink;
     float: left;
-    padding: 1.75em 3.125em;
+    padding: 1.5em 2.5em;
 }
 
 /* crucial banner layouts */
-.crucial_wrap {
-    background-color: whitesmoke;
-    height: 55rem;
+.crucial_wrap, .crucial_wrap li {
+    height: 100vh;
+}
+
+.crucial_slide li {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.crucial_text_wrap {
+    height: 100%;
 }
 
 .crucial_text {
-    max-width: 37.5%;
+    bottom: 29%; left: 0;
+}
+
+.crucial_text p {
+    margin-top: 1em;
+}
+
+/* section 01 layouts */
+.sc01 {
+    margin-top: 10rem; /* 160px */
+}
+
+
+
+.sc01 .title_desc {
+    float: right;
+}
+
+.sc01 .card_wrap {
+    margin-top: 8rem;
+}
+
+.sc01 .card_wrap .card {
+    width: calc((100% - (32px * 2)) / 3);
+    margin-left: 32px;
+}
+
+.sc01 .card_wrap .card:first-child {
+    margin-left: 0;
+}
+
+.sc01 .card_wrap .card .card_text {
+    padding: 1rem 0;
 }

@@ -9,16 +9,41 @@
     <link rel="stylesheet" href="css/initial.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- bxSlider CSS -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- bxSlider js -->
+    <script src="js/jquery.bxslider.js"></script>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0px #ccc;
+            -webkit-box-shadow: 0 0 0px #ccc;
+            box-shadow: 0 0 0px #ccc;
+            border: 0px solid #fff;
+            background: #fff;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('.crucial').bxSlider({
+                mode: 'fade',
+
+            });
+        })
+    </script>
 </head>
 <body>
     <!-- header, gnb -->
-    <header class="hder_wrap">
-        <div class="hder m-0a cleanfloat">
-            <h1><img src="images/titlelogo_colored.png" alt="넷마블문화재단" style="display: block;"></h1>
+    <header class="hder_wrap po-r">
+        <div class="hder w-760min w-1280max m-0a po-r cleanfloat">
+            <h1 class="fonts-gnbOnly po-a"><a href="#"><img src="images/titlelogo_colored.png" alt="넷마블문화재단" style="display: block;"></a></h1>
             <nav>
                 <ul class="cleanfloat fonts-gnbOnly">
                     <li>재단소개</li>
@@ -30,18 +55,85 @@
     </header>
 
     <!-- crucial banner -->
-    <div class="crucial_wrap">
-        <ul>
-            <li>
-                <img src="images/crucial01.jpg" alt="아기가 게임하며 웃는 사진">
-                <div class="crucial">
-                    <div class="crucial_text">
+    <div class="crucial_wrap po-r">
+        <ul class="crucial">
+            <li style="background-image: url(images/crucial01.jpg);">
+                <div class="crucial_text_wrap w-760min w-1280max m-0a po-r">
+                    <div class="crucial_text fonts-white po-a">
+                        <h2 class="fonts-headline">게임소통교육</h2>
+                        <p class="fonts-larger">게임으로 소통하고 게임으로 가까워지는 가족</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url(images/crucial02.jpg);">
+                <div class="crucial_text_wrap w-760min w-1280max m-0a po-r">
+                    <div class="crucial_text fonts-white po-a">
                         <h2 class="fonts-headline">전국 장애학생<br>e페스티벌</h2>
-                        <h3 class="largest">게임 안에서 하나 되는 모두의 축제</h3>
+                        <p class="fonts-larger">게임 안에서 하나 되는 모두의 축제</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url(images/crucial03.jpg);">
+                <div class="crucial_text_wrap w-760min w-1280max m-0a po-r">
+                    <div class="crucial_text fonts-white po-a">
+                        <h2 class="fonts-headline">견학프로그램</h2>
+                        <p class="fonts-larger">나의 게임 산업 탐방기</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url(images/crucial04.jpg);">
+                <div class="crucial_text_wrap w-760min w-1280max m-0a po-r">
+                    <div class="crucial_text fonts-white po-a">
+                        <h2 class="fonts-headline">게임아카데미</h2>
+                        <p class="fonts-larger">미래의 꿈 게임에 담다</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url(images/crucial05.jpg);">
+                <div class="crucial_text_wrap w-760min w-1280max m-0a po-r">
+                    <div class="crucial_text fonts-white po-a">
+                        <h2 class="fonts-headline">어깨동무문고</h2>
+                        <p class="fonts-larger">다름을 이해하는 모두의 동화</p>
                     </div>
                 </div>
             </li>
         </ul>
     </div>
+
+    <!-- section 01 -->
+    <section class="sc01_wrap">
+        <div class="sc01 w-1280max m-0a">
+            <div class="title cleanfloat">
+                <h3 class="fonts-largest">문화를 만들고 인재를 키우고<br>마음을 나눕니다</h3>
+                <div class="yellow-stick-short mt-1re mb-1re"></div>
+                <p class="title_desc fonts-large">넷마블문화재단은 문화적 가치 확산을 통해 우리 사회의 미래 경쟁력을 높여 가고자<br>다양한 공익 활동을 전개해 나가고 있습니다.</p>
+            </div>
+            <div class="card_wrap">
+                <ul class="cleanfloat">
+                    <li class="card flo-lft">
+                        <div class="card_img"><img src="images/card01.jpg" alt="웃는 아이를 보는 어머니"></div>
+                        <div class="card_text">
+                            <h3 class="fonts-title">문화 만들기</h3>
+                            <p class="fonts-article">게임을 기반으로 다양한 문화적 가치를 공유하고 누구나<br>즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어 갑니다.</p>
+                        </div>
+                    </li>
+                    <li class="card flo-lft">
+                        <div class="card_img"><img src="images/card02.jpg" alt="이름표를 들고 카메라를 보는 청소년"></div>
+                        <div class="card_text">
+                            <h3 class="fonts-title">인재 키우기</h3>
+                            <p class="fonts-article">미래 문화 산업을 이끌어 갈 가능성 있는 인재들을 발굴하고<br>체계적인 성장 기회를 지원합니다.</p>
+                        </div>
+                    </li>
+                    <li class="card flo-lft">
+                        <div class="card_img"><img src="images/card03.jpg" alt="아기와 놀아주며 웃는 어머니"></div>
+                        <div class="card_text">
+                            <h3 class="fonts-title">마음 나누기</h3>
+                            <p class="fonts-article">나눔이 가진 영향력과 가치를 알리고 쉽게 동참할 수 있는<br>기회를 제공하여 모두가 즐거운 나눔 문화를 확산해 갑니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
