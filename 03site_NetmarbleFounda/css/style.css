@@ -120,17 +120,27 @@ img {
     margin-bottom: 10rem;
 }
 
+.sc01 .title {
+    margin-bottom: 8rem;
+}
+
 .sc01 .title_desc {
     float: right;
 }
 
-.sc01 .card_wrap {
-    margin-top: 8rem;
-}
 
 .sc01 .card_wrap .card {
     width: calc((100% - (32px * 2)) / 3);
     margin-left: 32px;
+}
+
+.sc01 .card_wrap .card img {
+    transition: 0.3s;
+}
+
+.sc01 .card_wrap .card img:hover {
+    transform: translate(0, -1.25rem);
+    box-shadow: 0 28px 28px rgba(8, 8, 8, 0.11);
 }
 
 .sc01 .card_wrap .card:first-child {
@@ -151,7 +161,7 @@ img {
 
 /* section 02 phrase layouts */
 .sc02 {
-    height: 468px; /* 좋은 방법이 안떠오른다 */
+    height: 468px;
 }
 
 
@@ -214,48 +224,82 @@ img {
 .footer_wrap {
     background-color: #171717; color: #605F60;
     height: 300px;
-    padding-top: 4rem;
+    padding: 4rem 0;
 }
 
-.footer_box {
-    padding: 0 1rem;
-}
-
-/* footer left layouts */
-.footer_box .footer_left p {
-    margin: 2em 0 4em;
-}
-
-.footer_box .footer_left li {
+.footer_logo img,
+.footer_util_bar .footer_util,
+.footer_util_bar ul li {
     float: left;
-    margin-right: 2em;
-    position: relative;
 }
 
-.footer_box .footer_left li:last-child {
+.footer_logo .family_btn,
+.footer_util_bar .footer_offsite {
+    float: right;
+}
+
+.footer_logo,
+.footer_wrap .address,
+.footer_util_bar {
+    padding: 0 1.25rem;
+}
+
+.footer_logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer_logo .family_btn a {
+    display: block;
+    padding: 0.5em 9.25em 0.5em 2em;
+    background-color: #080808;
+}
+
+.footer_wrap .address {
+    margin-bottom: 3rem;
+}
+
+.footer_util li a {
+    display: block;
+    padding: 0.75em 1.25em;
+
+    margin-right: 2em;
+}
+
+.footer_util li:first-child a {
+    padding-left: 0;
+}
+
+.footer_util li:last-child,
+.footer_offsite li:last-child {
     margin-right: 0;
 }
 
-.footer_box .footer_left li:after {
+.footer_util li {
+    position: relative;
+}
+
+.footer_util li:after {
     content: "";
     display: block;
     width: 1px;
     height: 1em;
-    position: absolute; top: .375em; right: -1.125em;
     background-color: #605F60;
+    position: absolute; bottom: 1.25em; right: 0.75em;
 }
 
-.footer_box .footer_left li:last-child::after {
+.footer_util li:last-child::after{
     display: none;
 }
 
-/* footer right layouts */
-.footer_box .footer_right {
-    right: 0;
+.footer_offsite li {
+    margin-right: 1.75rem;
 }
 
-.footer_box .footer_right .family_btn a {
-    display: block;
-    padding: 0.5em 9.25em 0.5em 2em;
-    background-color: #080808;
+/* external plugins */
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc; */
+    border: 0px solid #fff;
+    background: #fff;
 }

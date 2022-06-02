@@ -1,3 +1,8 @@
+20220602 18:19
+    - 03site_NetmarbleFounda:
+        - Footer rewrote
+        - transition added
+
 20220531 18:20
     - 03site_NetmarbleFounda:
         - O<-<
