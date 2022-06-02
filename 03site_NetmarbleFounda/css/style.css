@@ -106,14 +106,18 @@ img {
 
 /* section 01 layouts */
 .section_white {
+    padding: 10rem 0;
     height: 100%;
 }
 
-/* section 01 card layouts */
 .sc01, .sc02 {
-    margin-top: 10rem; /* 160px */
-    margin-bottom: 10rem; /* 160px */
     padding: 0 2rem;
+}
+
+/* section 01 card layouts */
+
+.sc01 {
+    margin-bottom: 10rem;
 }
 
 .sc01 .title_desc {
@@ -199,7 +203,7 @@ img {
     padding: 0.75em 1.5em;
     margin-left: 1em;
 
-    cursor: pointer ;
+    cursor: pointer;
 }
 
 .info .info_menu_bar li:first-child {
@@ -210,4 +214,48 @@ img {
 .footer_wrap {
     background-color: #171717; color: #605F60;
     height: 300px;
+    padding-top: 4rem;
+}
+
+.footer_box {
+    padding: 0 1rem;
+}
+
+/* footer left layouts */
+.footer_box .footer_left p {
+    margin: 2em 0 4em;
+}
+
+.footer_box .footer_left li {
+    float: left;
+    margin-right: 2em;
+    position: relative;
+}
+
+.footer_box .footer_left li:last-child {
+    margin-right: 0;
+}
+
+.footer_box .footer_left li:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1em;
+    position: absolute; top: .375em; right: -1.125em;
+    background-color: #605F60;
+}
+
+.footer_box .footer_left li:last-child::after {
+    display: none;
+}
+
+/* footer right layouts */
+.footer_box .footer_right {
+    right: 0;
+}
+
+.footer_box .footer_right .family_btn a {
+    display: block;
+    padding: 0.5em 9.25em 0.5em 2em;
+    background-color: #080808;
 }
