@@ -1,3 +1,9 @@
+20220607 18:17
+    - 03site_NetmarbleFounda:
+        - mirror 1.0, maybe T vT
+        - animate CSS and WOW js added
+        - O<-<
+
 20220602 18:19
     - 03site_NetmarbleFounda:
         - Footer rewrote

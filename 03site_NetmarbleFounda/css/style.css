@@ -140,7 +140,7 @@ img {
 
 .sc01 .card_wrap .card img:hover {
     transform: translate(0, -1.25rem);
-    box-shadow: 0 28px 28px rgba(8, 8, 8, 0.11);
+    box-shadow: 0 28px 28px rgba(8, 8, 8, 0.15);
 }
 
 .sc01 .card_wrap .card:first-child {
@@ -192,7 +192,11 @@ img {
     padding: 10rem 2rem;
 
     /* 임시 */
-    height: 960px; 
+    /* height: 960px;  */
+}
+
+.info .info_title {
+    margin-bottom: 5rem;
 }
 
 .info .info_title h3::after {
@@ -218,6 +222,39 @@ img {
 
 .info .info_menu_bar li:first-child {
     margin-left: 0;
+}
+
+.info_post li {
+    background-color: #FFF;
+    float: left;
+    width: 360px; height: 460px; padding: 2em;
+    margin-right: 2rem;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.info_post li:hover {
+    transform: translate(0, -1.25rem);
+    box-shadow: 0 28px 28px rgba(8, 8, 8, 0.18);
+}
+
+.info_post li:last-child {
+    margin-right: 0;
+}
+
+.info_post li h3 {
+    margin-bottom: 0.5em;
+}
+
+.info_post_article {
+    color: #605F60;
+}
+
+.info_post_date {
+    bottom: 2em;
+    color: #c0c0c0; font-size: 0.8375em;
 }
 
 /* footer layouts */
@@ -299,7 +336,7 @@ img {
 .bx-wrapper {
     -moz-box-shadow: 0 0 0px #ccc;
     -webkit-box-shadow: 0 0 0px #ccc;
-    box-shadow: 0 0 0px #ccc; */
+    box-shadow: 0 0 0px #ccc;
     border: 0px solid #fff;
     background: #fff;
 }
