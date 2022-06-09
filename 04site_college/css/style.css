@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* header layout */
+/* class starts with "hder" */
+.hder-top-college-menu li,
+.hder-top-utility-menu li,
+.hder-bot-site-menu li,
+.hder-bot-toggle-menu li {
+    float: left;
+}
+
+.hder-top-college-menu li {
+    padding: 12px 40px;
+}
+
+.hder-top-utility-menu li {
+    padding: 12px 12px;
+}
+
+.hder-top-college-menu li:hover {
+
+} 
+
+.hder-top-college-menu li.active {
+    background: #FFFFFF;
+}

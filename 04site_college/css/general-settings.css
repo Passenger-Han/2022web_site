@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* color settings */
+.theme-dark-green {
+    background: rgb(3, 107, 41);
+}
+
+.theme-green {
+    background: rgb(33, 186, 49);
+}
+
+.theme-light-green {
+    background: rgb(184, 243, 41);
+}
+
+.theme-white {
+    background: rgb(255, 255, 255);
+}
+
+.theme-black {
+    background: rgb(0, 0, 0);
+}
+
+.fonts-white {
+    color: rgb(255, 255, 255);
+}
+
+.fonts-black {
+    color: rgb(0, 0, 0);
+}
+
+.fonts-cool-gray {
+    color: rgb(177, 179, 180);
+}
+
+/* measurements and positioning */
+.actual-workspace {
+    width: 1200px;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.pads {
+    padding: 24px;
+}
+
+.text-margin {
+    margin-bottom: 15px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.position-ab {
+    position: absolute;
+}
+
+.position-re {
+    position: relative;
+}
+
+/* fonts settings */
+.fonts-headline {
+    font-size: 5em;
+    letter-spacing: -0.1em;
+}
+
+.fonts-title {
+    font-size: 2em;
+    letter-spacing: -0.02em;
+}
+
+.fonts-subtitle {
+    font-size: 1.5em;
+    letter-spacing: -0.1em;
+}
+
+.fonts-article {
+    font-size: 1.17em;
+    letter-spacing: -0.04em;
+    line-height: 1.5em;
+}
+
+.fonts-button {
+    font-size: 1.33em;
+}
+
+.fonts-mini {
+    font-size: 1em;
+    letter-spacing: -0.04em;
+    line-height: 1.5em;
+}
+
+.fonts-bold {
+    font-weight: bold;
+}
+
+.fonts-bolder {
+    font-weight: bolder;
+}
