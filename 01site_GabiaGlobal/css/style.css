@@ -392,3 +392,21 @@ a:visited {
 .footer_right li img {
     width: 36px;
 }
+
+.footer_upper {
+    margin-bottom: 60px;
+}
+
+.footer_lower {
+    padding: 24px 0;
+    border-top: 1px solid #DDD;
+    color: #AFAFAF;
+}
+
+.footer_lower a {
+    float: left;
+}
+
+.footer_lower p {
+    float: right;
+}
