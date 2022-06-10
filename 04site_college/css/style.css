@@ -1,25 +1,122 @@
 @charset "UTF-8";
+body {
+    font-size: 15px;
+}
+
 /* header layout */
-/* class starts with "hder" */
+/* start with "hder" */
 .hder-top-college-menu li,
 .hder-top-utility-menu li,
 .hder-bot-site-menu li,
-.hder-bot-toggle-menu li {
+.hder-bot-toggle-menu li,
+.hder-top-utility-menu li:nth-child(2) a {
     float: left;
 }
 
+.hder-top-utility-menu li:nth-child(2)>a,
+.hder-bot-site-menu li a {
+    margin-right: 2px;
+}
+
 .hder-top-college-menu li {
-    padding: 12px 40px;
+    width: 120px;
+}
+
+.hder-top-college-menu li a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+
+.hder-top-utility-menu li:last-child {
+    padding-right: 0;
+}
+
+.hder-top-college-menu li:hover,
+.hder-top-college-menu li.active {
+    background: #FFFFFF;
+    color: #000000;
 }
 
 .hder-top-utility-menu li {
-    padding: 12px 12px;
+    padding: 0 12px;
+    height: 40px; /* line-height: 40px in hder-top-college-menu */;
+    display: flex; justify-content: center; align-items: center;
 }
 
-.hder-top-college-menu li:hover {
+.hder-top-utility-menu li:nth-child(2) {
+}
 
-} 
+.hder-top-utility-menu li:nth-child(2)>a {
+    width: 20px; height: 20px;
+    background-color: #FFFFFF;
 
-.hder-top-college-menu li.active {
-    background: #FFFFFF;
+    text-align: center;
+}
+
+.hder-bot {
+    height: 118px;
+    padding: 21px 0;
+}
+
+.hder-bot-site-menu li,
+.hder-bot-toggle-menu li {
+    height: 75px;
+    display: flex; justify-content: center; align-items: center;
+    /* 쓰지 않고 체게적이고 논리적으로 만드는 방법이 아직 떠오르지 않는다 */
+}
+
+.hder-bot-site-menu li a {
+    display: block;
+    padding: 0 26px;
+    line-height: calc(118px - (21px * 2));
+    text-align: center;
+}
+
+/* section layout */
+/* start with "sct" */
+#section {
+    background: url(../img/Mesh-Pattern.png), url(../img/bg.png);
+    background-repeat: repeat no-repeat;
+    background-size: auto, cover;
+    background-position: center;
+    padding: 48px 0;
+}
+
+
+/* section-slogan layout */
+.wrap-sct-slogan {
+    padding-bottom: 48px;
+}
+
+.sct-slogan-student-menu {
+    background-color: pink;
+    height: 100%
+}
+
+.sct-slogan-student-menu li {
+    float: left;
+    margin-left: 22px;
+}
+
+.sct-slogan-text h2 {
+    margin-bottom: 0.25em;
+}
+
+.sct-slogan-text p:nth-child(2) {
+    text-align: right;
+}
+
+.sct-slogan-student-menu li a div {
+    margin-bottom: 12px;
+}
+
+.sct-slogan-student-menu li p {
+    text-align: center;
+}
+
+/* section-content layout */
+.wrap-sct-content {
+    background-color: beige;
+    height: 1000px;
 }

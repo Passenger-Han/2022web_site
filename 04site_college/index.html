@@ -11,22 +11,28 @@
     <!-- CSS for page -->
     <link rel="stylesheet" href="css/general-settings.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts - Nanum Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="wrap-hder-top theme-dark-green">
-            <div class="hder-top actual-workspace margin-center cleanfloat">
+            <div class="hder-top actualWorkspace margin-center cleanfloat">
                 <nav class="hder-top-college-menu float-left">
-                    <ul class="cleanfloat">
+                    <ul class="fonts-white cleanfloat">
                         <li class="active"><a href="#">대학교</a></li>
                         <li><a href="#">입학안내</a></li>
                         <li><a href="#">대학원</a></li>
                     </ul>
                 </nav>
                 <nav class="hder-top-utility-menu float-right">
-                    <ul class="cleanfloat">
-                        <li>글자크기</li>
-                        <li>
+                    <ul class="fonts-white cleanfloat">
+                        <li><a style="cursor: default;">글자크기</a></li>
+                        <li class="fonts-black cleanfloat">
                             <a href="#">-</a>
                             <a href="#">+</a>
                         </li>
@@ -37,24 +43,71 @@
                 </nav>
             </div>
         </div>
-        <div class="hder-bot actual-workspace margin-center cleanfloat position-re">
-            <h1 class="float-left"><a href="#">건국대학교</a></h1>
-            <nav class="hder-bot-site-menu float-left position-ab">
+
+        <div class="hder-bot actualWorkspace margin-center cleanfloat">
+            <h1 class="float-left"><a href="#"><img src="img/UI.png" alt="건국대학교"></a></h1>
+            <div class="wrap-hder-bot-menu float-right cleanfloat">
+                <nav class="hder-bot-site-menu float-left">
+                    <ul class="cleanfloat">
+                        <li><a href="#">대학소개</a></li>
+                        <li><a href="#">학과소개</a></li>
+                        <li><a href="#">학사안내</a></li>
+                        <li><a href="#">대학생활</a></li>
+                        <li><a href="#">학생지원센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="hder-bot-toggle-menu float-right">
+                    <ul class="cleanfloat">
+                        <li><a href="#"><img src="img/btn - menu.png" alt="메뉴버튼"></a></li>
+                        <li><a href="#"><img src="img/btn - mypage.png" alt="마이페이지버튼"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="section">
+        <div class="wrap-sct-slogan actualWorkspace margin-center fonts-white cleanfloat">
+            <div class="sct-slogan-text float-left">
+                <h2 class="fonts-headline">
+                    창조적 혁신으로<br>
+                    미래를 선도하는 대학
+                </h2>
+                <p class="fonts-title">A history of leadership</p>
+            </div>
+            <nav class="sct-slogan-student-menu float-right">
                 <ul class="cleanfloat">
-                    <li><a href="#">대학소개</a></li>
-                    <li><a href="#">학과소개</a></li>
-                    <li><a href="#">학사안내</a></li>
-                    <li><a href="#">대학생활</a></li>
-                    <li><a href="#">학생지원센터</a></li>
-                </ul>
-            </nav>
-            <nav class="hder-bot-toggle-menu float-right">
-                <ul class="cleanfloat">
-                    <li><a href="#"><img src="img/btn - menu.png" alt="메뉴버튼"></a></li>
-                    <li><a href="#"><img src="img/btn - mypage.png" alt="마이페이지버튼"></a></li>
+                    <li>
+                        <a href="#">
+                            <div class="container-img"><img src="img/apply-instruction.png" alt="입학절차안내"></div>
+                            <p>입학절차안내</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="container-img"><img src="img/apply-insruction-presentation.png" alt="입학설명회"></div>
+                            <p>입학설명회</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="container-img"><img src="img/scholarship.png" alt="장학제도"></div>
+                            <p>장학제도</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="container-img"><img src="img/verification-paper.png" alt="증명서밝브"></div>
+                            <p>증명서발급</p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
-    </header>
+
+        <div class="wrap-sct-content actualWorkspace margin-center">
+
+        </div>
+    </section>
 </body>
 </html>

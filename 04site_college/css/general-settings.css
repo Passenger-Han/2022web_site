@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* color settings */
+/* color themes */
 .theme-dark-green {
     background: rgb(3, 107, 41);
 }
@@ -33,7 +33,7 @@
 }
 
 /* measurements and positioning */
-.actual-workspace {
+.actualWorkspace {
     width: 1200px;
 }
 
@@ -66,13 +66,18 @@
 }
 
 /* fonts settings */
+/* FONTS */
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 .fonts-headline {
-    font-size: 5em;
-    letter-spacing: -0.1em;
+    font-size: 4.5em;
+    letter-spacing: -0.033em;
 }
 
 .fonts-title {
-    font-size: 2em;
+    font-size: 1.9375em;
     letter-spacing: -0.02em;
 }
 
