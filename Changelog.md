@@ -1,3 +1,8 @@
+20220610 18:30
+    - 04site_college
+        - did header work.
+        - making visual section..
+
 20220607 18:17
     - 03site_NetmarbleFounda:
         - mirror 1.0, maybe T vT
