@@ -1,3 +1,7 @@
+20220613 18:36
+    - 04site_college
+        - bxSlider injecting..
+
 20220610 18:30
     - 04site_college
         - did header work.

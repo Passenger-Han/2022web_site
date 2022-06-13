@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <!-- CSS for initial settings -->
     <link rel="stylesheet" href="css/initial.css">
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <!-- js for bxSlider -->
+    <script src="js/jquery.bxslider.js"></script>
+    <!-- CSS for bxSlider -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+
     <!-- CSS for page -->
     <link rel="stylesheet" href="css/general-settings.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,6 +24,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 
+    <script>
+        $(document).ready(function(){
+            $(".visual-slide-01").bxSlider();
+        })
+    </script>
 </head>
 <body>
     <header id="header">
@@ -106,7 +118,22 @@
         </div>
 
         <div class="wrap-sct-content actualWorkspace margin-center">
-
+            <ul class="sct-content cleanfloat">
+                <li>
+                    <ul class="visual-slide-01">
+                        <li class="test" style="background: url(img/sct-01-bg-01.png);">1</li>
+                        <li class="test" style="background: url(img/sct-01-bg-01.png);">2</li>
+                        <li class="test" style="background: url(img/sct-01-bg-01.png);">3</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     </section>
 </body>
