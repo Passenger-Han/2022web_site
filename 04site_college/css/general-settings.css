@@ -65,6 +65,10 @@
     position: relative;
 }
 
+.textalign-right {
+    text-align: right;
+}
+
 /* fonts settings */
 /* FONTS */
 body {
@@ -87,7 +91,7 @@ body {
 }
 
 .fonts-article {
-    font-size: 1.17em;
+    font-size: 0.9375em;
     letter-spacing: -0.04em;
     line-height: 1.5em;
 }
@@ -97,7 +101,7 @@ body {
 }
 
 .fonts-mini {
-    font-size: 1em;
+    font-size: 0.875em;
     letter-spacing: -0.04em;
     line-height: 1.5em;
 }

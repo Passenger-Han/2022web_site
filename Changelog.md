@@ -1,5 +1,9 @@
 20220613 18:36
     - 04site_college
+        - almost (footer left)
+
+20220613 18:36
+    - 04site_college
         - bxSlider injecting..
 
 20220610 18:30

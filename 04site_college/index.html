@@ -26,7 +26,13 @@
 
     <script>
         $(document).ready(function(){
-            $(".visual-slide-01").bxSlider();
+            $(".visual-slide-01").bxSlider({
+                responsive: false
+            });
+
+            $(".visual-slide-02").bxSlider({
+                responsive: false
+            });
         })
     </script>
 </head>
@@ -121,18 +127,133 @@
             <ul class="sct-content cleanfloat">
                 <li>
                     <ul class="visual-slide-01">
-                        <li class="test" style="background: url(img/sct-01-bg-01.png);">1</li>
-                        <li class="test" style="background: url(img/sct-01-bg-01.png);">2</li>
-                        <li class="test" style="background: url(img/sct-01-bg-01.png);">3</li>
+                        <li class="test" style="background: url(img/sct-01-bg-01.png);">
+                            <div class="container-text fonts-white">
+                                <h2 class="fonts-headline">
+                                    재미있는 정보가 한가득!<br>
+                                    대학생활의 활력소
+                                </h2>
+                                <a href="#" class="theme-dark-green fonts-button">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="test" style="background: url(img/sct-01-bg-01.png);">
+                            <div class="container-text fonts-white">
+                                <h2 class="fonts-headline">
+                                    재미있는 정보가 한가득!<br>
+                                    대학생활의 활력소
+                                </h2>
+                                <a href="#" class="theme-dark-green fonts-button">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="test" style="background: url(img/sct-01-bg-01.png);">
+                            <div class="container-text fonts-white">
+                                <h2 class="fonts-headline">
+                                    재미있는 정보가 한가득!<br>
+                                    대학생활의 활력소
+                                </h2>
+                                <a href="#" class="theme-dark-green fonts-button">자세히보기</a>
+                            </div>
+                        </li>
                     </ul>
                 </li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li style="background: url(img/sct-02-bg-01.png);">
+                    <div class="container-text fonts-white">
+                        <h2 class="fonts-headline">
+                            자랑스런<br>
+                            건국인
+                        </h2>
+                        <h3 class="fonts-title">
+                            교수 - 학생 - 동문
+                        </h3>
+                        <a href="#" class="theme-dark-green fonts-button">자세히보기</a>
+                    </div>
+                </li>
+                <li class="theme-dark-green fonts-white pads">
+                    <h3 class="fonts-title">HOT LINK</h3>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/international-center.png" alt="국제교류센터"></a>
+                            <p>국제교류센터</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/remote-support-system.png" alt="원격지원시스템"></a>
+                            <p>
+                                원격지원<br>
+                                시스템
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/financial-report.png" alt="예결산공고"></a>
+                            <p>
+                                예산 / 결산<br>
+                                공고
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="theme-green fonts-white pads">
+                    <h3 class="fonts-title">공지사항</h3>
+                    <div style="background: #FFFFFF; width: 100%; height: 2px; margin: 24px 0;"></div>
+                    <div>
+                        <div class="container-text fonts-article">
+                            <p><a href="#">2022학년도 1학기 기말고사 <span>2022-06-08</span></a></p>
+                            <p><a href="#">2022학년도 하계 계절학기 <span>2022-06-08</span></a></p>
+                            <p><a href="#">2022학년도 1학기 강의평가 <span>2022-06-08</span></a></p>
+                            <p><a href="#">2022학년도 하계 계절학기 <span>2022-06-08</span></a></p>
+                    </div>
+                </li>
+                <li class="theme-white pads position-re">
+                    <a href="#">
+                        <h3 class="fonts-title">건국 SNS</h3>
+                        <div class="container-text cleanfloat">
+                            <img src="img/sct-05-thumbnail.png" alt="영상썸네일">
+                            <p class="fonts-article float-right">[건국대학교 캠퍼스]<br>벤치에 숨겨진 비밀을 알아보자</p>
+                        </div>
+                    </a>
+                    <div class="position-ab" style="bottom: 24px; right: 24px;">
+                        <a href="#"><img src="img/btn - naver.png" alt="네이버블로그"></a>
+                        <a href="#"><img src="img/btn - facebook.png" alt="페이스북"></a>
+                        <a href="#"><img src="img/btn - instagram.png" alt="인스타그램"></a>
+                        <a href="#"><img src="img/btn - youtube.png" alt="유튜브"></a>
+                    </div>
+                </li>
+                <li class="position-re">
+                    <div class="container-text position-ab fonts-subtitle fonts-white fonts-bold">찾아오시는 길</div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/sct-07-thumbnail.png" alt="유튜브알쓸건잡썸네일"></a>
+                </li>
+                <li>
+                    <ul class="visual-slide-02">
+                        <li class="test" style="background: url(img/sct-08-bg-01.png);">
+                            <div class="container-text">
+                                <h2 class="fonts-title">
+                                    취업 전문 컨설턴트 진로취업상담 오픈
+                                </h2>
+                                <h3 class="fonts-headline">2022. 06. 08 ~</h3>
+                                <a href="#" class="theme-dark-green fonts-button">위인전 신청하러 가기</a>
+                            </div>
+                        </li>
+                        <li class="test" style="background: url(img/sct-08-bg-01.png);">
+                            <div class="container-text">
+                                <h2 class="fonts-title">
+                                    취업 전문 컨설턴트 진로취업상담 오픈
+                                </h2>
+                                <h3 class="fonts-headline">2022. 06. 08 ~</h3>
+                                <a href="#" class="theme-dark-green fonts-button">위인전 신청하러 가기</a>
+                            </div>
+                        </li>
+                        <li class="test" style="background: url(img/sct-08-bg-01.png);">
+                            <div class="container-text">
+                                <h2 class="fonts-title">
+                                    취업 전문 컨설턴트 진로취업상담 오픈
+                                </h2>
+                                <h3 class="fonts-headline">2022. 06. 08 ~</h3>
+                                <a href="#" class="theme-dark-green fonts-button">위인전 신청하러 가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </section>
