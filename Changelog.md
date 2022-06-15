@@ -1,3 +1,8 @@
+20220615 17:44
+    - 04site_college
+        - 1.0 released!
+        - 1.1 : fixed the section 3's p-tags were not in an a-tag.
+
 20220613 18:36
     - 04site_college
         - almost (footer left)
