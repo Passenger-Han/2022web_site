@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* colors */
+.theme-true-black {background-color: #000000;}
+.theme-matte-black {background-color: #111111;}
+.theme-pastel-black {background-color: #1B1B1B;}
+.theme-dark-gray {background-color: #252628;}
+.theme-white {background-color: #FFFFFF;}
+.theme-magenta {background-color: #B6082E;}
+.theme-red-wine {background-color: #9F0728;}
+.fonts-dark-gray {color: #252628;}  
+.fonts-white {color: #FFFFFF;}
+
+/* fonts styles */
+.fonts-headline {font-size: 3.375em; font-weight: 600; letter-spacing: -0.045625em; line-height: 3.625em;}
+.fonts-category {font-size: 1.75em; font-weight: 600;line-height: 2.1875em;}
+.fonts-title {font-size: 1.25em; font-weight: 600; line-height: 1.5em;}
+.fonts-headline-sub {font-size: 1.25em; font-weight: 600; letter-spacing: -0.02375em; line-height: 2em;}
