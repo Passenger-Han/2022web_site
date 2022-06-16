@@ -184,6 +184,13 @@ a:hover {
     padding: 12px 40px;
 }
 
+.visual-slide-01 .container-text .fonts-button:hover,
+.wrap-sct-content .sct-content>li:nth-child(2) .container-text .fonts-button:hover,
+.visual-slide-02 .container-text .fonts-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
 .wrap-sct-content .sct-content>li:nth-child(1) .board-black,
 .wrap-sct-content .sct-content>li:nth-child(2) .board-black {
     background-color: rgba(0, 0, 0, 0.45);
@@ -372,7 +379,7 @@ a:hover {
 }
 
 .visual-slide-02 .img-attached-over {
-    top: 0; left: 0;
+    top: 0; right: 128px;
 }
 
 .visual-slide-02 .container-text {

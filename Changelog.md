@@ -1,3 +1,8 @@
+20220616 18:15
+    - 04site_college
+        - 1.31 : button hover effects added, some images retoned, black boards added for readabilities
+    - 05site_PUBGesports started
+
 20220615 17:44
     - 04site_college
         - 1.0 released!
