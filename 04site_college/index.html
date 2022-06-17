@@ -10,40 +10,26 @@
     <!-- jQuery -->
     <script src="js/jquery-3.1.1.min.js"></script>
 
-    <!-- js for bxSlider -->
-    <script src="js/jquery.bxslider.js"></script>
     <!-- CSS for bxSlider -->
     <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <!-- js for bxSlider -->
+    <script src="js/jquery.bxslider.js"></script>
+
+    <!-- CSS for colorbox -->
+    <link rel="stylesheet" href="css/colorbox.css">
+    <!-- js for colorbox -->
+    <script src="js/jquery.colorbox-min.js"></script>
 
     <!-- CSS for page -->
     <link rel="stylesheet" href="css/general-settings.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- js for page -->
+    <script src="js/script.js"></script>
 
     <!-- Google Fonts - Nanum Gothic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-
-    <script>
-        $(document).ready(function(){
-            var slide_one = $(".visual-slide-01").bxSlider({
-                controls: false,
-                responsive: false,
-            });
-
-            $(".prev-btn").click(function(){
-                slide_one.goToPrevSlide();
-            });
-            $(".next-btn").click(function(){
-                slide_one.goToNextSlide();
-            });
-
-            $(".visual-slide-02").bxSlider({
-                controls: false,
-                responsive: false
-            });
-        })
-    </script>
 </head>
 <body>
     <header id="header">
@@ -243,8 +229,8 @@
                     <div class="container-text position-ab fonts-subtitle fonts-white fonts-bold">찾아오시는 길</div>
                 </li>
                 <li class="position-re">
-                    <a href="#"><img src="img/sct-07-thumbnail.png" alt="유튜브알쓸건잡썸네일"></a>
-                    <a href="#" class="position-ab"></a>
+                    <!-- <a href="https://www.youtube.com/embed/Ok65tF-wlU4" class="modal"></a> -->
+                    <a href="https://www.youtube.com/embed/Ok65tF-wlU4" class="modal position-ab"></a>
                 </li>
                 <li>
                     <ul class="visual-slide-02 fonts-white">
