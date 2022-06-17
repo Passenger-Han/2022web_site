@@ -11,12 +11,16 @@
 .fonts-white {color: #FFFFFF;}
 
 /* fonts styles */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .fonts-headline {font-size: 3.375em; font-weight: 600; letter-spacing: -0.045625em; line-height: 3.625em;}
 .fonts-category {font-size: 1.75em; font-weight: 600;line-height: 2.1875em;}
 .fonts-title {font-size: 1.25em; font-weight: 600; line-height: 1.5em;}
 .fonts-headline-sub {font-size: 1.25em; font-weight: 600; letter-spacing: -0.02375em; line-height: 2em;}
 .fonts-menu1 {font-weight: 600; line-height: 1.25em;}
-.fonts-menu1 {font-weight: 600; line-height: 1.125em;}
+.fonts-menu2 {font-weight: 600; line-height: 1.125em;}
 .fonts-subtitle {font-size: 0.875em; font-weight: 600;}
 .fonts-btn-detail {font-size: 0.875em; font-weight: 600; letter-spacing: 0.0075em;}
 .fonts-menu-footer {font-size: 0.875em; line-height: 1.125em;}

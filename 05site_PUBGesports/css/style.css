@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body {
+    background-color: #1B1B1B;
+}
+
+/* HEADER LAYOUTS */
+#header {
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .gnb-bar>ul {
+    justify-self: left;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.event-submenu,
+.language-submenu {
+    display: none;
+}

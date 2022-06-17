@@ -1,3 +1,9 @@
+20220617 18:21
+    - 04site_college
+        - 1.4 : modal added
+    - 05site_PUBGesports
+        - Header: learning for flexbox needed..
+
 20220616 18:15
     - 04site_college
         - 1.31 : button hover effects added, some images retoned, black boards added for readabilities
