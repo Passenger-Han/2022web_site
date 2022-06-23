@@ -1,3 +1,7 @@
+20220623 18:20
+    - 06site_tour
+        - started!
+
 20220617 18:21
     - 04site_college
         - 1.4 : modal added

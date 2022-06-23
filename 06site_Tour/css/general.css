@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* THEME */
+.theme-gradient-white-gray {background: linear-gradient(to bottom, #FFFFFF, #DEDEDE);}
+.theme-red {background-color: rgb(218, 41, 28);}
+.theme-champagne-gold {background-color: rgb(135, 118, 105);}
+
+/* FONTS */
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+.fonts-medium {font-weight: 500;}
+.fonts-bold {font-weight: 700;}
+
+.fonts-headline {font-size: 3em;}
+.fonts-headline-sub {font-size: 1.75em; line-height: 1.375em;}
+.fonts-title {font-size: 1.125em;}
+.fonts-description {font-size: 0.9375em;}
+.fonts-article {font-size: 0.875em;}
+.fonts-footer {font-size: 0.906875em}
+.fonts-footer-address {font-size: 0.8em}
+
+.fonts-gray {color: #868789;}
+.fonts-dark {color: #333333;}
+.fonts-red {color: rgb(218, 41, 28);}
+.fonts-white {color: #FFFFFF;}
+
+/* MEASUREMENT AND POSITION */
+.actualWorkspace {width: 980px; margin: 0 auto;}
+
+.position-re {position: relative;}
+.position-ab {position: absolute;}
+
+.transit {transition: 0.22s;}
+
+.cardboard {height: 216px;}

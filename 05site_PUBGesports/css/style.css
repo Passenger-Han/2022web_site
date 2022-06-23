@@ -12,15 +12,19 @@ body {
     align-items: center;
 }
 
-#header .gnb-bar>ul {
-    justify-self: left;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+#header .gnb-bar {
+    width: 90%;
 }
 
-.event-submenu,
-.language-submenu {
+#header .gnb-bar>ul {
+    display: flex;
+    gap: 48px;
+}
+
+.event-submenu {
+    display: none;
+}
+
+.language-selcetor .language-submenu {
     display: none;
 }
