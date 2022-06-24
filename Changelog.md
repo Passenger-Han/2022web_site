@@ -1,3 +1,7 @@
+20220624 16:19
+    - 06site_tour
+        - form boards are bad things.. I'm mentally almost dying! O<-<
+
 20220623 18:20
     - 06site_tour
         - started!

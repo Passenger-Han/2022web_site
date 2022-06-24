@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!-- library: fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- page CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,8 +27,14 @@
         <div class="wrap-upper-header theme-red">
             <div class="upper-header actualWorkspace">
                 <h1><img src="img/logo.png" alt="롯데투어"></h1>
-                <!-- <form action="" placeholder="검색어를 입력하세요"></form> -->
-                <div class="place-holder">PLACEHOLDER</div>
+                <div class="search-bar position-re">
+                    <form action="#">
+                        <input type="text" placeholder="검색어를 입력하세요">
+                    </form>
+                    <div class="wrap-icon position-ab">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
                 <div class="social-site">
                     <a href="#"><img src="img/btn-Facebook.png" alt="페이스북"></a>
                     <a href="#"><img src="img/btn-twitter.png" alt="트위터"></a>
@@ -62,14 +70,41 @@
                 <div class="section-row-first-left">
                     <div class="wrap-form-board">
                         <div class="form-board-selector">
-                            <ul>
+                            <ul class="theme-red">
                                 <li>공항예약</li>
                                 <li>호텔예약</li>
                                 <li>차량렌트</li>
                                 <li>휴양지</li>
                             </ul>
                         </div>
-                        <div class="form-board"></div>
+                        <div class="form-board">
+                            <form action="#">
+                                <div class="input">
+                                    <label for="country-select">가고싶은 나라를 선택하세요.</label>
+                                    <input type="text" placeholder="여행국가 선택">
+                                </div>
+                                <div class="input">
+                                    <label for="date-go">출발일</label>
+                                    <input type="date" placeholder="YYYY/MM/DD">
+                                </div>
+                                <div class="input">
+                                    <label for="date-come">귀국일</label>
+                                    <input type="date" placeholder="YYYY/MM/DD">
+                                </div>
+                                <div class="input">
+                                    <label for="seat-level">좌석등급</label>
+                                    <input type="text" placeholder="일반석">
+                                </div>
+                                <div class="input">
+                                    <label for="passenger-adult">성인</label>
+                                    <input type="text" placeholder="인원">
+                                </div>
+                                <div class="input">
+                                    <label for="passenger-child">아이</label>
+                                    <input type="text" placeholder="인원">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <div class="popular-location">
                         <ul>
