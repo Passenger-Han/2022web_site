@@ -1,3 +1,7 @@
+20220627 18:19
+    - 06site_Tour
+        - swiper added.
+
 20220624 16:19
     - 06site_tour
         - form boards are bad things.. I'm mentally almost dying! O<-<

@@ -80,9 +80,19 @@
     background-repeat: no-repeat;
 }
 
+.container-content {
+    width: 25%;
+    height: 216px;
+}
+
+/* SECTION ROW FIRST */
 #section-main .section-row-first-left,
 #section-main .section-row-first-right {
     width: 50%;
+}
+
+.section-row-first {
+    margin-bottom: 16px;
 }
 
 .section-row-first,
@@ -96,7 +106,6 @@
     height: 216px;
 }
 
-/* SECTION ROW FIRST */
 /* SECTION ROW FIRST LEFT */
 .section-row-first-left .wrap-form-board {
     height: 300px;
@@ -130,3 +139,69 @@
 .section-row-first-left .wrap-form-board .form-board {float: right;} */
 
 /* SECTION ROW FIRST RIGHT */
+
+/* .section-row-first-right .container-img {
+    z-index: 0;
+} */
+
+/* SECTION ROW SECOND */
+.section-row-second {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.section-row-second .swiper-wrapper .swiper-slide,
+.swiper-button-next,
+.swiper-button-prev {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 35%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next {
+    background-image: url(../img/btn-next.png);
+    right: 0;
+}
+
+.swiper-button-prev {
+    background-image: url(../img/btn-prev.png);
+    left: 0;
+}
+
+.section-row-second .recommendation-hotel .container-text i,
+.section-row-second .recommendation-landmark .container-text i {
+    font-size: 0.75em;
+}
+
+.section-row-second .recommendation-hotel .container-text i:nth-child(-n+4),
+.section-row-second .recommendation-landmark .container-text i:nth-child(-n+4) {
+    color: #ffd700;
+}
+
+.section-row-second .recommendation-hotel .container-text i:nth-child(n+5),
+.section-row-second .recommendation-landmark .container-text i:nth-child(n+5) {
+    color: #ffffff;
+}
+
+.section-row-second .swiper-wrapper .swiper-slide .container-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.875em;
+    background: #000;
+}
+
+.section-row-second .swiper-wrapper .swiper-slide .container-text h3 {
+    line-height: 0.825em;
+}
