@@ -7,16 +7,19 @@
 /* FONTS */
 body {font-family: 'Noto Sans KR', sans-serif;}
 
+.fonts-thin {font-weight: 100;}
+.fonts-regular {font-weight: 400;}
 .fonts-medium {font-weight: 500;}
 .fonts-bold {font-weight: 700;}
 
 .fonts-headline {font-size: 3em;}
 .fonts-headline-sub {font-size: 1.75em; line-height: 1.375em;}
 .fonts-title {font-size: 1.125em;}
-.fonts-description {font-size: 0.9375em;}
+.fonts-description {font-size: 0.9em;}
 .fonts-article {font-size: 0.875em;}
-.fonts-footer {font-size: 0.906875em}
-.fonts-footer-address {font-size: 0.8em}
+.fonts-footer {font-size: 0.906875em;}
+.fonts-footer-address {font-size: 0.8em;}
+.fonts-smallest {font-size: 0.75em;}
 
 .fonts-gray {color: #868789;}
 .fonts-dark {color: #333333;}

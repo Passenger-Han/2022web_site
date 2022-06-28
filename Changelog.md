@@ -1,3 +1,7 @@
+20220628 18:19
+    - 06site_Tour
+        - progressing, main section almost done..
+
 20220627 18:19
     - 06site_Tour
         - swiper added.
