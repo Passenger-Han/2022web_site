@@ -74,44 +74,74 @@
             <!-- SECTION ROW FIRST -->
             <div class="section-row-first">
                 <div class="section-row-first-left">
-                    <div class="wrap-form-board">
-                        <div class="form-board-selector">
-                            <ul class="theme-red">
-                                <li>공항예약</li>
-                                <li>호텔예약</li>
-                                <li>차량렌트</li>
-                                <li>휴양지</li>
-                            </ul>
-                        </div>
-                        <div class="form-board">
-                            <form action="#">
-                                <div class="input">
-                                    <label for="country-select">가고싶은 나라를 선택하세요.</label>
-                                    <input type="text" placeholder="여행국가 선택">
+                    <div class="swiper wrap-form-board">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="form-board">
+                                    <form action="#">
+                                        <fieldset>
+                                            <label for="select-country-01">가고싶은 나라를 선택하세요</label>
+                                            <select name="selectcountry" id="select-country-01">
+                                                <option value="">선택하세요</option>
+                                                <option value="국내">국내</option>
+                                                <option value="미국">미국</option>
+                                                <option value="일본">일본</option>
+                                                <option value="중국">중국</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="date-leave-01">출발일</label>
+                                                <input type="text" id="date-leave-01" name="dateleave">
+                                            </div>
+                                            <div class="float-right">
+                                                <label for="date-return-01">귀국일</label>
+                                                <input type="text" id="date-return-01" name="datereturn">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="seat-tier-01">좌석등급</label>
+                                                <select name="seattier" id="seat-tier-01">
+                                                    <option value="">선택하세요</option>
+                                                    <option value="economy-01">이코노미</option>
+                                                    <option value="business-01">비즈니스</option>
+                                                    <option value="first-class-01">퍼스트 클래스</option>
+                                                </select>
+                                            </div>
+                                            <div class="float-right clearfix">
+                                                <div class="float-left">
+                                                    <label for="passenger-adult-01">성인</label>
+                                                    <input type="number" name="passengeradult" id="passenger-adult-01">
+                                                </div>
+                                                <div class="float-right">
+                                                    <label for="passenger-child-01">아이</label>
+                                                    <input type="number" name="passengerchild" id="passenger-child-01">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <button>검색하기</button>
+                                    </form>
                                 </div>
-                                <div class="input">
-                                    <label for="date-go">출발일</label>
-                                    <input type="date" placeholder="YYYY/MM/DD">
-                                </div>
-                                <div class="input">
-                                    <label for="date-come">귀국일</label>
-                                    <input type="date" placeholder="YYYY/MM/DD">
-                                </div>
-                                <div class="input">
-                                    <label for="seat-level">좌석등급</label>
-                                    <input type="text" placeholder="일반석">
-                                </div>
-                                <div class="input">
-                                    <label for="passenger-adult">성인</label>
-                                    <input type="text" placeholder="인원">
-                                </div>
-                                <div class="input">
-                                    <label for="passenger-child">아이</label>
-                                    <input type="text" placeholder="인원">
-                                </div>
-                            </form>
+                            </div>
+                            <div class="swiper-slide">2</div>
+                            <div class="swiper-slide">3</div>
+                            <div class="swiper-slide">4</div>
                         </div>
                     </div>
+
+                    <script>
+                        var swiper00 = new Swiper('.wrap-form-board', {
+                            cssMode: 'true',
+                            direction: 'vertical',
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: 'true',
+                            },
+                        });
+                    </script>
+
                     <div class="popular-location">
                         <ul>
                             <li style="background-image: url(img/03travel01.jpg)">

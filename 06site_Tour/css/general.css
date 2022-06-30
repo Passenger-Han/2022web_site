@@ -32,6 +32,9 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 .position-re {position: relative;}
 .position-ab {position: absolute;}
 
+.float-left {float: left;}
+.float-right {float: right;}
+
 .transit {transition: 0.22s;}
 
 .cardboard {height: 216px;}

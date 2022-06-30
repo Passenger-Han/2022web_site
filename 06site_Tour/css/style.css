@@ -112,36 +112,76 @@
     margin-bottom: 16px;
     background: rgb(255, 255, 255);
 
-    display: flex;
+    /* display: flex; */
 }
 
-.section-row-first-left .wrap-form-board .form-board-selector {
+.section-row-first-left .wrap-form-board .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
+    /* initializing swiper CSS */
+    right: initial;
+    top: initial;
+    transform: initial;
+
+    left: 0;
     width: 25%;
-}
-
-.section-row-first-left .wrap-form-board .form-board-selector,
-.section-row-first-left .wrap-form-board .form-board-selector ul {
     height: 100%;
 }
 
-.section-row-first-left .wrap-form-board .form-board-selector li {
-    height: 25%;
-    
-    cursor: pointer;
+.section-row-first-left .wrap-form-board .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 100%));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 25%));
+    border-radius: 0;
+}
+
+.section-row-first-left .wrap-form-board .swiper-pagination-bullet:nth-child(1)::after {
+    content: "공항예약";
+    color: #FFFFFF;
+}
+.section-row-first-left .wrap-form-board .swiper-pagination-bullet:nth-child(2)::after {
+    content: "호텔예약";
+    color: #FFFFFF;
+}
+.section-row-first-left .wrap-form-board .swiper-pagination-bullet:nth-child(3)::after {
+    content: "렌트카";
+    color: #FFFFFF;
+}
+.section-row-first-left .wrap-form-board .swiper-pagination-bullet:nth-child(4)::after {
+    content: "휴양지";
+    color: #FFFFFF;
+}
+
+.section-row-first-left .wrap-form-board .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+
+.section-row-first-left .wrap-form-board .swiper-wrapper {
+    width: 75%;
+    position: absolute;
+    right: 0;
 }
 
 .section-row-first-left .wrap-form-board .form-board {
-    width: 75%;
     padding: 1rem;
 }
 
-/* float 를 이용해 좌우에 할당하고 싶다면, 위의 display: flex; 를 지우고
-아래를 활성화할 것 */
-/* .section-row-first-left .wrap-form-board .form-board-selector {float: left;}
-.section-row-first-left .wrap-form-board .form-board {float: right;} */
+.section-row-first-left .wrap-form-board .form-board fieldset {
+    border: 0 none;
+    margin-bottom: 12px;
+}
+
+.section-row-first-left .wrap-form-board .form-board label {
+    display: block;
+}
+
+.section-row-first-left .wrap-form-board .form-board .float-left,
+.section-row-first-left .wrap-form-board .form-board .float-right {
+    width: 48%;
+}
+
+.section-row-first-left .wrap-form-board .form-board input {
+    width: 100%;
+}
 
 /* SECTION ROW FIRST RIGHT */
-
 /* .section-row-first-right .container-img {
     z-index: 0;
 } */
