@@ -1,3 +1,7 @@
+20220701 18:20
+    - 06site_Tour
+        - mainpage almost!
+
 20220628 18:19
     - 06site_Tour
         - progressing, main section almost done..
