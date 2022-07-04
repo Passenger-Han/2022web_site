@@ -3,6 +3,8 @@
 .theme-gradient-white-gray {background: linear-gradient(to bottom, #FFFFFF, #DEDEDE);}
 .theme-red {background-color: rgb(218, 41, 28);}
 .theme-champagne-gold {background-color: rgb(135, 118, 105);}
+.theme-silver-tp {background-color: rgba(138, 141, 143, 0.22);}
+.theme-white {background-color: #FFFFFF;}
 
 /* FONTS */
 body {font-family: 'Noto Sans KR', sans-serif;}

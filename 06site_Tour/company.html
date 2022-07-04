@@ -37,7 +37,7 @@
         <!-- HEADER UPPER -->
         <div class="wrap-upper-header theme-red">
             <div class="upper-header actualWorkspace">
-                <h1><img src="img/logo.png" alt="롯데투어"></h1>
+                <h1><a href="./"><img src="img/logo.png" alt="롯데투어"></a></h1>
                 <div class="search-bar position-re">
                     <form action="#">
                         <input type="text" placeholder="검색어를 입력하세요">
@@ -57,7 +57,7 @@
 
         <!-- HEADER LOWER -->
         <div class="wrap-lower-header">
-            <div class="lower-header actualWorkspace">
+            <div class="lower-header">
                 <nav class="gnb">
                     <ul class="fonts-medium fonts-dark fonts-description">
                         <li>
@@ -73,7 +73,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">국내여행</a>
+                            <a href="company.html">국내여행</a>
                         </li>
                         <li>
                             <a href="#">제주여행</a>
@@ -97,10 +97,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">그랜드 하얏트 제주</a>
-                        </li>
-                        <li>
-                            <a href="#">#허니문</a>
+                            <a href="company.html">회사소개</a>
                         </li>
                     </ul>
                 </nav>
@@ -109,10 +106,29 @@
     </header>
 
     <!-- MAIN SECTION -->
-    <section id="section-sub">
-        <div class="visual"></div>
-    </section>
 
+    <section id="section-sub" class="subpage domestic-trip">
+
+        <div class="visual">
+            <div class="container-text actualWorkspace fonts-white">
+                <h2>국내여행</h2>
+                <p>합리적인 가격에 대한민국의 숨은 명소로 모셔드립니다.</p>
+            </div>
+        </div>
+
+        <div class="content theme-silver-tp">
+            <div class="wrap-content actualWorkspace theme-white position-re">
+                <div class="site-location position-ab">
+                    <p class="fonts-thin fonts-description">홈 > <a href="company.html" class="fonts-bold">회사소개</a></p>
+                </div>
+                <div class="container-img">
+                    <img src="img/subpage-placeholder01.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
     <!-- FOOTER -->
     <!-- FOOTER UPPER -->
     <footer id="footer">
@@ -176,5 +192,12 @@
 
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[0].innerHTML = `<i class="fa-solid fa-plane"></i> &nbsp;`;
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[1].innerHTML = `<i class="fa-solid fa-computer-mouse"></i> &nbsp;`;
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[2].innerHTML = `<i class="fa-solid fa-car"></i> &nbsp;`;
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[3].innerHTML = `<i class="fa-solid fa-umbrella-beach"></i> &nbsp;`;
+    </script>
 </body>
 </html>
