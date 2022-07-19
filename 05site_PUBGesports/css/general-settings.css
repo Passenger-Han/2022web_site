@@ -7,7 +7,7 @@
 .theme-white {background-color: #FFFFFF;}
 .theme-magenta {background-color: #B6082E;}
 .theme-red-wine {background-color: #9F0728;}
-.fonts-dark-gray {color: #252628;}  
+.fonts-dark-gray {color: #80898F;}  
 .fonts-white {color: #FFFFFF;}
 
 /* fonts styles */
@@ -15,17 +15,17 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.fonts-headline {font-size: 3.375em; font-weight: 600; letter-spacing: -0.045625em; line-height: 3.625em;}
-.fonts-category {font-size: 1.75em; font-weight: 600;line-height: 2.1875em;}
-.fonts-title {font-size: 1.25em; font-weight: 600; line-height: 1.5em;}
-.fonts-headline-sub {font-size: 1.25em; font-weight: 600; letter-spacing: -0.02375em; line-height: 2em;}
-.fonts-menu1 {font-weight: 600; line-height: 1.25em;}
-.fonts-menu2 {font-weight: 600; line-height: 1.125em;}
-.fonts-subtitle {font-size: 0.875em; font-weight: 600;}
-.fonts-btn-detail {font-size: 0.875em; font-weight: 600; letter-spacing: 0.0075em;}
-.fonts-menu-footer {font-size: 0.875em; line-height: 1.125em;}
-.fonts-copyright-footer {font-size: 0.8125em; letter-spacing: -0.015625em;}
-.fonts-date {font-size: 0.75em; font-weight: 600; /* with .fonts-headline-sub, add 'line-height: 2em;' */}
+.fonts-headline {font-size: 3.375rem; font-weight: 600; letter-spacing: -0.045625rem; line-height: 3.625rem;}
+.fonts-category {font-size: 1.75rem; font-weight: 600;line-height: 2.1875rem;}
+.fonts-title {font-size: 1.25rem; font-weight: 600; line-height: 1.5rem;}
+.fonts-headline-sub {font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02375rem; line-height: 2rem;}
+.fonts-menu1 {font-weight: 600; line-height: 1.25rem;}
+.fonts-menu2 {font-weight: 600; line-height: 1.125rem;}
+.fonts-subtitle {font-size: 0.875rem; font-weight: 600;}
+.fonts-btn-detail {font-size: 0.875rem; font-weight: 600; letter-spacing: 0.0075rem;}
+.fonts-menu-footer {font-size: 0.875rem; line-height: 1.125rem;}
+.fonts-copyright-footer {font-size: 0.8125rem; letter-spacing: -0.015625rem;}
+.fonts-date {font-size: 0.75rem; font-weight: 600; /* with .fonts-headline-sub, add 'line-height: 2rem;' */}
 
 /* measurements and positioning */
 .position-re {position: relative;}

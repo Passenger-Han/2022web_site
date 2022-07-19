@@ -3,9 +3,9 @@ body {
     background-color: #1B1B1B;
 }
 
-/* HEADER LAYOUTS */
+/* HEADER */
 #header {
-    padding: 20px 40px;
+    padding: 0 40px;
 
     display: flex;
     justify-content: space-between;
@@ -13,18 +13,122 @@ body {
 }
 
 #header .gnb-bar {
-    width: 90%;
+    width: 85%;
 }
 
 #header .gnb-bar>ul {
     display: flex;
-    gap: 48px;
+    gap: 40px;
 }
 
-.event-submenu {
-    display: none;
+.gnb-bar .event-submenu {
+    width: 160px;
+    left: -56px;
+
+    visibility: hidden;
 }
 
-.language-selcetor .language-submenu {
-    display: none;
+.gnb-bar .event-submenu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translateX(-50%) rotate(45deg);
+}
+.gnb-bar .event-submenu,
+.gnb-bar .event-submenu::before {
+    background-color: #B6082E;
+}
+
+.gnb-bar>ul>li:first-child:hover .event-submenu {
+    visibility: visible;
+}
+
+.gnb-bar .event-submenu ul li a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+
+.language-selector {
+    margin-right: 32px;
+}
+
+#header .gnb-bar>ul>li>a,
+.language-selector .container-img {
+    display: flex; align-items: center;
+    height: 100px;
+}
+
+.language-selector .language-submenu {
+    width: 120px;
+    left: -50px;
+
+    background-color: #FFFFFF;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.language-selector .language-submenu.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.language-selector .language-submenu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -4px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.gnb-bar .event-submenu ul,
+.language-selector .language-submenu ul{
+    position: relative;
+}
+
+.gnb-bar .event-submenu,
+.gnb-bar .event-submenu ul,
+.language-selector .language-submenu ul {
+    z-index: 2;
+}
+
+.language-selector .language-submenu ul li {
+    line-height: 40px;
+    text-indent: 1rem;
+}
+
+/* SECTION - MAINPAGE */
+#section {
+    width: 100%;
+}
+
+.visual {
+    height: 640px;
+    background-color: #A9A9A9;
+
+    display: flex;
+}
+
+.visual>div {
+    height: 100%;
+}
+
+.visual .swiper {
+    width: calc(100% - 480px);
+}
+
+.visual .ranking {
+    width: 480px;
 }

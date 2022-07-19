@@ -16,3 +16,7 @@ a:link, a:visited {
     display: block;
     clear: both;
 }
+
+img {
+    display: block;
+}

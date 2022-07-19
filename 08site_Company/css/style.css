@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* GENERAL SETTINGS */
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: -1.5%; color: #333333;}
+
+/* COMMONLY USED */
+.actualWorkspace {width: 1240px; margin: 0 auto;}
+
+/* COLORS */
+.theme-endeavour-blue {background-color: #005EB8;}
+.theme-white {background-color: #FFFFFF;}
+.fonts-white {color: #FFFFFF;}
+.fonts-faded {color: #666666;}
+
+/* MEASUREMENTS */
+.fonts-headline {font-weight: 700; font-size: 4em;}
+.fonts-title {font-weight: 900; font-size: 2em;}
+.fonts-headline-sub {font-size: 1.5em;}
+.fonts-desc-big {font-size: 1.625em;}
+.fonts-subtitle {font-weight: 500; font-size: 1.25em;}
+.fonts-article {font-size: 1em; line-height: 160%;}
+.fonts-date {font-size: 0.875em;}
+
+.btn-layout {border: 1px solid #FFFFFF; padding: 16px 40px;}
+
+.logo {width: 66%;}
+
+/* HEADER */
+
+#header {
+    position: absolute;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+/* HEADER LOGO */
+.wrap-navigator h1 {
+    display: flex; justify-content: center; align-items: center;
+}
+
+/* HEADER NAVIGATOR */
+.wrap-navigator,
+.navigator > ul {
+    display: flex;
+}
+
+.navigator {
+    margin-left: auto;
+}
+
+.navigator > ul {
+    height: 100%;
+}
+
+.navigator > ul > li {
+    position: relative;
+}
+
+
+.navigator > ul > li > a {
+    transition: 0.15s;
+    /* .fonts-subtitle */
+    font-size: 1.25em; font-weight: 500;
+    
+    height: 100%;
+    padding: 0 24px; /* 패딩이 아닌 다른 방법으로 균일한 너비를 가지게 하면 더 보기 좋아보일 거 같다 */
+    display: flex; justify-content: center; align-items: center;
+}
+.navigator > ul > li:hover > a {
+    background-color: #005EB8;
+    color: #FFFFFF;
+}
+
+/* HEADER NAVIGATOR SUBMENU */
+.submenu {display: none;}
+.submenu {
+    font-size: 1.06375em; font-weight: 300;
+}
+
+.navigator > ul > li:hover .submenu {
+    background-color: #fff;
+    color: #999999;
+    display: block; position: absolute;
+    width: 120%;
+    padding: 10px;
+    left: -10%;
+}
+
+.btn-toggle {
+    width: 40px;
+    height: 40px;
+    background-color: beige;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-toggle .bar {
+    width: 24px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+
+    transition: 0.23s;
+}
+
+.btn-toggle .bar:nth-child(1) {transform: translateY(-8px);}
+.btn-toggle .bar:nth-child(3) {transform: translateY(8px);}
+
+/* VISUAL */
+.wrap-visual {
+    height: 100vh;
+    background-color: goldenrod;
+}

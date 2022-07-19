@@ -11,22 +11,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
+    
+    <!-- Swiper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.0/swiper-bundle.min.js" integrity="sha512-+oUge+PHyEv6R7xjWkZ9zeGWbRLIs24P6/2afAClEZi+kZ2vsK+Di4Ud9ON39uAbkkcCrewO3ayzk2765bbPpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.0/swiper-bundle.css" integrity="sha512-W3EpFysZWfMjkA5NIsJ1jQbd2CvZrEY0YRB16wlQdePUuxykf4E47/Yqajz2vkCRcMYkxY9+CHY6r2Al0AExBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- CSS for page -->
     <link rel="stylesheet" href="css/initial.css">
     <link rel="stylesheet" href="css/general-settings.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header id="header" class="theme-matte-black fonts-dark-gray">
+
         <h1><img src="img/PUBG-Esports-Logo.svg" alt="PUBG-Esports-로고"></h1>
+
         <nav class="gnb-bar fonts-menu2">
             <ul>
-                <li>
+                <li class="position-re">
                     <a href="#">이벤트</a>
-                    <div class="event-submenu">
+                    <div class="event-submenu position-ab fonts-white">
                         <ul>
                             <li><a href="#">글로벌 대회</a></li>
                             <li><a href="#">전체 대회</a></li>
+                            <li><a href="#">PNC 2022</a></li>
                         </ul>
                     </div>
                 </li>
@@ -35,27 +44,59 @@
                 <li><a href="#">통계</a></li>
                 <li><a href="#">뉴스</a></li>
                 <li><a href="#">펍지 이스포츠</a></li>
-                <li><a href="#">PNC 2022</a></li>
             </ul>
         </nav>
-        <div class="language-selector">
-            <a href="#">
-                <img src="img/language-selector.svg" alt="언어선택">
-                <div class="language-submenu">
-                    <ul>
-                        <li><a href="#">영어</a></li>
-                        <li><a href="#">한국어</a></li>
-                        <li><a href="#">러시아어?</a></li>
-                        <li><a href="#">터키어</a></li>
-                        <li><a href="#">독일어</a></li>
-                        <li><a href="#">중국어(간체)</a></li>
-                        <li><a href="#">중국어(번체)</a></li>
-                        <li><a href="#">일본어</a></li>
-                        <li><a href="#">베트남어</a></li>
-                    </ul>
-                </div>
-            </a>
+
+        <div class="language-selector position-re">
+            <div class="container-img"><img src="img/language-selector.svg" alt="언어선택" class="language-selector-btn"></div>
+            <div class="language-submenu position-ab">
+                <ul>
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">러시아어</a></li>
+                    <li><a href="#">터키어</a></li>
+                    <li><a href="#">독일어</a></li>
+                    <li><a href="#">중국어번체</a></li>
+                    <li><a href="#">중국어간체</a></li>
+                    <li><a href="#">일본어</a></li>
+                    <li><a href="#">베트남어</a></li>
+                    <!-- 언어별 페이지를 따로 구상해둬야 함 -->
+                </ul>
+            </div>
         </div>
+
+        <script>
+            document.querySelector(".language-selector .language-selector-btn").addEventListener('click', function(){
+                document.querySelector(".language-selector .language-submenu").classList.toggle("active");
+            });
+        </script>
     </header>
+
+        <!-- SECTION MAINPAGE -->
+    <section id="section" class="mainpage">
+
+        <div class="visual">
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-color: gold">Slide 1</div>
+                    <div class="swiper-slide" style="background-color: blue">Slide 2</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="ranking"></div>
+
+            <script>
+                const swiper = new Swiper('.swiper', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                });
+            </script>
+
+        </div>
+
+    </section>
+
 </body>
 </html>
