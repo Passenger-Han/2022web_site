@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Page Stylesheet -->
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js" integrity="sha512-naEQG74IcOLQ6K/B1PmhIcZ4i3YE2FXs2zm603E1Q3shbron+PmYLg44/q+xAymD/RvskZ2H8l1Qa7I5qELlrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.css" integrity="sha512-5TGRCl3hPoqtruhO+mubTuySHOfcEBvyIfiWHoCK8wDLmf6C1U73OUoNCU6ZvyT/8vfCcha1INDIo8dabDmQjw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Page Stylesheet and JavaScript -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/temporal_sheet.css">
 </head>
 <body>
     <header id="header">
 
         <div class="wrap-navigator actualWorkspace">
 
-            <h1><a href="./"><img src="img/logo.png" alt="두산" class="logo"></a></h1>
+            <h1><a href="./"><img src="img/logo.png" alt="두산"></a></h1>
 
             <nav class="navigator">
                 <ul>
                     <li>
-                        <a href="#">회사소개</a>
+                        <a href="#">회사소개<img src="img/btn-Arrow.png" alt=""></a>
                         <ul class="submenu">
                             <li><a href="#">인사말</a></li>
                             <li><a href="#">해외법인</a></li>
@@ -36,7 +44,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">서비스</a>
+                        <a href="#">서비스<img src="img/btn-Arrow.png" alt=""></a>
                         <ul class="submenu">
                             <li><a href="#">비즈니스 솔루션</a></li>
                             <li><a href="#">디지털 & 플랫폼 솔루션</a></li>
@@ -44,14 +52,14 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">인더스트리</a>
+                        <a href="#">인더스트리<img src="img/btn-Arrow.png" alt=""></a>
                         <ul class="submenu">
                             <li><a href="#">산업기계</a></li>
                             <li><a href="#">드론</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">리소스</a>
+                        <a href="#">리소스<img src="img/btn-Arrow.png" alt=""></a>
                         <ul class="submenu">
                             <li><a href="#">인사이트 콘텐츠</a></li>
                             <li><a href="#">뉴스</a></li>
@@ -59,7 +67,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">고객지원</a>
+                        <a href="#">고객지원<img src="img/btn-Arrow.png" alt=""></a>
                         <ul class="submenu">
                             <li><a href="#">문의하기</a></li>
                             <li><a href="#">자주하는 질문</a></li>
@@ -67,32 +75,61 @@
                     </li>
                     <li>
                         <a href="#">커스터마이즈</a>
-                        <ul class="submenu">
-                            <li><a href="#">Sub04-01</a></li>
-                            <li><a href="#">Sub04-02</a></li>
-                            <li><a href="#">Sub04-03</a></li>
-                            <li><a href="#">Sub04-04</a></li>
-                        </ul>
                     </li>
                 </ul>
             </nav>
+
+            <div class="language-selector">
+                <div><a href="javascript:void(0);" class="selected">KOR</a></div>
+                <div><a href="javascript:void(0);">ENG</a></div>
+            </div>
 
             <div class="btn-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-
-            <div class="navigator-cloned"></div>
-
+            
         </div>
-
-    </header>
-
-
-    <div class="wrap-visual">
         
+    </header>
+    <div class="overlay"></div>
+    <div class="navigator-cloned">
+        <div class="navigator-mobile"></div>
     </div>
+
+    <section id="sct01">
+        <div class="swiper">
+            <div class="visual swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(img/visual01.png);">
+                    <div class="container-text">
+                        <h3 class="fonts-subtitle">GRAND OPEN</h3>
+                        <h2 class="fonts-headline" style="margin-bottom: 24px;">두산의 새로운 창의혁신공간 오픈 이노베이션 센터</h2>
+                        <p class="fonts-headline-sub" style="margin-bottom: 24px;">분당 두산타워 24층에 위치한 오픈 이노베이션 센터는<br>
+                            사람을 중심으로 창의적인 생각과 활동이 모이고 연결되어<br>
+                            혁신적인 성과를 만들어내는 두산 그룹의 새로운 혁신 공간입니다.<br></p>
+                        <p class="fonts-headline-sub">사람(People), 공간(Place), 프로세스(Design Process)가 융합되어 새로운 일하는 경험을 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(img/visual02.png);">
+                    <div class="container-text">
+                        <h3>GRAND OPEN</h3>
+                        <h2 class="fonts-headline">두산의 새로운 창의혁신공간 오픈 이노베이션 센터</h2>
+                        <p>분당 두산타워 24층에 위치한 오픈 이노베이션 센터는
+                            사람을 중심으로 창의적인 생각과 활동이 모이고 연결되어
+                            혁신적인 성과를 만들어내는 두산 그룹의 새로운 혁신 공간입니다.</p>
+                        <p>사람(People), 공간(Place), 프로세스(Design Process)가 융합되어 새로운 일하는 경험을 제공합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const swiperMain = new Swiper('#sct01 .swiper', {
+            loop: true,
+        });
+    </script>
 
     <script src="js/script.js"></script>
 </body>

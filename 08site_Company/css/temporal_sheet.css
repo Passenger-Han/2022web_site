@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* 1200px */
+/* 1200px */
+/* 1200px */
+@media screen and (max-width: 1199px){
+    .actualWorkspace {
+        /* was in COMMONLY USED */
+        width: 100%;
+    }
+}
+
+/* 992px */
+/* 992px */
+/* 992px */
+@media screen and (max-width: 991px){
+}
+
+/* 768px */
+/* 768px */
+/* 768px */
+@media screen and (max-width: 767px){
+    .wrap-navigator {
+        padding: 0 40px;
+        justify-content: space-between;
+    }
+    
+    /* PC NAVIGATOR AND PC LANGUAGE SELECTOR OFF */
+    .navigator {
+        display: none;
+    }
+
+    .language-selector {
+        display: none;
+    }
+    
+    /* MOBILE TOGGLE BUTTON */
+    .btn-toggle {
+        align-self: center;
+        display: flex;
+    }
+
+    /* MOBILE NAVIGATOR CLONED */
+    .navigator-cloned {
+        display: block;
+    }
+
+    .navigator-mobile {
+        padding-top: 120px;
+    }
+
+    .navigator-cloned .navigator-mobile > ul > li {
+        /* .fonts-subtitle */
+        font-size: 1.25em; font-weight: 500;
+        margin-bottom: 16px;
+    }
+
+    .navigator-cloned .navigator-mobile > ul > li:after {
+        /* Borderlines */
+        content: "";
+        display: block;
+        margin: 1px auto;
+        width: 80%;
+        height: 1px;
+        background-color: #EAEAEA;
+    }
+    .navigator-cloned .navigator-mobile > ul > li:last-child::after {
+        display: none;
+    }
+
+    .navigator-cloned .navigator-mobile > ul > li > a {
+        min-height: 40px;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigator-cloned .navigator-mobile > ul > li > a > img {
+        display: block;
+    }
+
+    .navigator-cloned .navigator-mobile > ul > li.active > a > img {
+        transform: rotate(-90deg);
+    }
+
+    .navigator-cloned .navigator-mobile > ul > li .submenu {
+        font-weight: 300;
+        margin: 0 40px;
+    }
+    .navigator-cloned .navigator-mobile > ul > li.active .submenu {
+        display: block;
+    }
+    
+    .navigator-cloned .navigator-mobile > ul > li .submenu > li {
+        background-color: #EAEAEA;
+        width: 88%;
+        margin-left: auto;
+        text-indent: 8px;
+        padding: 8px;
+        margin-bottom: 1px;
+    }
+}

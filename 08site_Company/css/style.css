@@ -22,32 +22,39 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .btn-layout {border: 1px solid #FFFFFF; padding: 16px 40px;}
 
-.logo {width: 66%;}
-
 /* HEADER */
 
 #header {
     position: absolute;
+    z-index: 10;
     width: 100%;
+    height: 104px;
     background-color: #FFFFFF;
+    box-shadow: 0 0 6px #00000033;
+}
+#header.toggle {
+    position: fixed;
+}
+
+.wrap-navigator {
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    /* align-items: stretch; */
 }
 
 /* HEADER LOGO */
 .wrap-navigator h1 {
-    display: flex; justify-content: center; align-items: center;
+    display: flex; align-items: center;
 }
 
 /* HEADER NAVIGATOR */
-.wrap-navigator,
-.navigator > ul {
-    display: flex;
-}
-
 .navigator {
     margin-left: auto;
 }
 
 .navigator > ul {
+    display: flex;
     height: 100%;
 }
 
@@ -60,35 +67,51 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     transition: 0.15s;
     /* .fonts-subtitle */
     font-size: 1.25em; font-weight: 500;
-    
     height: 100%;
-    padding: 0 24px; /* 패딩이 아닌 다른 방법으로 균일한 너비를 가지게 하면 더 보기 좋아보일 거 같다 */
+    width: 112px;
     display: flex; justify-content: center; align-items: center;
 }
-.navigator > ul > li:hover > a {
+.navigator > ul > li.active > a {
     background-color: #005EB8;
     color: #FFFFFF;
 }
 
+.navigator > ul > li > a > img {
+    display: none;
+}
+
 /* HEADER NAVIGATOR SUBMENU */
-.submenu {display: none;}
-.submenu {
-    font-size: 1.06375em; font-weight: 300;
-}
-
-.navigator > ul > li:hover .submenu {
+.navigator > ul > li .submenu {
+    transition: 0.15s;
+    font-weight: 300;
     background-color: #fff;
-    color: #999999;
-    display: block; position: absolute;
-    width: 120%;
+    position: absolute;
+    width: 140%;
     padding: 10px;
-    left: -10%;
+    left: -22%;
+    display: none;
+    /* visibility: hidden; */
+    /* opacity: 0.33; */
+    /* transform: translateY(6px); */
 }
 
+.navigator > ul > li.active .submenu {
+    display: block;
+    /* visibility: visible; */
+    /* opacity: 1; */
+    /* transform: translateY(0); */
+}
+
+.navigator > ul > li .submenu > li > a {
+    line-height: 1.875em;
+    font-weight: 300;
+}
+
+/* MOBILE - HEADER TOGGLE BUTTON */
 .btn-toggle {
     width: 40px;
     height: 40px;
-    background-color: beige;
+    border: 1px solid #333333;
     /* display: flex; */
     display: none;
     justify-content: center;
@@ -96,19 +119,89 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 }
 
 .btn-toggle .bar {
-    width: 24px;
-    height: 3px;
-    background-color: #000;
+    width: 18px;
+    height: 1px;
+    background-color: #000000;
     position: absolute;
-
-    transition: 0.23s;
 }
 
-.btn-toggle .bar:nth-child(1) {transform: translateY(-8px);}
-.btn-toggle .bar:nth-child(3) {transform: translateY(8px);}
+#header .btn-toggle .bar:nth-child(1) {transform: translateY(-8px);}
+#header .btn-toggle .bar:nth-child(3) {transform: translateY(8px);}
+
+#header.toggle .btn-toggle .bar:nth-child(1) {transform: rotate(45deg);}
+#header.toggle .btn-toggle .bar:nth-child(2) {opacity: 0;}
+#header.toggle .btn-toggle .bar:nth-child(3) {transform: rotate(-45deg);}
+
+/* LANGUAGE SELECTOR */
+.language-selector {
+    display: flex; align-items: center;
+    margin-left: 30px;
+}
+
+.language-selector div {
+    width: 48px;
+    height: 48px;
+    margin-left: -1px;
+}
+
+.language-selector a {
+    width: 100%;
+    height: 100%;
+    display: flex; justify-content: center; align-items: center;
+    border: 1px solid #000000;
+}
+
+.language-selector .selected {
+    border: none;
+    background-color: #005EB8;
+    color: #FFFFFF;
+}
+
+/* MOBILE - HEADER TOGGLE MENU */
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000055;
+}
+
+.navigator-cloned {
+    display: none;
+    width: calc(100% - 56px);
+    height: 100%;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: -100%;
+}
+
+.navigator-mobile .submenu {
+    display: none;
+}
 
 /* VISUAL */
-.wrap-visual {
+#sct01 .swiper {
     height: 100vh;
     background-color: goldenrod;
+}
+
+#sct01 .swiper .swiper-wrapper,
+#sct01 .swiper .swiper-wrapper .swiper-slide {
+    height: 100%;
+}
+
+#sct01 .swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; justify-content: center; align-items: center;
+}
+
+#sct01 .swiper-slide .container-text {
+    color: white;
 }
