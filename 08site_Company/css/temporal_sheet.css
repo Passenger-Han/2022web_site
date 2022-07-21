@@ -13,6 +13,16 @@
 /* 992px */
 /* 992px */
 @media screen and (max-width: 991px){
+    /* MEASUREMENTS */
+    .fonts-headline {font-weight: 700; font-size: 3.25em; line-height: 1.05em;}
+    /* .fonts-title {font-weight: 900; font-size: 2em;} */
+    .fonts-headline-sub {font-weight: 200; font-size: 1.1em;}
+    /* .fonts-desc-big {font-size: 1.625em;} */
+    /* .fonts-subtitle {font-weight: 500; font-size: 1.25em;} */
+    /* .fonts-article {font-size: 1em; line-height: 160%;} */
+    /* .fonts-date {font-size: 0.875em;} */
+
+    /* .btn-layout {border: 1px solid #FFFFFF; padding: 16px 40px;} */
 }
 
 /* 768px */

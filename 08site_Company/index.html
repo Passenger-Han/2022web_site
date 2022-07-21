@@ -103,33 +103,139 @@
             <div class="visual swiper-wrapper">
                 <div class="swiper-slide" style="background-image: url(img/visual01.png);">
                     <div class="container-text">
+                        <h3 class="fonts-subtitle" style="font-weight: 300;">Doosan Digital Innovation</h3>
+                        <h2 class="fonts-headline" style="margin-bottom: 20px;">
+                            두산 디지털이노베이션은<br>
+                            전세계 법인을 거점으로<br>
+                            Global IT 서비스를 제공합니다.
+                        </h2>
+                        <p class="fonts-headline-sub" style="margin-bottom: 20px;">
+                            미주(DDI America), 유럽(DDI Europe) 및 중국(DDI China)등에<br>
+                            글로벌 IT 거점을 구축하여 핵심 계열사들의 글로벌 비즈니스를 지원하고 있습니다.<br></p>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(img/visual02.png);">
+                    <div class="container-text">
                         <h3 class="fonts-subtitle">GRAND OPEN</h3>
-                        <h2 class="fonts-headline" style="margin-bottom: 24px;">두산의 새로운 창의혁신공간 오픈 이노베이션 센터</h2>
-                        <p class="fonts-headline-sub" style="margin-bottom: 24px;">분당 두산타워 24층에 위치한 오픈 이노베이션 센터는<br>
+                        <h2 class="fonts-headline" style="margin-bottom: 20px;">두산의 새로운 창의혁신공간 오픈 이노베이션 센터</h2>
+                        <p class="fonts-headline-sub" style="margin-bottom: 20px;">
+                            분당 두산타워 24층에 위치한 오픈 이노베이션 센터는<br>
                             사람을 중심으로 창의적인 생각과 활동이 모이고 연결되어<br>
                             혁신적인 성과를 만들어내는 두산 그룹의 새로운 혁신 공간입니다.<br></p>
                         <p class="fonts-headline-sub">사람(People), 공간(Place), 프로세스(Design Process)가 융합되어 새로운 일하는 경험을 제공합니다.</p>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url(img/visual02.png);">
-                    <div class="container-text">
-                        <h3>GRAND OPEN</h3>
-                        <h2 class="fonts-headline">두산의 새로운 창의혁신공간 오픈 이노베이션 센터</h2>
-                        <p>분당 두산타워 24층에 위치한 오픈 이노베이션 센터는
-                            사람을 중심으로 창의적인 생각과 활동이 모이고 연결되어
-                            혁신적인 성과를 만들어내는 두산 그룹의 새로운 혁신 공간입니다.</p>
-                        <p>사람(People), 공간(Place), 프로세스(Design Process)가 융합되어 새로운 일하는 경험을 제공합니다.</p>
-                    </div>
-                </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
     <script>
         const swiperMain = new Swiper('#sct01 .swiper', {
             loop: true,
+            pagination: {
+                el: "#sct01 .swiper-pagination",
+            },
+            navigation: {
+                nextEl: "#sct01 .swiper-button-next",
+                prevEl: "#sct01 .swiper-button-prev",
+            },
         });
     </script>
+
+    <section id="sct02">
+        <div class="wrap-content grid-container actualWorkspace">
+            <div class="grid-item">01</div>
+            <div class="grid-item">
+                02
+                <div class="container-text">
+                    <h3 class="fonts-title fonts-white">경비 처리 솔루션</h3>
+                    <div class="border"></div>
+                    <p class="fonts-article fonts-white">통합 결산 환경제공을 위한 연결 결산 시스템 및
+                        결산 지원 IT서비스를 제공합니다</p>
+                </div>
+                    <a href="javascript:void(0);" class="btn-more fonts-white">더보기</a>
+            </div>
+            <div class="grid-item">
+                <div class="container-icon">
+                    <img src="img/icon-concur.png" alt="">
+                    <h3>03 Concur</h3>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="container-icon">
+                    <img src="img/icon-security.png" alt="">
+                    <h3>04 Security</h3>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="container-icon">
+                    <img src="img/icon-successfactor.png" alt="">
+                    <h3>05 Success Factor</h3>
+                </div>
+            </div>
+            <div class="grid-item">
+                06
+                <div class="container-text">
+                    <h3 class="fonts-title fonts-white">HR</h3>
+                    <div class="border"></div>
+                    <p class="fonts-article fonts-white">Global HR Management/Program 실현을 위한
+                        Global HRIS 기획 및 구축을 수행합니다</p>
+                </div>
+                    <a href="javascript:void(0);" class="btn-more fonts-white">더보기</a>
+            </div>
+            <div class="grid-item">
+                07
+                <div class="container-text-horizontal">
+                    <h3 class="fonts-title fonts-white">EDR & MDR</h3>
+                    <div class="border"></div>
+                    <p class="fonts-article fonts-white">EDR 솔루션
+                        MDR 서비스
+                        
+                        컨설팅부터
+                        PoC 및 구축으로
+                        강력한 보안체계를
+                        제공합니다</p>
+                </div>
+                    <a href="javascript:void(0);" class="btn-more fonts-white">더보기</a>
+            </div>
+            <div class="grid-item">
+                08
+                <div class="container-text">
+                    <h3 class="fonts-title fonts-white">구매 업무</h3>
+                    <div class="border"></div>
+                    <p class="fonts-article fonts-white">구매 프로세스 수립 및 시스템 구축 및
+                        WEB 환경으로 통합구매 Workplace 서비스를 제공합니다</p>
+                </div>
+                    <a href="javascript:void(0);" class="btn-more fonts-white">더보기</a>
+            </div>
+            <div class="grid-item">
+                <div class="container-icon">
+                    <img src="img/icon-ariba.png" alt="">
+                    <h3>09 Ariba</h3>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="container-icon">
+                    <img src="img/icon-cube.png" alt="">
+                    <h3>10 Cube</h3>
+                </div>
+            </div>
+            <div class="grid-item">
+                11
+                <div class="container-text">
+                    <h3 class="fonts-title fonts-white">Cloud & Server</h3>
+                    <div class="border"></div>
+                    <p class="fonts-article fonts-white">그룹의 IT 인프라를 효과적으로 관리하기 위해
+                        데이터센터 및 네트워크 서비스, 인터넷전화와
+                        재해복구 서비스를 제공하고 합니다</p>
+                </div>
+                    <a href="javascript:void(0);" class="btn-more fonts-white">더보기</a>
+            </div>
+        </div>
+    </section>
 
     <script src="js/script.js"></script>
 </body>

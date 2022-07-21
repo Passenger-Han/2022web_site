@@ -1,3 +1,7 @@
+20220721 06:18
+    - 08site_Company
+        - Stopped at #sct01. (for making it responsive)
+
 20220720 18:18
     - 08site_Company
         - Header.
