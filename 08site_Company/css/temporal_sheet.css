@@ -14,7 +14,7 @@
 /* 992px */
 @media screen and (max-width: 991px){
     /* MEASUREMENTS */
-    .fonts-headline {font-weight: 700; font-size: 3.25em; line-height: 1.05em;}
+    .fonts-headline {font-weight: 700; font-size: 2.5em; line-height: 1.05em;}
     /* .fonts-title {font-weight: 900; font-size: 2em;} */
     .fonts-headline-sub {font-weight: 200; font-size: 1.1em;}
     /* .fonts-desc-big {font-size: 1.625em;} */
@@ -23,6 +23,19 @@
     /* .fonts-date {font-size: 0.875em;} */
 
     /* .btn-layout {border: 1px solid #FFFFFF; padding: 16px 40px;} */
+
+    /* SECTION 1 VISUAL */
+    #sct01 .swiper-slide .container-text {
+        padding: 40px;
+        margin-top: -28%;
+    }
+
+    #sct01 .swiper-slide .container-text p {
+        display: none;
+    }
+
+    #sct01 .swiper-button-next {display: none;}
+    #sct01 .swiper-button-prev {display: none;}
 }
 
 /* 768px */
@@ -108,5 +121,68 @@
         text-indent: 8px;
         padding: 8px;
         margin-bottom: 1px;
+    }
+/* SECTION 1 VISUAL */
+/* SWIPER CUSTOM */ /* SECTION 1 SWIPER */
+    #sct01 .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 5%;
+    }
+
+    /* SECTION 2 */
+    #sct02 .grid-container {
+        height: initial;
+        display: flex;
+        /* grid-template-columns: 25% 25% 25% 25%; */
+        /* grid-template-rows: 25% 25% 25% 25%; */
+        /* position: relative; */
+        /* z-index: 3; */
+        flex-direction: column;
+        margin-top: initial;
+    }
+
+    #sct02 .grid-item .container-text {
+        flex-direction: row;
+        align-items: baseline;
+    }
+    
+    #sct02 .grid-item .container-text-horizontal {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+
+    #sct02 .grid-item:nth-child(1) {display: none;}
+    #sct02 .grid-item:nth-child(2) {} /* .container-text */
+    #sct02 .grid-item:nth-child(3) {display: none;} /* .container-icon */
+    #sct02 .grid-item:nth-child(4) {display: none;} /* .container-icon */
+    #sct02 .grid-item:nth-child(5) {display: none;} /* .container-icon */
+    #sct02 .grid-item:nth-child(6) {} /* .container-text */
+    #sct02 .grid-item:nth-child(7) {} /* .container-text-horizontal */
+    #sct02 .grid-item:nth-child(8) {} /* .container-text */
+    #sct02 .grid-item:nth-child(9) {display: none;} /* .container-icon */
+    #sct02 .grid-item:nth-child(10) {display: none;} /* .container-icon */
+    #sct02 .grid-item:nth-child(11) {} /* .container-text */
+
+    #sct02 .grid-item p,
+    #sct02 .grid-item a {
+        display: none;
+    }
+
+    #sct02 .grid-item:nth-child(2) .border {width: initial; flex-grow: 1;}
+    #sct02 .grid-item:nth-child(6) .border {width: initial; flex-grow: 1;}
+    #sct02 .grid-item:nth-child(7) .border {width: initial; flex-grow: 1;}
+    #sct02 .grid-item:nth-child(8) .border {width: initial; flex-grow: 1;}
+    #sct02 .grid-item:nth-child(11) .border {width: initial; flex-grow: 1;}
+
+    #sct02 .grid-item:nth-child(2) .border:after {content: ""; display: block; width: 1px; height: 24px; background-color: #FFFFFF; transform: rotate(-45deg); position: absolute; right: 8px; bottom: -3px;}
+    #sct02 .grid-item:nth-child(6) .border:after {content: ""; display: block; width: 1px; height: 24px; background-color: #FFFFFF; transform: rotate(-45deg); position: absolute; right: 8px; bottom: -3px;}
+    #sct02 .grid-item:nth-child(7) .border:after {content: ""; display: block; width: 1px; height: 24px; background-color: #FFFFFF; transform: rotate(-45deg); position: absolute; right: 8px; bottom: -3px;}
+    #sct02 .grid-item:nth-child(8) .border:after {content: ""; display: block; width: 1px; height: 24px; background-color: #FFFFFF; transform: rotate(-45deg); position: absolute; right: 8px; bottom: -3px;}
+    #sct02 .grid-item:nth-child(11) .border:after {content: ""; display: block; width: 1px; height: 24px; background-color: #FFFFFF; transform: rotate(-45deg); position: absolute; right: 8px; bottom: -3px;}
+
+    /* SECTION 3 */
+    #sct03 {
+        display: none;
     }
 }

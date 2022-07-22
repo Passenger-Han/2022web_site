@@ -22,33 +22,6 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .btn-layout {border: 1px solid #FFFFFF; padding: 16px 40px;}
 
-/* SWIPER CUSTOM */
-/* SECTION 1 SWIPER */
-#sct01 .swiper-pagination-bullet {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    border: 1px solid #FFFFFF;
-    background: none;
-    border-radius: 50%;
-}
-
-#sct01 .swiper-pagination-bullet-active {
-    border: none;
-    background: #FFFFFF;
-}
-
-#sct01 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 35%; left: 50%;
-    transform: translateX(-50%);
-    width: initial;
-}
-
-#sct01 .swiper-button-next {background-image: url(../img/btn-right.png); background-size: cover; right: 14.5%;}
-#sct01 .swiper-button-prev {background-image: url(../img/btn-left.png); background-size: cover; left: 14.5%;}
-#sct01 .swiper-button-next::after {display: none;}
-#sct01 .swiper-button-prev::after {display: none;}
-
 /* HEADER */
 
 #header {
@@ -212,6 +185,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 }
 
 /* SECTION 1 VISUAL */
+/* SWIPER CUSTOM */ /* SECTION 1 SWIPER */
 #sct01 .swiper {
     height: 100vh;
     background-color: goldenrod;
@@ -233,6 +207,34 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     color: white;
     margin-top: -8%;
 }
+
+
+#sct01 .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border: 1px solid #FFFFFF;
+    background: none;
+    border-radius: 50%;
+}
+
+#sct01 .swiper-pagination-bullet-active {
+    border: none;
+    background: #FFFFFF;
+}
+
+#sct01 .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 35%; left: 50%;
+    transform: translateX(-50%);
+    width: initial;
+}
+
+#sct01 .swiper-button-next {background-image: url(../img/btn-right.png); background-size: cover; right: 14.5%;}
+#sct01 .swiper-button-prev {background-image: url(../img/btn-left.png); background-size: cover; left: 14.5%;}
+#sct01 .swiper-button-next::after {display: none;}
+#sct01 .swiper-button-prev::after {display: none;}
+
 
 /* SECTION 2 */
 #sct02 {
@@ -256,6 +258,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 #sct02 .grid-item .border {
     height: 1px;
     background-color: #FFFFFF;
+    position: relative;
 }
 
 #sct02 .grid-item:nth-child(2) .border {width: 29%;}
@@ -297,4 +300,29 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 #sct02 .grid-item {
     background-color: #CACACA;
     border: 1px dotted #FFFFFF;
+}
+
+
+/* SECTION 3 */
+#sct03 {
+    /* height: 520px; */
+    padding: 112px 0;
+    background-color: #CACACA; /* TEMPORAL */
+}
+
+#sct03 .wrap-scroll {
+    height: 148px;
+    width: 100%;
+}
+
+#sct03 .wrap-scroll .scroll-list {
+    display: flex;
+}
+
+#sct03 .wrap-scroll .scroll-list li {
+    background-color: #FFFFFF;
+}
+
+#sct03 .wrap-scroll .scroll-list li img {
+    height: 100%;
 }
