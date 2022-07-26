@@ -1,4 +1,8 @@
-20220721 06:18
+20220726 18:15
+    - 08site_Company
+        - putting background-images..
+
+20220721 18:18
     - 08site_Company
         - Stopped at #sct01. (for making it responsive)
 

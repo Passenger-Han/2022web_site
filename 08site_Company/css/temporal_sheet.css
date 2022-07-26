@@ -14,9 +14,9 @@
 /* 992px */
 @media screen and (max-width: 991px){
     /* MEASUREMENTS */
-    .fonts-headline {font-weight: 700; font-size: 2.5em; line-height: 1.05em;}
-    /* .fonts-title {font-weight: 900; font-size: 2em;} */
-    .fonts-headline-sub {font-weight: 200; font-size: 1.1em;}
+    .fonts-headline {font-weight: 700; font-size: 2.25em; line-height: 1.0875em;}
+    .fonts-title {font-weight: 700; font-size: 1.6em;}
+    .fonts-headline-sub {font-weight: 200; font-size: 1.075em;}
     /* .fonts-desc-big {font-size: 1.625em;} */
     /* .fonts-subtitle {font-weight: 500; font-size: 1.25em;} */
     /* .fonts-article {font-size: 1em; line-height: 160%;} */
@@ -27,7 +27,7 @@
     /* SECTION 1 VISUAL */
     #sct01 .swiper-slide .container-text {
         padding: 40px;
-        margin-top: -28%;
+        margin-top: initial;
     }
 
     #sct01 .swiper-slide .container-text p {
@@ -42,8 +42,16 @@
 /* 768px */
 /* 768px */
 @media screen and (max-width: 767px){
+    .forMobile {
+        display: block;
+    }
+
+    #header {
+        height: 9.5vh;
+    }
+
     .wrap-navigator {
-        padding: 0 40px;
+        padding: 0 16px;
         justify-content: space-between;
     }
     
@@ -219,4 +227,50 @@
 
     #sct04 .wrap-news .news:nth-child(2) .container-text {order: initial;}
     #sct04 .wrap-news .news:nth-child(2) .container-img {order: initial;}
+
+    /* FOOTER */
+    /* FOOTER FAQ */
+    .wrap-faq {
+        padding: 18px 0;
+    }
+
+    .wrap-faq .container-text {
+        gap: 16px;
+    }
+
+    .wrap-faq .container-text h3 {
+        display: none;
+    }
+
+    /* FOOTER MENU BAR */
+    /* FOOTER MENU BAR UPPER */
+    .wrap-footer-bar {
+        padding: 20px;
+    }
+
+    .wrap-footer-bar .footer-bar-upper {
+        border-bottom: initial;
+    }
+
+    .wrap-footer-bar .footer-bar-upper .wrap-footer-menu {
+        display: none;
+    }
+
+    .wrap-footer-bar .footer-bar-upper .wrap-footer-privacy ul:after {
+        margin-bottom: initial;
+    }
+
+    /* FOOTER MENU BAR LOWER */
+    .wrap-footer-bar .footer-bar-lower {
+        align-items: center;
+        padding: initial;
+    }
+
+    .wrap-footer-bar .footer-bar-lower .container-img {
+        padding-right: 16px;
+    }
+
+    .wrap-footer-bar .footer-bar-lower .container-img a img {
+        width: 100px;
+    }
 }

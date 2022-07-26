@@ -22,6 +22,10 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .btn-layout {border: 1px solid #FFFFFF; padding: 16px 40px;}
 
+.forMobile {
+    display: none;
+}
+
 /* HEADER */
 
 #header {
@@ -205,7 +209,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 #sct01 .swiper-slide .container-text {
     color: white;
-    margin-top: -8%;
+    margin-top: -15em;
 }
 
 
@@ -253,6 +257,10 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 #sct02 .grid-item {
     padding: 50px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #sct02 .grid-item .border {
@@ -411,3 +419,86 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 }
 
 /* FOOTER */
+/* FOOTER FAQ */
+.wrap-faq {
+    padding: 36px 0;
+    background-image: url(../img/faq-background.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-faq .container-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 33px;
+}
+
+.wrap-faq .container-text .btn-layout {
+    width: fit-content;
+}
+
+/* FOOTER MENU BAR */
+/* FOOTER MENU BAR UPPER */
+.wrap-footer-bar {
+    background-color: #F2F2F2;
+    padding: 97px 0 34px;
+}
+
+.wrap-footer-bar a {
+    color: #555658;
+}
+
+.wrap-footer-bar .footer-bar-upper {
+    border-bottom: 1px solid #5556581F;
+}
+
+.wrap-footer-bar .footer-bar-upper .wrap-footer-menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 95px;
+}
+
+.wrap-footer-bar .footer-bar-upper .wrap-footer-menu ul {
+    flex-basis: 14%;
+    white-space: nowrap;
+}
+
+.wrap-footer-bar .footer-bar-upper .wrap-footer-menu ul li,
+.wrap-footer-bar .footer-bar-upper .wrap-footer-privacy ul li {
+    font-weight: 400;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.wrap-footer-bar .footer-bar-upper .wrap-footer-menu ul li:first-child a {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333333;
+}
+
+.wrap-footer-bar .footer-bar-upper .wrap-footer-privacy ul:after {
+    content: "";
+    display: block;
+    clear: both;
+    margin-bottom: 24px;
+}
+
+.wrap-footer-bar .footer-bar-upper .wrap-footer-privacy ul li {
+    float: left;
+    margin-right: 1em;
+}
+
+/* FOOTER MENU BAR LOWER */
+.wrap-footer-bar .footer-bar-lower {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
