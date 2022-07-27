@@ -38,3 +38,5 @@ $(".navigator-mobile > ul > li").click(function(){
         $(this).addClass("active");
     }
 });
+
+// PC SECTION 2 GRID 1 MODAL

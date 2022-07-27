@@ -138,6 +138,25 @@
     }
 
     /* SECTION 2 */
+    .namer-sct02,
+    .namer-sct04 {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .namer-sct02 .border,
+    .namer-sct04 .border {
+        background-color: #005EB8;
+        height: 1px;
+        width: 64px;
+    }
+
+    #sct02 {
+        padding-bottom: initial;
+    }
+
     #sct02 .grid-container {
         height: initial;
         display: flex;
@@ -156,6 +175,7 @@
     
     #sct02 .grid-item .container-text-horizontal {
         display: flex;
+        flex-direction: row;
         align-items: baseline;
         gap: 20px;
     }
@@ -195,6 +215,10 @@
     }
 
     /* SECTION 4 */
+    #sct04 .actualWorkspace {
+        padding: initial;
+    }
+
     #sct04 .wrap-news {
         flex-direction: column;
         gap: 16px;

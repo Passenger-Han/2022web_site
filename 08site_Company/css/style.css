@@ -107,8 +107,14 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 }
 
 .navigator > ul > li .submenu > li > a {
-    line-height: 1.875em;
-    font-weight: 300;
+    display: block;
+    text-indent: 4px;
+    line-height: 2.875em;
+    /* font-weight: 300; */
+}
+
+.navigator > ul > li .submenu > li > a:hover {
+    background-color: #EAEAEA;
 }
 
 /* MOBILE - HEADER TOGGLE BUTTON */
@@ -229,7 +235,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 #sct01 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 35%; left: 50%;
+    bottom: 360px; left: 50%;
     transform: translateX(-50%);
     width: initial;
 }
@@ -256,11 +262,19 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 }
 
 #sct02 .grid-item {
-    padding: 50px;
+    padding: 40px;
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    position: relative;
+}
+
+#sct02 .grid-item .btn-more {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
 }
 
 #sct02 .grid-item .border {
@@ -287,6 +301,27 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 #sct02 .grid-item:nth-child(10) {} /* .container-icon */
 #sct02 .grid-item:nth-child(11) {grid-area: 4 / 3 / span 1 / span 2;} /* .container-text */
 
+/* SECTION 2 GRID 1 MODAL */
+#sct02 .grid-item:nth-child(1) .modal-btn-thumbnail,
+#sct02 .grid-item:nth-child(1) .modal-btn-thumbnail a {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sct02 .grid-item:nth-child(1) .modal-btn-thumbnail img {
+    position: absolute;
+}
+
+#sct02 .grid-item:nth-child(1) .modal-btn-thumbnail .btn-play {
+    transition: 0.3s;
+}
+#sct02 .grid-item:nth-child(1) .modal-btn-thumbnail .btn-play:hover {
+    opacity: 0;
+}
+
 #sct02 .container-icon {
     width: 100%;
     height: 100%;
@@ -294,9 +329,11 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
 }
 
-#sct02 .container-text {
+#sct02 .container-text,
+#sct02 .container-text-horizontal {
     width: 100%;
     height: 100%;
     display: flex;
@@ -313,9 +350,11 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 /* SECTION 3 */
 #sct03 {
-    /* height: 520px; */
     padding: 112px 0;
-    background-color: #CACACA; /* TEMPORAL */
+    background-image: url(../img/sct03-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #sct03 .wrap-scroll {
