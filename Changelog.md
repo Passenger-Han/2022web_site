@@ -1,3 +1,7 @@
+20220728 18:18
+    - 08site_Company
+        - news-modal hasn't been finished yet..
+
 20220726 18:15
     - 08site_Company
         - putting background-images..

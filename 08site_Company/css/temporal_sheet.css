@@ -14,7 +14,7 @@
 /* 992px */
 @media screen and (max-width: 991px){
     /* MEASUREMENTS */
-    .fonts-headline {font-weight: 700; font-size: 2.25em; line-height: 1.0875em;}
+    .fonts-headline {font-weight: 700; font-size: 2.375em;}
     .fonts-title {font-weight: 700; font-size: 1.6em;}
     .fonts-headline-sub {font-weight: 200; font-size: 1.075em;}
     /* .fonts-desc-big {font-size: 1.625em;} */
@@ -26,7 +26,7 @@
 
     /* SECTION 1 VISUAL */
     #sct01 .swiper-slide .container-text {
-        padding: 40px;
+        padding: 16px;
         margin-top: initial;
     }
 
@@ -43,7 +43,11 @@
 /* 768px */
 @media screen and (max-width: 767px){
     .forMobile {
-        display: block;
+        display: initial;
+    }
+
+    .forPC {
+        display: none;
     }
 
     #header {
@@ -73,10 +77,11 @@
     /* MOBILE NAVIGATOR CLONED */
     .navigator-cloned {
         display: block;
+        overflow-y: auto;
     }
 
     .navigator-mobile {
-        padding-top: 120px;
+        padding-top: 90px;
     }
 
     .navigator-cloned .navigator-mobile > ul > li {
@@ -137,9 +142,19 @@
         bottom: 5%;
     }
 
+    /* #sct01 .swiper-slide .container-text h2 {
+        font-size: 2.3em;
+    } */
+
+    #sct01 .swiper-slide .container-text span.forMobile {
+        font-size: 0.9em;
+        font-weight: 300;
+    }
+
     /* SECTION 2 */
     .namer-sct02,
-    .namer-sct04 {
+    .namer-sct04,
+    .namer-footer {
         padding: 16px;
         display: flex;
         flex-direction: column;
@@ -147,7 +162,8 @@
     }
 
     .namer-sct02 .border,
-    .namer-sct04 .border {
+    .namer-sct04 .border,
+    .namer-footer .border {
         background-color: #005EB8;
         height: 1px;
         width: 64px;
@@ -253,9 +269,13 @@
     #sct04 .wrap-news .news:nth-child(2) .container-img {order: initial;}
 
     /* FOOTER */
+    .namer-footer {
+        visibility: hidden;
+    }
+
     /* FOOTER FAQ */
     .wrap-faq {
-        padding: 18px 0;
+        padding: 32px 16px;
     }
 
     .wrap-faq .container-text {
@@ -264,6 +284,11 @@
 
     .wrap-faq .container-text h3 {
         display: none;
+    }
+
+    .wrap-faq .container-text p {
+        font-size: 1.5em;
+        font-weight: 500;
     }
 
     /* FOOTER MENU BAR */
@@ -297,4 +322,7 @@
     .wrap-footer-bar .footer-bar-lower .container-img a img {
         width: 100px;
     }
+
+    /* NEWS MODAL */    
+
 }

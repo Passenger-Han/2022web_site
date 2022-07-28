@@ -33,11 +33,20 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     z-index: 10;
     width: 100%;
     height: 104px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#header.scrolled {
+    position: fixed;
     background-color: #FFFFFF;
     box-shadow: 0 0 6px #00000033;
 }
+
 #header.toggle {
-    position: fixed;
+    position: fixed !important;
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 6px !important;
 }
 
 .wrap-navigator {
@@ -74,10 +83,16 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     height: 100%;
     width: 112px;
     display: flex; justify-content: center; align-items: center;
+    color: #FFFFFF;
 }
-.navigator > ul > li.active > a {
+.navigator > ul > li.active > a,
+.navigator > ul > li.active > a.scrolled {
     background-color: #005EB8;
     color: #FFFFFF;
+}
+
+.navigator > ul > li > a.scrolled {
+    color: initial;
 }
 
 .navigator > ul > li > a > img {
@@ -121,7 +136,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 .btn-toggle {
     width: 40px;
     height: 40px;
-    border: 1px solid #333333;
+    border: 1px solid #FFFFFF;
     /* display: flex; */
     display: none;
     justify-content: center;
@@ -131,8 +146,18 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 .btn-toggle .bar {
     width: 18px;
     height: 1px;
-    background-color: #000000;
+    background-color: #FFFFFF;
     position: absolute;
+}
+
+.btn-toggle.scrolled,
+#header.toggle .btn-toggle {
+    border: 1px solid #000000;
+}
+
+.btn-toggle .bar.scrolled,
+#header.toggle .btn-toggle .bar {
+    background-color: #000000;
 }
 
 #header .btn-toggle .bar:nth-child(1) {transform: translateY(-8px);}
@@ -158,11 +183,17 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     width: 100%;
     height: 100%;
     display: flex; justify-content: center; align-items: center;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.language-selector a.scrolled {
+    color: initial;
     border: 1px solid #000000;
 }
 
 .language-selector .selected {
-    border: none;
+    border: none !important;
     background-color: #005EB8;
     color: #FFFFFF;
 }
@@ -185,7 +216,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     height: 100%;
     background-color: #FFFFFF;
     position: fixed;
-    z-index: 2;
+    z-index: 9;
     top: 0;
     left: -100%;
 }
@@ -216,6 +247,10 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 #sct01 .swiper-slide .container-text {
     color: white;
     margin-top: -15em;
+}
+
+#sct01 .swiper-slide .container-text h2 {
+    line-height: 1.3em;
 }
 
 
@@ -460,7 +495,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 /* FOOTER */
 /* FOOTER FAQ */
 .wrap-faq {
-    padding: 36px 0;
+    padding: 66px 0;
     background-image: url(../img/faq-background.png);
     background-position: right;
     background-repeat: no-repeat;
@@ -540,4 +575,62 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
+}
+
+/* NEWS MODAL - MOBILE */
+.overlay-modal {
+    display: none;
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000055;
+}
+
+.news-modal {
+    display: none;
+    width: 100%;
+    height: 84%;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 10;
+    bottom: -100%;
+    left: 0;
+    flex-direction: column;
+    border-radius: 32px 0 0 0;
+}
+
+.news-modal .modal-upper-bar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.news-modal .modal-article {
+    overflow-y: auto;
+}
+
+.news-modal .modal-article .container-img {
+    width: 100%;
+    height: fit-content;
+}
+
+.news-modal .modal-article .container-img img {
+    width: inherit;
+}
+
+.news-modal .modal-article .container-text {
+    padding: 16px;
+}
+
+.news-modal .modal-article .container-text p:nth-child(2) {
+    font-weight: 500;
+}
+
+.news-modal .modal-article .container-text h4,
+.news-modal .modal-article .container-text p {
+    margin-bottom: 16px;
 }
