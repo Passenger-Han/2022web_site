@@ -135,3 +135,9 @@ $(".overlay-modal").click(function(){
     $(".news-modal").css({"bottom": "-100%", "display": "none"});
     $("#sct04 .news").removeClass("toggle");
 });
+$(".news-modal .modal-upper-bar .modal-close").click(function(){
+    // closing modal, via 'x' button
+    $(".overlay-modal").hide();
+    $(".news-modal").css({"bottom": "-100%", "display": "none"});
+    $("#sct04 .news").removeClass("toggle");
+});

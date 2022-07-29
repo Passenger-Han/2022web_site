@@ -195,7 +195,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 .language-selector .selected {
     border: none !important;
     background-color: #005EB8;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 /* MOBILE - HEADER TOGGLE MENU */
@@ -607,7 +607,38 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     top: 0;
     width: 100%;
     height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
 }
+
+.news-modal .modal-upper-bar h4 {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.news-modal .modal-upper-bar .modal-close {
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-modal .modal-upper-bar .modal-close .bar {
+    background-color: #000000;
+    position: absolute;
+    width: 12px;
+    height: 3px;
+}
+
+.news-modal .modal-upper-bar .modal-close .bar:nth-child(1) {transform: rotate(45deg);}
+.news-modal .modal-upper-bar .modal-close .bar:nth-child(2) {transform: rotate(-45deg);}
 
 .news-modal .modal-article {
     overflow-y: auto;
