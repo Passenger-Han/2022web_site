@@ -1,5 +1,12 @@
 console.log("HELLO");
 
+// MAINPAGE
+// MAINPAGE
+// MAINPAGE
+// MAINPAGE
+// MAINPAGE
+// MAINPAGE
+// MAINPAGE
 // PC
 $(".navigator > ul > li").hover(function(){
     $(this).addClass("active");
@@ -113,12 +120,12 @@ $(".overlay").click(function(){
     $("#header").removeClass("toggle");
 });
 
-$(".navigator-mobile > ul > li").click(function(){
-    if ($(this).hasClass("active")){
-        $(this).removeClass("active");
+$(".navigator-mobile > ul > li > a").click(function(){
+    if ($(this).parent().hasClass("active")){
+        $(this).parent().removeClass("active");
     } else {
         $(".navigator-mobile > ul > li").removeClass("active");
-        $(this).addClass("active");
+        $(this).parent().addClass("active");
     }
 });
 

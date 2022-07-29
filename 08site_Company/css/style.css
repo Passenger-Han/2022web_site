@@ -665,3 +665,30 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 .news-modal .modal-article .container-text p {
     margin-bottom: 16px;
 }
+
+
+
+/* SUBPAGE */
+/* SUBPAGE */
+/* SUBPAGE */
+/* SUBPAGE */
+/* SUBPAGE */
+
+/* SUBPAGE - SERVICE */
+.wrap-visual {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 588px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.wrap-visual.service {background-image: url(../img/sub01-visual.png);}
+
+.wrap-visual h2 {
+    text-align: center;
+}
+
+.wrap-visual .depth2-selector {}

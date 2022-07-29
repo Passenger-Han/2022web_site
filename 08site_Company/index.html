@@ -122,7 +122,7 @@
                     <div class="container-text">
                         <h3 class="fonts-subtitle" style="font-weight: 300;">GRAND OPEN</h3>
                         <h2 class="fonts-headline" style="margin-bottom: 20px;">
-                            두산<span class="forMobile">의</span> 새로운<br class="forMobile"> 창의혁신공간 오픈<br class="forMobile"> 이노베이션 센터
+                            두산의 새로운<br class="forMobile"> 창의혁신공간<br> 오픈 이노베이션 센터
                         </h2>
                         <p class="fonts-headline-sub" style="margin-bottom: 20px;">
                             분당 두산타워 24층에 위치한 오픈 이노베이션 센터는<br>
@@ -140,6 +140,10 @@
 
     <script>
         const swiperMain = new Swiper('#sct01 .swiper', {
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: true,
+            },
             loop: true,
             pagination: {
                 el: "#sct01 .swiper-pagination",

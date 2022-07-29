@@ -1,3 +1,7 @@
+20220729 18:22
+    - 08site_Company
+        - Do I have to put animating features in?
+
 20220728 18:18
     - 08site_Company
         - news-modal hasn't been finished yet..
