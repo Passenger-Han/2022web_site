@@ -8,6 +8,12 @@ console.log("HELLO");
 // MAINPAGE
 // MAINPAGE
 // PC
+function MenuIndex(menuNumber){
+    if (menuNumber != "home"){
+        $(".navigator > ul > li").eq(menuNumber).find("> a").css({"background-color": "#005EB8", "color": "#FFFFFF",});
+    }
+}
+
 $(".navigator > ul > li").hover(function(){
     $(this).addClass("active");
 }, function(){
@@ -17,58 +23,22 @@ $(".navigator > ul > li").hover(function(){
 // HEADER SCROLLING
 $(window).scroll(function(){
     if (scrollY > 160){
-        // $("#header").css({
-        //     "position": "fixed",
-        //     "background-color": "#FFFFFF",
-        //     "box-shadow": "0 0 6px #00000033",
-        // });
-        // $(".navigator > ul > li > a").css({
-        //     "color": "initial",
-        // });
-        // $(".language-selector a").css({
-        //     "color": "initial",
-        //     "border": "1px solid #000000",
-        // });
         $("#header").addClass("scrolled");
         $(".navigator > ul > li > a").addClass("scrolled");
         $(".language-selector a").addClass("scrolled");
 
         if ($("#header").hasClass("toggle") == false){
             $("#header .wrap-navigator h1 a img").attr("src", "img/logo.png");
-            // $(".btn-toggle").css({
-            //     "border": "1px solid #000000",
-            // });
-            // $(".btn-toggle .bar").css({
-            //     "background-color": "#000000",
-            // });
             $(".btn-toggle").addClass("scrolled");
             $(".btn-toggle .bar").addClass("scrolled");
         }
     } else {
-        // $("#header").css({
-        //     "position": "absolute",
-        //     "background-color": "transparent",
-        //     "box-shadow": "none",
-        // });
-        // $(".navigator > ul > li > a").css({
-        //     "color": "#FFFFFF",
-        // });
-        // $(".language-selector a").css({
-        //     "color": "#FFFFFF",
-        //     "border": "1px solid #FFFFFF",
-        // });
         $("#header").removeClass("scrolled");
         $(".navigator > ul > li > a").removeClass("scrolled");
         $(".language-selector a").removeClass("scrolled");
 
         if ($("#header").hasClass("toggle") == false){
             $("#header .wrap-navigator h1 a img").attr("src", "img/logo-transparent.png");
-            // $(".btn-toggle").css({
-            //     "border": "1px solid #FFFFFF",
-            // });
-            // $(".btn-toggle .bar").css({
-            //     "background-color": "#FFFFFF",
-            // });
             $(".btn-toggle").removeClass("scrolled");
             $(".btn-toggle .bar").removeClass("scrolled");
         }
@@ -86,24 +56,12 @@ $(".btn-toggle").click(function(){
         $("#header").addClass("toggle");
 
         $("#header .wrap-navigator h1 a img").attr("src", "img/logo.png");
-        // $(".btn-toggle").css({
-        //     "border": "1px solid #000000",
-        // });
-        // $(".btn-toggle .bar").css({
-        //     "background-color": "#000000",
-        // });
     } else {
         $(".overlay").hide();
         $(".navigator-cloned").css("left", "-100%");
         $("#header").removeClass("toggle");
         if (scrollY <= 160){
             $("#header .wrap-navigator h1 a img").attr("src", "img/logo-transparent.png");
-            // $(".btn-toggle").css({
-            //     "border": "1px solid #FFFFFF",
-            // });
-            // $(".btn-toggle .bar").css({
-            //     "background-color": "#FFFFFF",
-            // });
             $(".btn-toggle").removeClass("scrolled");
             $(".btn-toggle .bar").removeClass("scrolled");
         } else {
@@ -120,7 +78,8 @@ $(".overlay").click(function(){
     $("#header").removeClass("toggle");
 });
 
-$(".navigator-mobile > ul > li > a").click(function(){
+$(".navigator-mobile > ul > li > a").click(function(event){
+    event.preventDefault();
     if ($(this).parent().hasClass("active")){
         $(this).parent().removeClass("active");
     } else {
@@ -148,3 +107,20 @@ $(".news-modal .modal-upper-bar .modal-close").click(function(){
     $(".news-modal").css({"bottom": "-100%", "display": "none"});
     $("#sct04 .news").removeClass("toggle");
 });
+
+
+// SUBPAGE
+// SUBPAGE
+// SUBPAGE
+// SUBPAGE
+// SUBPAGE
+// SUBPAGE
+// SUBPAGE
+function SubmenuIndex(submenuNumber){
+    $(".wrap-visual .depth2-selector li").eq(submenuNumber).addClass("active");
+}
+
+$(".wrap-visual .depth2-selector li a").click(function(){
+    $(".wrap-visual .depth2-selector li").removeClass("active");
+    $(this).parent().addClass("active");
+})
