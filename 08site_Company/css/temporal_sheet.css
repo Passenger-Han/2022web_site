@@ -335,6 +335,33 @@
 
     /* SUBPAGE - VISUAL */
     .wrap-visual .depth2-selector ul li a {
+        padding: 16px 0;
         font-size: 1.25em; font-weight: 500;
+    }
+
+    /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
+    .wrap-visual.service {background-image: url(../img/sub02-visual-mobile.png);}
+    /* .wrap-visual.industry {background-image: url(../img/sub03-visual-mobile.png);} */
+    /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
+
+    /* SUBPAGE - CONTENT */
+    .wrap-visual {
+        height: 380px;
+    }
+
+    .wrap-visual h2 {
+        top: 40%;
+    }
+
+    .wrap-visual .depth2-selector ul {
+        flex-wrap: wrap;
+    }
+
+    .wrap-visual .depth2-selector ul li {
+        flex-basis: 50% !important;
+    }
+
+    .subpage .container-content .container-text p {
+        display: none;
     }
 }

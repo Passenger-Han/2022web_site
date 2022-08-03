@@ -116,11 +116,23 @@ $(".news-modal .modal-upper-bar .modal-close").click(function(){
 // SUBPAGE
 // SUBPAGE
 // SUBPAGE
-function SubmenuIndex(submenuNumber){
-    $(".wrap-visual .depth2-selector li").eq(submenuNumber).addClass("active");
-}
+let params = new URLSearchParams(location.search);
 
 $(".wrap-visual .depth2-selector li a").click(function(){
+    let i = $(this).parent().index();
+
     $(".wrap-visual .depth2-selector li").removeClass("active");
     $(this).parent().addClass("active");
+    $(".subpage .container-content .tab").hide().eq(i).show();
 })
+
+function Dep2Tab(parameter){
+    if (parameter != null){
+        let j = params.get("depth");
+        $(".wrap-visual .depth2-selector li").removeClass("active").eq(j).addClass("active");
+        $(".subpage .container-content .tab").hide().eq(j).show();
+    } else {
+        $(".wrap-visual .depth2-selector li").removeClass("active").eq(0).addClass("active");
+        $(".subpage .container-content .tab").hide().eq(0).show();
+    }
+}

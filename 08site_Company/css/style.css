@@ -104,12 +104,14 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 /* HEADER NAVIGATOR SUBMENU */
 .navigator > ul > li .submenu {
     transition: 0.15s;
-    font-weight: 300;
+    /* font-size: 0.95em; */
+    font-weight: 400;
     background-color: #fff;
+    box-shadow: 0 0 12px #00000043;
     position: absolute;
-    width: 140%;
-    padding: 10px;
-    left: -22%;
+    width: 100%;
+    padding: 6px 4px;
+    left: 0%;
     display: none;
     /* visibility: hidden; */
     /* opacity: 0.33; */
@@ -125,7 +127,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .navigator > ul > li .submenu > li > a {
     display: block;
-    text-indent: 4px;
+    text-indent: 6px;
     line-height: 2.875em;
     /* font-weight: 300; */
 }
@@ -381,7 +383,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 /* temporal */
 #sct02 .grid-item {
     background-color: #CACACA;
-    border: 1px dotted #FFFFFF;
+    /* border: 1px dotted #FFFFFF; */
 }
 
 
@@ -683,11 +685,11 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     background-size: cover;
     height: 588px;
     position: relative;
-    display: flex;
 }
 
 /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
-.wrap-visual.service {background-image: url(../img/sub01-visual.png);}
+.wrap-visual.service {background-image: url(../img/sub02-visual.png);}
+.wrap-visual.industry {background-image: url(../img/sub03-visual.jpg);}
 /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
 
 .wrap-visual h2 {
@@ -700,21 +702,24 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .wrap-visual .actualWorkspace {
     position: relative;
+    height: inherit;
 }
 
 .wrap-visual .depth2-selector {
-    width: 100%;
+    width: 99.9999%;
     position: absolute;
     bottom: 0;
 }
 
 .wrap-visual .depth2-selector ul {
     display: flex;
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
-
-.wrap-visual .depth2-selector ul li {
-    width: calc(100% / 3);
-}
+/* SUBPAGE - VISUAL - DEPTH2 SELECTORS */
+.wrap-visual.service .depth2-selector ul li {flex-basis: 33.333333%; flex-basis: calc(100% / 3);}
+.wrap-visual.industry .depth2-selector ul li {flex-basis: 50%; flex-basis: calc(100% / 2);}
+/* SUBPAGE - VISUAL - DEPTH2 SELECTORS */
 
 .wrap-visual .depth2-selector ul li a {
     display: block;
@@ -732,6 +737,25 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 }
 
 /* SUBPAGE - CONTENT */
-.subpage .container-content {
-    text-align: center;
+
+.subpage .container-content .container-text p {
+    text-align: right;
+    padding: 36px 36px 0;
+    font-weight: 500;
+    display: flex; align-items: center;
+    justify-content: flex-end;
+}
+
+.subpage .container-content .container-text p i {
+    height: 40px;
+}
+
+.subpage .container-content .container-text p span {
+    color: #005EB8;
+}
+
+.subpage .container-content .container-img {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
