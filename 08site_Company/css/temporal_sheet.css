@@ -338,10 +338,14 @@
         padding: 16px 0;
         font-size: 1.25em; font-weight: 500;
     }
+    .wrap-visual.company .depth2-selector ul li a {padding: 8px 0;}
 
     /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
+    .wrap-visual.company {background-image: url(../img/sub01-visual-mobile.png);}
     .wrap-visual.service {background-image: url(../img/sub02-visual-mobile.png);}
-    /* .wrap-visual.industry {background-image: url(../img/sub03-visual-mobile.png);} */
+    .wrap-visual.industry {background-image: url(../img/sub03-visual-mobile.png);}
+    .wrap-visual.resource {background-image: url(../img/sub04-visual-mobile.png);}
+    .wrap-visual.support {background-image: url(../img/sub05-visual-mobile.png);}
     /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
 
     /* SUBPAGE - CONTENT */

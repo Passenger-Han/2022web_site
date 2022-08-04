@@ -1,3 +1,7 @@
+20220804 18:14
+    - 08site_Company
+        - mainpage ===> news section: a tag wrapper for img tag needed (must NOT work when mobile screen!)
+
 20220803 18:20
     - 08site_Company
         - mainpage ===> mobile menu: I think I don't have to fix it! ^ -^

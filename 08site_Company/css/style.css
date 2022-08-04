@@ -457,6 +457,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     align-items: center;
     overflow: hidden;
 }
+#sct04 .wrap-news .news .container-img a {display: flex; justify-content: center; align-items: center;}
 
 #sct04 .wrap-news .news .container-img img {width: 127%;}
 #sct04 .wrap-news .news:nth-child(3) .container-img img {width: initial; height: 127%;}
@@ -688,8 +689,11 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 }
 
 /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
+.wrap-visual.company {background-image: url(../img/sub01-visual.png);}
 .wrap-visual.service {background-image: url(../img/sub02-visual.png);}
 .wrap-visual.industry {background-image: url(../img/sub03-visual.jpg);}
+.wrap-visual.resource {background-image: url(../img/sub04-visual.png);}
+.wrap-visual.support {background-image: url(../img/sub05-visual.png);}
 /* SUBPAGE - VISUAL - BACKGROUNDIMAGES */
 
 .wrap-visual h2 {
@@ -713,12 +717,15 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .wrap-visual .depth2-selector ul {
     display: flex;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     cursor: pointer;
 }
 /* SUBPAGE - VISUAL - DEPTH2 SELECTORS */
+.wrap-visual.company .depth2-selector ul li {flex-basis: 50%; flex-basis: calc(100% / 2);}
 .wrap-visual.service .depth2-selector ul li {flex-basis: 33.333333%; flex-basis: calc(100% / 3);}
 .wrap-visual.industry .depth2-selector ul li {flex-basis: 50%; flex-basis: calc(100% / 2);}
+.wrap-visual.resource .depth2-selector ul li {flex-basis: 33.333333%; flex-basis: calc(100% / 3);}
+.wrap-visual.support .depth2-selector ul li {flex-basis: 50%; flex-basis: calc(100% / 2);}
 /* SUBPAGE - VISUAL - DEPTH2 SELECTORS */
 
 .wrap-visual .depth2-selector ul li a {
@@ -727,7 +734,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     text-align: center;
     font-size: 1.75em; font-weight: 500;
     color: #333333;
-    background-color: #FFFFFF;
+    background-color: #FFFFFFE0;
 }
 
 .wrap-visual .depth2-selector ul li:hover a,
