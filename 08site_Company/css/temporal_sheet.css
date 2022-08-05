@@ -135,6 +135,10 @@
         padding: 8px;
         margin-bottom: 1px;
     }
+
+    .navigator-cloned .navigator-mobile > ul > li .submenu > li > a {
+        display: block;
+    }
 /* SECTION 1 VISUAL */
 /* SWIPER CUSTOM */ /* SECTION 1 SWIPER */
     #sct01 .swiper-horizontal > .swiper-pagination-bullets,

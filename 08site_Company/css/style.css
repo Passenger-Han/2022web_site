@@ -13,7 +13,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 /* MEASUREMENTS */
 .fonts-headline {font-weight: 700; font-size: 4em; line-height: 1.1em;}
-.fonts-title {font-weight: 900; font-size: 2em;}
+.fonts-title {font-weight: 700; font-size: 2em;}
 .fonts-headline-sub {font-weight: 200; font-size: 1.3em;}
 .fonts-desc-big {font-size: 1.625em;}
 .fonts-subtitle {font-weight: 500; font-size: 1.25em;}
@@ -127,6 +127,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .navigator > ul > li .submenu > li > a {
     display: block;
+    width: 100%;
     text-indent: 6px;
     line-height: 2.875em;
     /* font-weight: 300; */
@@ -369,6 +370,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     align-items: center;
     justify-content: center;
     gap: 12px;
+    cursor: pointer;
 }
 
 #sct02 .container-text,
@@ -671,6 +673,30 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     margin-bottom: 16px;
 }
 
+/* SCROLLUP */
+.scrollup {
+    cursor: pointer;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 60px;
+    height: 60px;
+    background-color: #005EB8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollup .arrow {
+    width: 24px;
+    height: 24px;
+    border: 8px solid #FFFFFF;
+    border-bottom: none;
+    border-right: none;
+    transform: translateY(25%) rotate(45deg);
+}
+
 
 
 /* SUBPAGE */
@@ -719,7 +745,9 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     display: flex;
     /* background-color: #FFFFFF; */
     cursor: pointer;
+    background-color: #FFFFFFE0;
 }
+
 /* SUBPAGE - VISUAL - DEPTH2 SELECTORS */
 .wrap-visual.company .depth2-selector ul li {flex-basis: 50%; flex-basis: calc(100% / 2);}
 .wrap-visual.service .depth2-selector ul li {flex-basis: 33.333333%; flex-basis: calc(100% / 3);}
@@ -734,7 +762,6 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     text-align: center;
     font-size: 1.75em; font-weight: 500;
     color: #333333;
-    background-color: #FFFFFFE0;
 }
 
 .wrap-visual .depth2-selector ul li:hover a,
@@ -747,14 +774,15 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
 
 .subpage .container-content .container-text p {
     text-align: right;
-    padding: 36px 36px 0;
+    height: 40px;
+    padding: 32px 20px;
     font-weight: 500;
     display: flex; align-items: center;
     justify-content: flex-end;
 }
 
 .subpage .container-content .container-text p i {
-    height: 40px;
+    line-height: 0;
 }
 
 .subpage .container-content .container-text p span {
