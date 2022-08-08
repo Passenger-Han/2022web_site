@@ -1,3 +1,7 @@
+20220805 18:26
+    - 08site_Company
+        - mainpage ===> news section: colorbox..? O -o;
+
 20220804 18:14
     - 08site_Company
         - mainpage ===> news section: a tag wrapper for img tag needed (must NOT work when mobile screen!)
