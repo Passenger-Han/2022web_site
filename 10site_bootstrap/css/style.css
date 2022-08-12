@@ -1,0 +1,36 @@
+@charset "UTF-8";
+:root {
+    --height-header: 100px;
+}
+
+.dropdown-toggle::after {display: none;}
+
+#header, #navbar-depth2 {height: var(--height-header);}
+#navbar-depth2 {
+    display: flex;
+    position: absolute;
+    padding: var(--bs-navbar-padding-y) 0;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+#navbar-depth2 .navbar-nav {
+    position: absolute;
+    right: 0;
+}
+
+#navbar-depth2 .navbar-nav .nav-item a {
+    color: var(--bs-dark);
+    text-decoration: none;
+}
+
+#visual {background-color: #000000;}
+
+#content-1st .position-sticky {top: 196px;}
+#content-1st #cards .wrapper-text {height: 440px; margin-bottom: 24px;}
+#content-1st #cards .wrapper-text:nth-child(2n) {transform: translateY(40px);}
+#content-1st #cards .text {height: 100%}
+
+#belt .row .col {background: center no-repeat; background-size: cover;}
