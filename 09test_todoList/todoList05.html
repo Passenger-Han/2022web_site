@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST</title>
+    <!-- Google Fonts: Noto Sans 400:600:700, Nanum Pen Script, Nanum Gothic:400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 
+        :root {
+            --h2-height-calc: unset;
+            --input-height-calc: unset;
+            --wrapperList-height-calc: unset;
+            --happybutton-height-calc: unset;
+        }
+         */
+
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {background-color: #676767; color: white; font-family: 'Noto Sans KR', sans-serif;}
+        /* body {font-family: 'Nanum Gothic', sans-serif; font-family: 'Nanum Pen Script', cursive; font-family: 'Noto Sans KR', sans-serif;} */
+        li {list-style-type: none;}
+        button {padding: 8px 6px; background-color: transparent; border: 1px solid #000000; border-radius: 6px; cursor: pointer;}
+        button:active {transform: translate(1px, 1px);}
+        .container {width: 320px; height: 568px; background-color: #000000; margin: 0 auto; padding: 16px; display: flex; flex-direction: column; gap: 14px; justify-content: space-between;}
+        .container h2 {text-align: center; text-shadow: 0 0 1px #000000;}
+        .container form {position: relative;}
+        .container input[type=text] {width: 100%; padding: 19px 16px; font-weight: 100; overflow-x: hidden;}
+        .container input[type=text]:focus {outline: none;}
+        .container form button {background-color: #FFFFFF; position: absolute; right: 8px; top: calc(19px / 2);}
+
+        .container .wrapper-lists {background-color: #750000; border-radius: 6px; height: 100%; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px;}
+        .container .wrapper-lists ul {/* wrapperLists - happy-button - gap - wrapperLists:padding */ height: calc(416px - 50px - 16px - 32px); overflow-y: auto;}
+        .container .wrapper-lists ul::-webkit-scrollbar {width: 0;}
+        .container .wrapper-lists ul li {background-color: #FFFFFF; color: #000000; width: 100%; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 0.9em; font-weight: 400; margin-bottom: 6px; position: relative; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4);}
+        .container .wrapper-lists ul li span {/* wrapperLists li width:w/o Padding - .wrapperButton width - gap */ width: calc(224px - 90px - 8px); max-height: 36px; overflow: hidden; line-height: 17px;}
+        .container .wrapper-lists ul li:last-child {margin-bottom: initial;}
+        .container .wrapper-lists ul li.done {background-color: transparent; color: #FFFFFF; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);}
+        .container .wrapper-lists ul li.done span {text-decoration: line-through; font-weight: 100;}
+        /* .container .wrapper-lists ul li button {border: 1px solid #000000;} */
+        .container .wrapper-lists ul li.done button {background-color: transparent; color: #FFFFFF; border: 1px solid #FFFFFF; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4);}
+
+        .container .wrapper-lists ul li .wrapper-button {display: flex; gap: 4px;}
+
+        .container .wrapper-lists .happy-button {background-color: #FFFFFF; color: #000000; font-weight: 700; font-size: 1.125em; height: 60px; width: 100%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4); cursor: pointer;}
+        .container .wrapper-lists .happy-button:active {transform: translate(1px, 1px);}
+    </style>
+</head>
+<body>
+    <!-- width: 320px == iPhone SE -->
+    <div class="container">
+        <h2>오늘 할 일이 더 있나요?</h2>
+        <form action="javascript:void(0);">
+            <input type="text" name="todo" id="todo" placeholder="할 일을 적어주세요." data-writing-mode="-1">
+            <button onclick="Add();">추가</button>
+        </form>
+        <div class="wrapper-lists">
+            <ul class="lists">
+                <!-- <li>
+                    <span>${element.todo}</span>
+                    <div class="wrapper-button">
+                        <button onclick="Modify(${index});">수정</button>
+                        <button onclick="Remove(${index});">삭제</button>
+                    </div>
+                </li> -->
+                <!-- <li class="done">
+                    <span>코인 세탁</span>
+                    <div class="wrapper-button">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <span>TV 택배</span>
+                    <div class="wrapper-button">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li> -->
+            </ul>
+            <div class="happy-button" onclick="RemoveAll();">누르면 행복해지는 버튼</div>
+        </div>
+    </div>
+
+    <script>
+        'use strict';
+        let todoList = [
+            // {
+            //     todo: 'PLACEHOLDER',
+            //     done: false,
+            // },
+            // {
+            //     todo: 'PLACEHOLDER 2',
+            //     done: true,
+            // },
+        ]
+        const inputCall = document.querySelector(".container form input#todo");
+        const addCall = document.querySelector(".container form button");
+        const listCall = document.querySelector(".container .wrapper-lists .lists");
+        const doneCall = document.querySelector(".container .wrapper-lists .lists li");
+        const eraserCall = document.querySelector(".container .wrapper-lists .happy-button");
+
+        function View(){
+            todoList = JSON.parse(localStorage.getItem('todoStorage'));
+            let textStack = '';
+            if (todoList.length == 0){
+                textStack = '할 일 끝! 행복! ^0 ^';
+            } else {
+                todoList.forEach((element, index) => {
+                    if (element.done == false){
+                        textStack += `<li onclick="Done(${index});"><span>${element.todo}</span><div class="wrapper-button"><button onclick="Modify(${index});">수정</button><button onclick="Remove(${index});">삭제</button></div></li>`;
+                    } else {
+                        textStack += `<li class="done" onclick="Done(${index});"><span>${element.todo}</span><div class="wrapper-button"><button onclick="Modify(${index});">수정</button><button onclick="Remove(${index});">삭제</button></div></li>`;
+                    }
+                })
+            }
+            listCall.innerHTML = textStack;
+
+            if (todoList.length >= 6){
+                eraserCall.innerHTML = `화면에 보이지 않는 일이 더..<br> .. 하지만 행복버튼..!`;
+                eraserCall.style.fontSize = 1 + 'em';
+            } else {
+                eraserCall.innerHTML = `누르면 행복해지는 버튼`;
+                eraserCall.style.fontSize = 1.125 + 'em';
+            }
+        }
+
+        function Done(index){
+            todoList[index].done = !todoList[index].done;
+            localStorage.setItem('todoStorage', JSON.stringify(todoList));
+            View();
+        }
+
+        function Add(){
+            if (inputCall.dataset.writingMode == -1){
+                if (inputCall.value == ''){
+                    alert('입력한 내용이 없어 추가하지 않았습니다.');
+                } else {
+                    todoList.splice(0, 0, {todo: inputCall.value, done: false});
+                    localStorage.setItem('todoStorage', JSON.stringify(todoList));
+                }
+            } else {
+                if (inputCall.value == ''){
+                    alert('입력한 내용이 없어 수정하지 않았습니다.');
+                    inputCall.dataset.writingMode = -1;
+                    addCall.innerHTML = '추가';
+                } else {
+                    todoList[inputCall.dataset.writingMode].todo = inputCall.value;
+                    localStorage.setItem('todoStorage', JSON.stringify(todoList));
+                    inputCall.dataset.writingMode = -1;
+                    addCall.innerHTML = '추가';
+                }
+            }
+            inputCall.value = '';
+            inputCall.placeholder = '할 일을 적어주세요.'
+            inputCall.focus();
+            View();
+        }
+
+        function Modify(index){
+            inputCall.focus();
+            if (inputCall.dataset.writingMode != -1 && inputCall.dataset.writingMode == index){
+                inputCall.dataset.writingMode = -1;
+                inputCall.placeholder = '할 일을 적어주세요.'
+                addCall.innerHTML = '추가';
+            } else {
+                inputCall.dataset.writingMode = index;
+                inputCall.placeholder = '어떻게 바꿀까요?'
+                addCall.innerHTML = '수정';
+            }
+            event.stopPropagation();
+            View();
+        }
+        
+        function Remove(index){
+            if (inputCall.dataset.writingMode != -1){
+                inputCall.dataset.writingMode = -1;
+                inputCall.value = '';
+                inputCall.placeholder = '할 일을 적어주세요.'
+                addCall.innerHTML = '추가';
+            }
+            todoList.splice(index, 1);
+            localStorage.setItem('todoStorage', JSON.stringify(todoList));
+            event.stopPropagation();
+            View();
+        }
+        
+        function RemoveAll(){
+            todoList.splice(0, todoList.length + 1);
+            localStorage.setItem('todoStorage', JSON.stringify(todoList));
+            View();
+        }
+
+        View();
+    </script>
+</body>
+</html>
