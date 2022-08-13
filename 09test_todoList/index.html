@@ -104,6 +104,9 @@
         const doneCall = document.querySelector(".container .wrapper-lists .lists li");
         const eraserCall = document.querySelector(".container .wrapper-lists .happy-button");
         
+        if (JSON.parse(localStorage.getItem('todoStorage')) != null){
+            todoList = JSON.parse(localStorage.getItem('todoStorage'));
+        }
         localStorage.setItem('todoStorage', JSON.stringify(todoList));
 
         function View(){
