@@ -24,7 +24,7 @@
         body {background-color: #676767; color: white; font-family: 'Noto Sans KR', sans-serif;}
         /* body {font-family: 'Nanum Gothic', sans-serif; font-family: 'Nanum Pen Script', cursive; font-family: 'Noto Sans KR', sans-serif;} */
         li {list-style-type: none;}
-        button {padding: 8px 6px; background-color: transparent; border: 1px solid #000000; border-radius: 6px; cursor: pointer;}
+        button {padding: 8px 6px; background-color: rgba(0, 0, 0, 0); border: 1px solid #000000; border-radius: 6px; cursor: pointer;}
         button:active {transform: translate(1px, 1px);}
         .container {width: 320px; height: 568px; background-color: #000000; margin: 0 auto; padding: 16px; display: flex; flex-direction: column; gap: 14px; justify-content: space-between;}
         .container h2 {text-align: center; text-shadow: 0 0 1px #000000;}
@@ -39,10 +39,33 @@
         .container .wrapper-lists ul li {background-color: #FFFFFF; color: #000000; width: 100%; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 0.9em; font-weight: 400; margin-bottom: 6px; position: relative; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4);}
         .container .wrapper-lists ul li span {/* wrapperLists li width:w/o Padding - .wrapperButton width - gap */ width: calc(224px - 90px - 8px); max-height: 36px; overflow: hidden; line-height: 17px;}
         .container .wrapper-lists ul li:last-child {margin-bottom: initial;}
-        .container .wrapper-lists ul li.done {background-color: transparent; color: #FFFFFF; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);}
+        .container .wrapper-lists ul li.done {background-color: rgba(0, 0, 0, 0); color: #FFFFFF; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);}
         .container .wrapper-lists ul li.done span {text-decoration: line-through; font-weight: 100;}
         /* .container .wrapper-lists ul li button {border: 1px solid #000000;} */
-        .container .wrapper-lists ul li.done button {background-color: transparent; color: #FFFFFF; border: 1px solid #FFFFFF; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4);}
+        .container .wrapper-lists ul li.done button {background-color: rgba(0, 0, 0, 0); color: #FFFFFF; border: 1px solid #FFFFFF; box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4);}
+        .container .wrapper-lists ul li.modifying {
+            animation-name: blinking;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-duration: 1.1s;
+        }
+        .container .wrapper-lists ul li.modifying .wrapper-button button {
+            animation-name: blinkingBtn;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-duration: 1.1s;
+        }
+
+        @keyframes blinking {
+            0% {background-color: rgba(236, 224, 52, 1); color: rgba(0, 0, 0, 1);}
+            100% {background-color: inherit; color: rgba(255, 255, 255, 1);}
+        }
+        @keyframes blinkingBtn {
+            0% {color: rgba(0, 0, 0, 1); border: 1px solid #000000;}
+            100% {color: rgba(255, 255, 255, 1); border: 1px solid #FFFFFF;}
+        }
 
         .container .wrapper-lists ul li .wrapper-button {display: flex; gap: 4px;}
 
@@ -82,7 +105,7 @@
                     </div>
                 </li> -->
             </ul>
-            <div class="happy-button" onclick="RemoveAll();">누르면 행복해지는 버튼</div>
+            <div class="happy-button" onclick="RemoveAll();">전체삭제</div>
         </div>
     </div>
 
@@ -101,7 +124,8 @@
         const inputCall = document.querySelector(".container form input#todo");
         const addCall = document.querySelector(".container form button");
         const listCall = document.querySelector(".container .wrapper-lists .lists");
-        const doneCall = document.querySelector(".container .wrapper-lists .lists li");
+        // const doneCall = document.querySelectorAll(".container .wrapper-lists .lists li");
+        const buttonCall = document.querySelectorAll(".container .wrapper-lists .lists li .wrapper-button");
         const eraserCall = document.querySelector(".container .wrapper-lists .happy-button");
         
         if (JSON.parse(localStorage.getItem('todoStorage')) != null){
@@ -125,11 +149,21 @@
             }
             listCall.innerHTML = textStack;
 
+            todoList.forEach((element, index) => {
+                if (element.modify == false){
+                    document.querySelectorAll(".container .wrapper-lists .lists li")[index].classList.remove("modifying");
+                    document.querySelectorAll(".container .wrapper-lists .lists li")[index].querySelectorAll(".wrapper-button button")[0].innerHTML = '수정';
+                } else {
+                    document.querySelectorAll(".container .wrapper-lists .lists li")[index].classList.add("modifying");
+                    document.querySelectorAll(".container .wrapper-lists .lists li")[index].querySelectorAll(".wrapper-button button")[0].innerHTML = '취소';
+                }
+            })
+
             if (todoList.length >= 6){
-                eraserCall.innerHTML = `화면에 보이지 않는 일이 더..<br> .. 하지만 행복버튼..!`;
+                eraserCall.innerHTML = `전체삭제<br>(화면 스크롤하여 다른 일 확인하기)`;
                 eraserCall.style.fontSize = 1 + 'em';
             } else {
-                eraserCall.innerHTML = `누르면 행복해지는 버튼`;
+                eraserCall.innerHTML = `전체삭제`;
                 eraserCall.style.fontSize = 1.125 + 'em';
             }
         }
@@ -145,7 +179,7 @@
                 if (inputCall.value == ''){
                     alert('입력한 내용이 없어 추가하지 않았습니다.');
                 } else {
-                    todoList.splice(0, 0, {todo: inputCall.value, done: false});
+                    todoList.splice(0, 0, {todo: inputCall.value, done: false, modify: false,});
                     localStorage.setItem('todoStorage', JSON.stringify(todoList));
                 }
             } else {
@@ -172,10 +206,20 @@
                 inputCall.dataset.writingMode = -1;
                 inputCall.placeholder = '할 일을 적어주세요.'
                 addCall.innerHTML = '추가';
+                
+                todoList[index].modify = false;
+                localStorage.setItem('todoStorage', JSON.stringify(todoList));
             } else {
                 inputCall.dataset.writingMode = index;
                 inputCall.placeholder = '어떻게 바꿀까요?'
                 addCall.innerHTML = '수정';
+
+                todoList.forEach(element => {
+                    element.modify = false;
+                });
+                todoList[index].modify = true;
+                localStorage.setItem('todoStorage', JSON.stringify(todoList));
+                // document.querySelectorAll(".container .wrapper-lists .lists li")[index].classList.add("modifying");
             }
             event.stopPropagation();
             View();
