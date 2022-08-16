@@ -83,6 +83,7 @@
         </form>
         <div class="wrapper-lists">
             <ul class="lists">
+                <!-- LIST MARKUP EXAMPLE -->
                 <!-- <li>
                     <span>${element.todo}</span>
                     <div class="wrapper-button">
@@ -112,13 +113,16 @@
     <script>
         'use strict';
         let todoList = [
+            // ARRAY DATA FORMAT EXAMPLE
             // {
-            //     todo: 'PLACEHOLDER',
+            //    todo: 'PLACEHOLDER',
             //     done: false,
+            //     modify: false,
             // },
             // {
             //     todo: 'PLACEHOLDER 2',
             //     done: true,
+            //     modify: false,
             // },
         ]
         const inputCall = document.querySelector(".container form input#todo");
@@ -185,9 +189,16 @@
             } else {
                 if (inputCall.value == ''){
                     alert('입력한 내용이 없어 수정하지 않았습니다.');
+                    todoList.forEach(element => {
+                        element.modify = false;
+                    });
+                    localStorage.setItem('todoStorage', JSON.stringify(todoList));
                     inputCall.dataset.writingMode = -1;
                     addCall.innerHTML = '추가';
                 } else {
+                    todoList.forEach(element => {
+                        element.modify = false;
+                    });
                     todoList[inputCall.dataset.writingMode].todo = inputCall.value;
                     localStorage.setItem('todoStorage', JSON.stringify(todoList));
                     inputCall.dataset.writingMode = -1;
@@ -219,7 +230,6 @@
                 });
                 todoList[index].modify = true;
                 localStorage.setItem('todoStorage', JSON.stringify(todoList));
-                // document.querySelectorAll(".container .wrapper-lists .lists li")[index].classList.add("modifying");
             }
             event.stopPropagation();
             View();
