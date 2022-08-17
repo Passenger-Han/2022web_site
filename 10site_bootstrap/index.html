@@ -9,6 +9,10 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" integrity="sha512-ipO1yoQyZS3BeIuv2A8C5AwQChWt2Pi4KU3nUvXxc4TKr8QgG8dPexPAj2JGsJD6yelwKa4c7Y2he9TTkPM4Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js" integrity="sha512-V1mUBtsuFY9SNr+ptlCQAlPkhsH0RGLcazvOCFt415od2Bf9/YkdjXxZCdhrP/TVYsPeAWuHa+KYLbjNbeEnWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- CSS CUSTOM -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -122,7 +126,7 @@
         </div>
     </section>
 
-    <section id="content-1st" class="py-5">
+    <section id="content-1st" class="py-5 my-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -209,9 +213,132 @@
         </div>
     </section>
 
+    <section id="graphs" style="background: url(img/graph-bg.jpg) no-repeat center; background-size: cover;">
+        <div class="container">
+            <div class="text py-5">
+                <h6 class="fw-bold">PARTNERS</h6>
+                <h2 class="fw-bold">이미 성장한 많은 기업들이<br>플레이디와 함께하였습니다.</h2>
+                <p>온라인 마케팅의 처음부터 끝까지! 필요한 모든 것을 지원합니다.</p>
+            </div>
+            <div class="wrapper-graph my-5">
+                <div class="graph">
+                    <p class="fw-bold">누적 취급액</p>
+                    <div class="graph-bar">
+                        <span class="fw-bold">4,516억원</span>
+                        <div style="background-color: #000000;"></div>
+                    </div>
+                </div>
+                <div class="graph">
+                    <p class="fw-bold">연간 광고주 수</p>
+                    <div class="graph-bar">
+                        <span class="fw-bold">2,846개</span>
+                        <div style="background-color: #DA2D2D;"></div>
+                    </div>
+                </div>
+                <div class="graph">
+                    <p class="fw-bold">연간 Live 계정 수</p>
+                    <div class="graph-bar">
+                        <span class="fw-bold">76,840개</span>
+                        <div style="background-color: #676767;"></div>
+                    </div>
+                </div>
+            </div>
+            <h6 class="fw-bold text-end">*2021년 기준</h6>
+        </div>
+    </section>
+
+    <div class="swiper d-none d-md-block my-5" id="partners-logo">
+        <div class="swiper-wrapper">
+            <!-- .swiper-slide contents here -->
+        </div>
+    </div>
+
+    <div id="banner-footer" class="py-5" style="background-color: #FA2222;">
+        <h2 class="text-center fw-bold text-white">플레이디와 함께 멈추지 않는 성장을 경험하세요.</h2>
+        <div class="wrapper-button d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center mt-4">
+            <a href="#" class="fw-bold">프로젝트 문의</a>
+            <a href="#" class="fw-bold">회사 소개서 다운로드</a>
+        </div>
+    </div>
+
+    <footer style="background-color: #000000;">
+        <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-dark py-4">
+                  <div class="container">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">윤리위반신고 <span class="visually-hidden">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">뉴스레터</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">오시는 길</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">무료 광고 진단</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">개인정보처리방침</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PLACEHOLDER <span class="visually-hidden">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PLACEHOLDER</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PLACEHOLDER</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PLACEHOLDER</a>
+                            </li>
+                        </ul>
+                    </div>
+              </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <address class="text-white">(주)플레이디<br><br>대표자 : 이준용 | 사업자등록번호 : 129-86-43885<br><br>주소 : 경기도 성남시 분당구 황새울로 359번길 11, 5-6층<br><br>이메일 : master@playd.com</address>
+                    <p>교육용으로 만든 미러사이트 입니다. 본래 사이트와는 무관합니다!</p>
+                </div>
+                <div class="col-md-3">
+                    <p>대표전화</p>
+                    <h2>0000-0000</h2>
+                    <p>평일 10:00 ~ 17:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    
+    <!-- CUSTOM Scripts -->
     <script src="js/script.js"></script>
+    <script>
+        const swiper01 = new Swiper('#partners-logo', {
+            loop: true,
+            slidesPerView: 'auto',
+            spaceBetween: 21,
+            autoplay: {
+                delay: 1,
+                disableOnInteraction: false,
+            },
+            speed: 12000,
+        });
+    </script>
 </body>
 </html>

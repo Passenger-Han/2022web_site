@@ -63,4 +63,12 @@ contentFirstCardsCall.forEach((element, index) => {
     document.querySelectorAll("#content-1st #cards .rounded")[index].style.background = `url(${contentFirstCardsData[index].img}) center no-repeat`;
     document.querySelectorAll("#content-1st #cards .rounded")[index].style.backgroundSize = 'cover';
     element.innerHTML = stack;
-})
+});
+
+let swiper01Text = '';
+for(let i = 1; i < 11; i++){
+    swiper01Text += `<div class="swiper-slide">`;
+    swiper01Text += `<img src="img/partner-logo-${i}.png" alt="" class="img-fluid">`;
+    swiper01Text += `</div>`;
+}
+document.querySelector("#partners-logo .swiper-wrapper").innerHTML = swiper01Text;

@@ -34,3 +34,22 @@
 #content-1st #cards .text {height: 100%}
 
 #belt .row .col {background: center no-repeat; background-size: cover;}
+
+#graphs {padding: 160px 0;}
+#graphs .graph {text-align: end;}
+#graphs .graph .graph-bar {display: flex; justify-content: end; align-items: center; gap: 16px; margin: 16px 0;}
+#graphs .graph .graph-bar > div {
+    height: 40px;
+    border-radius: 20px;
+}
+#graphs .graph:nth-child(1) .graph-bar > div{width: 80%;}
+#graphs .graph:nth-child(2) .graph-bar > div{width: 59%;}
+#graphs .graph:nth-child(3) .graph-bar > div{width: 69%;}
+
+#partners-logo .swiper-wrapper {transition-timing-function: linear;}
+#partners-logo .swiper-slide {width: 200px;}
+#partners-logo .swiper-slide img {filter: saturate(0%) opacity(50%);}
+
+#banner-footer .wrapper-button a {display: flex; justify-content: center; align-items: center; border: 2px solid #FFFFFF; border-radius: 4px; width: 300px; height: 60px; font-size: 1.125em; text-decoration: none;}
+#banner-footer .wrapper-button a:nth-child(1) {color: #FFFFFF;}
+#banner-footer .wrapper-button a:nth-child(2) {color: #FA2222; background-color: #FFFFFF;}
