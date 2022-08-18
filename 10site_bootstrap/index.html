@@ -17,9 +17,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav id="header" class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid px-5 py-4">
-            <a class="navbar-brand" href="#">Navbar</a>
+    <nav id="header" class="navbar navbar-expand-md navbar-light bg-white position-absolute w-100">
+        <div id="navbar-depth1" class="container-fluid px-5 py-4 position-relative bg-white">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-filled.png" alt="" class="w-50">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -81,22 +83,22 @@
             </div>
         </div>
         <div class="wrapper-nav-menu" id="navbar-depth2">
-            <ul class="navbar-nav px-5">
+            <ul class="navbar-nav gap-3 px-5">
                 <li class="nav-item"><a href="#">캠페인 전략</a></li>
                 <li class="nav-item"><a href="#">미디어 전략</a></li>
                 <li class="nav-item"><a href="#">크리에이티브</a></li>
                 <li class="nav-item"><a href="#">포트폴리오</a></li>
                 <li class="nav-item"><a href="#">수상내역</a></li>
             </ul>
-            <ul class="navbar-nav px-5">
+            <ul class="navbar-nav gap-3 px-5">
                 <li class="nav-item"><a href="#">tech HUB</a></li>
             </ul>
-            <ul class="navbar-nav px-5">
+            <ul class="navbar-nav gap-3 px-5">
                 <li class="nav-item"><a href="#">뉴스레터</a></li>
                 <li class="nav-item"><a href="#">리포트</a></li>
                 <li class="nav-item"><a href="#">광고컬럼</a></li>
             </ul>
-            <ul class="navbar-nav px-5">
+            <ul class="navbar-nav gap-3 px-5">
                 <li class="nav-item"><a href="#">ABOUT</a></li>
                 <li class="nav-item"><a href="#">IR</a></li>
                 <li class="nav-item"><a href="#">윤리경영</a></li>
@@ -120,8 +122,8 @@
                 <img src="img/visual-main-D7.png" alt="" height="100%" class="position-absolute">
                 <img src="img/visual-main-D8.png" alt="" height="100%" class="position-absolute">
                 <img src="img/visual-main-D9.png" alt="" height="100%" class="position-absolute">
-                <img src="img/visual-main-DA.png" alt="" height="100%" class="position-absolute">
-                <img src="img/visual-main-DB.png" alt="" height="100%" class="position-absolute">
+                <img src="img/visual-main-D10.png" alt="" height="100%" class="position-absolute">
+                <img src="img/visual-main-D11.png" alt="" height="100%" class="position-absolute">
             </div>
         </div>
     </section>
@@ -195,20 +197,22 @@
 
     <section id="belt">
         <div class="container-fluid">
-            <div class="row vh-100">
-                <div class="col d-flex justify-content-center align-items-center" style="background-image: url(img/belt-left-1.jpg);">
+            <div class="row vh-100 position-relative">
+                <div class="col position-relative d-flex justify-content-center align-items-center" name="data" style="background-image: url(img/belt-left-1.jpg);">
                     <span>Data</span>
                 </div>
-                <div class="col d-flex flex-column justify-content-center align-items-center">
+                <div class="col position-absolute onLeft">LEFT</div>
+                <div class="col position-relative d-flex flex-column justify-content-center align-items-center">
                     <img src="img/belt-middle-1.png" alt="" width="120">
                     <div class="text-center">
                         <h2>Performance<br>Growth</h2>
                         <p>데이터에 공감을 더해 확실한 성과를 만듭니다.</p>
                     </div>
                 </div>
-                <div class="col d-flex flex-column justify-content-center align-items-center" style="background-image: url(img/belt-right-1.jpg);">
+                <div class="col position-relative d-flex flex-column justify-content-center align-items-center" name="creative" style="background-image: url(img/belt-right-1.jpg);">
                     <span>Creative</span>
                 </div>
+                <div class="col position-absolute onRight">RIGHT</div>
             </div>
         </div>
     </section>

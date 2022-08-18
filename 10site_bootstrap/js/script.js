@@ -72,3 +72,68 @@ for(let i = 1; i < 11; i++){
     swiper01Text += `</div>`;
 }
 document.querySelector("#partners-logo .swiper-wrapper").innerHTML = swiper01Text;
+
+// HEADER NAVBAR
+document.querySelectorAll("#header #navbar-depth1 .nav-item").forEach((element, index) => {
+    if (element.index != 4){
+        element.addEventListener("mouseover", function(){
+            // removing 'active' class..
+            document.querySelectorAll("#header #navbar-depth2 .navbar-nav").forEach(element => {
+                element.classList.remove("active");
+            });
+            // activating 'active' class on a specific element..
+            document.querySelector("#header #navbar-depth2").classList.add("active");
+            document.querySelectorAll("#header #navbar-depth2 .navbar-nav")[index].classList.add("active");
+        });
+    }
+});
+document.querySelector("#header").addEventListener("mouseleave", function(){
+    document.querySelectorAll("#header #navbar-depth2 .navbar-nav").forEach(element => {
+        element.classList.remove("active");
+    });
+    document.querySelector("#header #navbar-depth2").classList.remove("active");
+});
+document.querySelectorAll("#header #navbar-depth1 .nav-item")[4].addEventListener("mouseover", function(){
+    document.querySelectorAll("#header #navbar-depth2 .navbar-nav").forEach(element => {
+        element.classList.remove("active");
+    });
+    document.querySelector("#header #navbar-depth2").classList.remove("active");
+});
+
+// VISUAL SECTION
+let visualCounter = 1;
+setInterval(() => {
+    document.querySelectorAll("#visual .characters img").forEach(element => {
+        element.style.opacity = 0;
+    })
+    document.querySelectorAll("#visual .characters img")[visualCounter].style.opacity = 1;
+    ScreenColor();
+    visualCounter++;
+    visualCounter %= document.querySelectorAll("#visual .characters img").length;
+}, 2500);
+
+function ScreenColor(){
+    if (visualCounter == 0) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(84, 212, 212)')
+    if (visualCounter == 1) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(240, 185, 177)')
+    if (visualCounter == 2) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(249, 82, 109)')
+    if (visualCounter == 3) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(25, 128, 193)')
+    if (visualCounter == 4) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(67, 242, 42)')
+    if (visualCounter == 5) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(0, 0, 0)')
+    if (visualCounter == 6) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(84, 212, 212)')
+    if (visualCounter == 7) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(29, 0, 33)')
+    if (visualCounter == 8) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(121, 77, 159)')
+    if (visualCounter == 9) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(243, 205, 108)')
+    if (visualCounter == 10) document.querySelector(":root").style.setProperty('--visual-screen-color', 'rgb(241, 224, 48)')
+}
+
+// BELT SECTION
+document.querySelector("#belt div[name='data']").addEventListener("mouseenter", function(){
+    document.querySelector("#belt .onLeft").style.left = '0%';
+});
+document.querySelector("#belt div[name='creative']").addEventListener("mouseenter", function(){
+    document.querySelector("#belt .onRight").style.right = '0%';
+});
+document.querySelector("#belt .row").addEventListener("mouseleave", function(){
+    document.querySelector("#belt .onLeft").style.left = '-100%';
+    document.querySelector("#belt .onRight").style.right = '-100%';
+});

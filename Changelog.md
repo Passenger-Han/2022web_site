@@ -1,3 +1,7 @@
+20220818 18:20
+    - 10site_bootstrap
+        - check adaptive page.. I'm DUCKED LOL
+
 20220812 18:18
     - 09test_todoList
         - Uploaded for test.
