@@ -10,6 +10,10 @@ body {
 
 .dropdown-toggle::after {display: none;}
 
+.navbar-brand {min-width: 20%;}
+/* footer .navbar-brand {width: 15%;} */
+.navbar-brand img {width: 100%;}
+
 #header #navbar-depth1 {z-index: 2000;}
 #header, #navbar-depth2 {height: var(--height-header);}
 #navbar-depth2 {
@@ -43,6 +47,7 @@ body {
 }
 
 #visual {background-color: var(--visual-screen-color); transition: 0.5s;}
+#visual img {width: 100%;}
 #visual .characters img {transition: 0.5s; opacity: 0;}
 #visual .characters img:first-child {opacity: 1;}
 
@@ -86,3 +91,15 @@ body {
 #banner-footer .wrapper-button a {display: flex; justify-content: center; align-items: center; border: 2px solid #FFFFFF; border-radius: 4px; width: 300px; height: 60px; font-size: 1.125em; text-decoration: none;}
 #banner-footer .wrapper-button a:nth-child(1) {color: #FFFFFF;}
 #banner-footer .wrapper-button a:nth-child(2) {color: #FA2222; background-color: #FFFFFF;}
+
+footer .navbar-nav {
+    --bs-navbar-color: rgba(255, 255, 255, 1);
+    --bs-navbar-hover-color: rgba(255, 255, 255, 1);
+    --bs-navbar-disabled-color: rgba(255, 255, 255, 1);
+}
+
+footer .navbar-nav:last-child {
+    --bs-navbar-color: unset;
+    --bs-navbar-hover-color: unset;
+    --bs-navbar-disabled-color: unset;
+}
