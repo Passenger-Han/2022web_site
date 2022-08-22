@@ -51,7 +51,11 @@ body {
 #visual .characters img {transition: 0.5s; opacity: 0;}
 #visual .characters img:first-child {opacity: 1;}
 
-
+@media screen and (max-width: 575px){
+    #visual .text img, #visual .characters img {
+        margin-top: 60%;
+    }
+}
 
 #content-1st .position-sticky {top: 196px;}
 /* #content-1st .text.position-sticky {text-shadow: 0 0 1px rgba(255, 255, 255, 1);} */
