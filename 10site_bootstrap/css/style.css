@@ -51,7 +51,11 @@ body {
 #visual .characters img {transition: 0.5s; opacity: 0;}
 #visual .characters img:first-child {opacity: 1;}
 
+
+
 #content-1st .position-sticky {top: 196px;}
+/* #content-1st .text.position-sticky {text-shadow: 0 0 1px rgba(255, 255, 255, 1);} */
+#content-1st .text a {display: inline-block; margin-top: 24px; padding: 24px 60px; color: #FFFFFF; background-color: #FA2222; font-size: 1.125em; text-decoration: none;}
 #content-1st #cards .wrapper-text {height: 440px; margin-bottom: 24px;}
 #content-1st #cards .wrapper-text:nth-child(2n) {transform: translateY(40px);}
 #content-1st #cards .text {
@@ -67,7 +71,7 @@ body {
 }
 
 #belt .row {overflow-x: hidden;}
-#belt .row .col {background-position: center; background-repeat:  no-repeat; background-size: cover; transition: 0.6s; height: 100vh}
+#belt .row .col {background-position: center; background-repeat: no-repeat; background-size: cover; transition: 0.6s; height: 100vh}
 #belt .onLeft {left: -100%; z-index: 997; background-color: #FFFFFF;}
 #belt div[name=data] {z-index: 998; background-color: #FFFFFF;}
 #belt .onRight {right: -100%; z-index: 999; background-color: #FFFFFF;}
@@ -88,7 +92,7 @@ body {
 #partners-logo .swiper-slide {width: 200px;}
 #partners-logo .swiper-slide img {filter: saturate(0%) opacity(50%);}
 
-#banner-footer .wrapper-button a {display: flex; justify-content: center; align-items: center; border: 2px solid #FFFFFF; border-radius: 4px; width: 300px; height: 60px; font-size: 1.125em; text-decoration: none;}
+#banner-footer .wrapper-button a {display: flex; justify-content: center; align-items: center; border: 2px solid #FFFFFF; width: 300px; height: 60px; font-size: 1.125em; text-decoration: none;}
 #banner-footer .wrapper-button a:nth-child(1) {color: #FFFFFF;}
 #banner-footer .wrapper-button a:nth-child(2) {color: #FA2222; background-color: #FFFFFF;}
 
@@ -102,4 +106,12 @@ footer .navbar-nav:last-child {
     --bs-navbar-color: unset;
     --bs-navbar-hover-color: unset;
     --bs-navbar-disabled-color: unset;
+}
+
+footer .navbar-nav .nav-item {
+    font-size: 0.875em;
+}
+
+footer .text p, footer .text h2 {
+    margin: 0;
 }
