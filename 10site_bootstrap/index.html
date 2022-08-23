@@ -26,11 +26,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav id="header" class="navbar navbar-expand-md navbar-light bg-white position-absolute w-100">
-        <div id="navbar-depth1" class="container-fluid px-5 py-4 position-relative bg-white">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo-filled.png" alt="" class="w-50">
-            </a>
+    <nav id="header" class="navbar navbar-expand-md navbar-light bg-white position-fixed w-100">
+        <div id="navbar-depth1" class="container-fluid px-5 position-relative bg-white">
+            <div style="width: 120px;">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo-filled.png" alt="">
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -208,20 +210,64 @@
         <div class="container-fluid">
             <div class="row vh-100 position-relative">
                 <div class="col position-relative d-flex justify-content-center align-items-center" name="data" style="background-image: url(img/belt-left-1.jpg);">
-                    <span>Data</span>
+                    <span class="fs-1 fw-bolder text-white">Data</span>
                 </div>
-                <div class="col position-absolute onLeft">LEFT</div>
+                <div class="col position-absolute bg-light onLeft">
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col d-flex flex-column justify-content-center align-items-center gap-3">
+                            <ul class="list-unstyled w-75">
+                                <li class="fs-1 fw-bold p-4 position-relative border-1 border-bottom">
+                                    <p>01 &nbsp; <span class="fw-light">AD Big Data</span><span class="position-absolute end-0"><i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up d-none"></i></span></p>
+                                    <p class="d-none fs-6 fw-light">22년간의 디지털 마케팅 노하우를 녹인 플레이디만의 Data Technology을 경험하세요.
+                                        업계 1위, 풍부한 광고주 성공사례를 기반으로 최상의 광고효과를 도출해냅니다.</p>
+                                </li>
+                                <li class="fs-1 fw-bold p-4 position-relative border-1 border-bottom">
+                                    <p>02 &nbsp; <span class="fw-light">Market Analysis</span><span class="position-absolute end-0"><i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up d-none"></i></span></p>
+                                    <p class="d-none fs-6 fw-light">자체 마켓/경쟁사 분석 솔루션과 업종별 리서치를 기반으로 차별화된 마케팅 인사이트 제공 및 전략 도출을 지원합니다.</p>
+                                </li>
+                                <li class="fs-1 fw-bold p-4 position-relative border-1 border-bottom">
+                                    <p>03 &nbsp; <span class="fw-light">Media Data</span><span class="position-absolute end-0"><i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up d-none"></i></span></p>
+                                    <p class="d-none fs-6 fw-light">여러 매체의 광고 운영 및 효과를 한번에 관리하고 자동 통합 보고서를 활용해 최적의 인사이트를 도출할 수 있습니다.</p>
+                                </li>
+                                <li class="fs-1 fw-bold p-4 position-relative border-1 border-bottom">
+                                    <p>04 &nbsp; <span class="fw-light">Creative Pool</span><span class="position-absolute end-0"><i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up d-none"></i></span></p>
+                                    <p class="d-none fs-6 fw-light">업계 최다 업종 별, 매체 별 광고 소재 데이터 Pool 보유로 전환 효과 높은 소재를 빠르게 제작 및 Live 가능합니다.</p>
+                                </li>
+                            </ul>
+                            <div class="wrapper-button rounded">
+                                <a href="#!" class="text-white">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col position-relative d-flex flex-column justify-content-center align-items-center">
                     <img src="img/belt-middle-1.png" alt="" width="120">
                     <div class="text-center">
-                        <h2>Performance<br>Growth</h2>
-                        <p>데이터에 공감을 더해 확실한 성과를 만듭니다.</p>
+                        <h2 class="fw-bolder my-3">Performance<br>Growth</h2>
+                        <p class="fs-5 fw-light">데이터에 공감을 더해 확실한 성과를 만듭니다.</p>
                     </div>
                 </div>
                 <div class="col position-relative d-flex flex-column justify-content-center align-items-center" name="creative" style="background-image: url(img/belt-right-1.jpg);">
-                    <span>Creative</span>
+                    <span class="fs-1 fw-bolder text-white">Creative</span>
                 </div>
-                <div class="col position-absolute onRight">RIGHT</div>
+                <div class="col position-absolute onRight" style="background-color: rgba(234, 79, 79, 1);">
+                    <div class="row">
+                        <div class="col-7 d-flex flex-column justify-content-center align-items-center ps-5">
+                            <div class="text text-white w-50">
+                                <h3 class="fs-1 mb-3">CONTENTS CREATIVE</h3>
+                                <h4 class="fs-4 mb-4 text-nowrap">더 나은 퍼포먼스를 위해 영향력있는 콘텐츠를 만듭니다.</h4>
+                                <p class="fs-5 fw-light mb-5">소비자에게 공감을 이끌어내는 브랜디드 콘텐츠를 기획하여<br> 성과를 높이는 크리에이티브를 만들어냅니다.<br> 성과로 이어지는 전환형 크리에이티브를 경험해보세요!</p>
+                                <div class="d-inline-block wrapper-button rounded align-self-start">
+                                    <a href="#!"><i class="fa-solid fa-arrow-left-long fs-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-center position-relative">
+                            <img src="img/onRight_door.png" alt="" class="w-75 position-absolute start-0">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

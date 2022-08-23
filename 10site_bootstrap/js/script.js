@@ -75,15 +75,18 @@ document.querySelector("#partners-logo .swiper-wrapper").innerHTML = swiper01Tex
 
 // HEADER NAVBAR
 document.querySelectorAll("#header #navbar-depth1 .nav-item").forEach((element, index) => {
-    if (element.index != 4){
+    if (index != 4){
         element.addEventListener("mouseover", function(){
-            // removing 'active' class..
-            document.querySelectorAll("#header #navbar-depth2 .navbar-nav").forEach(element => {
-                element.classList.remove("active");
-            });
-            // activating 'active' class on a specific element..
-            document.querySelector("#header #navbar-depth2").classList.add("active");
-            document.querySelectorAll("#header #navbar-depth2 .navbar-nav")[index].classList.add("active");
+            // Check viewport's size..
+            if (window.innerWidth >= 576){
+                // removing 'active' class..
+                document.querySelectorAll("#header #navbar-depth2 .navbar-nav").forEach(element => {
+                    element.classList.remove("active");
+                });
+                // activating 'active' class on a specific element..
+                document.querySelector("#header #navbar-depth2").classList.add("active");
+                document.querySelectorAll("#header #navbar-depth2 .navbar-nav")[index].classList.add("active");
+            }
         });
     }
 });
