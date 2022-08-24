@@ -140,3 +140,5 @@ document.querySelector("#belt .row").addEventListener("mouseleave", function(){
     document.querySelector("#belt .onLeft").style.left = '-100%';
     document.querySelector("#belt .onRight").style.right = '-100%';
 });
+
+// Pseudo-WOW

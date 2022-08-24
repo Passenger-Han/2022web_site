@@ -1,3 +1,8 @@
+20220824 18:05
+    - 10site_bootstrap
+        - ahoufhghegjpoeq
+        - have to put animations into some items.
+
 20220823 18:11
     - 10site_bootstrap
         - qkek qhrh tlvek.. bb....
