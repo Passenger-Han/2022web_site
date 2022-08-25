@@ -141,4 +141,38 @@ document.querySelector("#belt .row").addEventListener("mouseleave", function(){
     document.querySelector("#belt .onRight").style.right = '-100%';
 });
 
-// Pseudo-WOW
+// Pseudo-WOW declaration part
+let cardCall = document.querySelectorAll("#content-1st #cards div.wrapper-text"); // #content-1st #cards
+let graphCall = document.querySelectorAll("#graphs .wrapper-graph .graph .graph-bar > div");
+window.onscroll = () => {
+    // Pseudo-WOW function part
+    if (window.innerWidth >= 576){
+        // * CARD PART *
+        for (let cardIndex = 0; cardIndex < cardCall.length; cardIndex++){
+            if (cardCall[cardIndex].getBoundingClientRect()['top'] < window.innerHeight * 5 / 6 && cardCall[cardIndex].dataset.getWowed == 0) {
+                cardCall[cardIndex].style.animationPlayState = 'running';
+                cardCall[cardIndex].dataset.getWowed = 1;
+                // cardCall[cardIndex].style.opacity = 1;
+            }
+        }
+
+        // *GRAPH PART *
+        for (let graphIndex = 0; graphIndex < graphCall.length; graphIndex++){
+            if (graphCall[graphIndex].getBoundingClientRect()['top'] < window.innerHeight * 7 / 8 && graphCall[graphIndex].dataset.getWowed == 0) {
+                graphCall[graphIndex].style.animationPlayState = 'running';
+                graphCall[graphIndex].dataset.getWowed = 1;
+                // graphCall[graphIndex].style.opacity = 1;
+            }
+        }
+    }
+
+    // GO TO TOP Visual part
+    if (window.scrollY > window.innerHeight * 2.5){
+        document.querySelector("#goToTop").classList.add("shown");
+    } else {
+        document.querySelector("#goToTop").classList.remove("shown");
+    }
+}
+
+// GO TO TOP Function part
+const GoToTop = () => window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
