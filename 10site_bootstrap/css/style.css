@@ -192,7 +192,7 @@ footer .text p, footer .text h2 {
 }
 
 footer #goToTop {
-    background-color: #FA2222; color: #FFFFFF; opacity: 0;
+    background-color: #FA2222; color: #FFFFFF; opacity: 0; visibility: hidden;
     position: fixed; right: 30px; bottom: 30px; z-index: 99999;
     width: 40px; height: 40px; border-radius: 50%;
     display: flex; justify-content: center; align-items: center;
@@ -201,7 +201,7 @@ footer #goToTop {
 }
 
 footer #goToTop.shown {
-    opacity: 0.5;
+    opacity: 0.5; visibility: visible;
 }
 
 footer #goToTop:hover {
