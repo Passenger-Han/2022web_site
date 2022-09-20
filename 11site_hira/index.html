@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건강보험심사평가원</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Fullpage.js -->
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <script src="js/fullpage.min.js"></script>
+    
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Site Custom -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- <div class="header-popped"></div> -->
+
+        <!-- HEADER UTILITY -->
+        <div id="header-utility">
+            <!-- Search form -->
+            <div class="search-wrapper">
+                <input type="text" name="sitesearch" id="sitesearch">
+                <button></button>
+            </div>
+            <div class="utility-menu">
+                <a href="#!">로그인</a>
+                <a href="#!">회원가입</a>
+                <a href="#!">인증센터</a>
+                <a href="#!">Language</a>
+            </div>
+        </div>
+
+        <!-- HEADER NAVIGATOR -->
+        <div id="header-navigator">
+            <!-- Logo -->
+            <h1><a href="#!"><img src="img/logo.png" alt=""></a></h1>
+            <!-- Navigator -->
+            <ul class="navigator">
+                <li><a href="#!">의료정보</a></li>
+                <li><a href="#!">조회·신청</a></li>
+                <li><a href="#!">제도·정책</a></li>
+                <li><a href="#!">국민소통</a></li>
+                <li><a href="#!">기관소식</a></li>
+            </ul>
+            <!-- Background - Full Dropdown Menu -->
+            <div class="background-fulldrop"></div>
+            <!-- Sitemap -->
+            <button>전체메뉴</button>
+        </div>
+    </header>
+
+    <div id="fullpage">
+
+        <!-- Section 01 -->
+        <section id="section-01" class="section">
+            <div class="backgrounds swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(img/section-1st-visual01.jpg);">
+                        <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
+                        <h2>건강보험심사평가원</h2>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(img/section-1st-visual02.jpg);">
+                        <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
+                        <h2>건강보험심사평가원</h2>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(img/section-1st-visual03.jpg);">
+                        <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
+                        <h2>건강보험심사평가원</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="panel container">
+                <div class="swiper-pagination"></div>
+                <div class="wrapper-frequent">
+                    <div class="categories">
+                        <a href="#!">국민</a>
+                        <a href="#!">기관</a>
+                    </div>
+                    <ul class="buttons">
+                        <li>
+                            <a href="#!">
+                                <img src="img/capsule.png" alt="알약">
+                                <p>내가 먹는 약! 한눈에</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img src="img/capsule.png" alt="알약">
+                                <p>내가 먹는 약! 한눈에</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img src="img/capsule.png" alt="알약">
+                                <p>내가 먹는 약! 한눈에</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img src="img/capsule.png" alt="알약">
+                                <p>내가 먹는 약! 한눈에</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img src="img/capsule.png" alt="알약">
+                                <p>내가 먹는 약! 한눈에</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img src="img/capsule.png" alt="알약">
+                                <p>내가 먹는 약! 한눈에</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <script>
+            const sct01Swiper = new Swiper('#section-01 .swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: true,
+                },
+            });
+        </script>
+
+    </div>
+</body>
+</html>

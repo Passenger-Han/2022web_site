@@ -1,0 +1,47 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #000000;
+    text-decoration: initial;
+}
+
+header {
+    position: fixed;
+}
+
+.container {
+    width: 1280px; margin: 0 auto;
+}
+
+.backgrounds {
+    width: 100vw; height: 100vh;
+    position: absolute;
+
+    .swiper-slide {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+#section-01 {
+    position: relative;
+
+    .panel {
+        position: relative;
+        z-index: 100;
+        bottom: 6rem;
+        
+        .wrapper-frequent {
+            .buttons {
+                display: flex;
+            }
+        }
+    }
+}

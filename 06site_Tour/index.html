@@ -28,13 +28,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- page CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" class="css">
 </head>
 <body>
     <!-- HEADER -->
-    <?php
-        include "./include/header.html";
-    ?>
+    <?php include "./include/header.html"; ?>
 
     <!-- MAIN SECTION -->
     <section id="section-main">
@@ -431,7 +429,7 @@
                     });
                 </script>
 
-                <div class="container-content position-re" style="background-image: url(img/03travel05.jpg);">
+                <div class="container-content position-re" style="background-image: url(img/03travel05.jpg); background-color: #000000; background-repeat: no-repeat; background-position: center; background-size: contain;">
                     <p class="fonts-white fonts-title fonts-regular" style="text-align: center; padding: 1em 0;">TOKYO</p>
                     <div class="container-text">
                         <p class="fonts-description fonts-white">20°C 구름조금<br><span class="fonts-thin" style="font-size: 0.9375em;">습도 60% 바람 남남동 2m/s</span></p>
@@ -508,15 +506,30 @@
     <!-- FOOTER -->
     <!-- FOOTER UPPER -->
 
-    <?php
-        include "./include/footer.html";
-    ?>
+    <?php include "./include/footer.html"; ?>
     
     <script>
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[0].innerHTML = `<i class="fa-solid fa-plane"></i> &nbsp;`;
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[1].innerHTML = `<i class="fa-solid fa-computer-mouse"></i> &nbsp;`;
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[2].innerHTML = `<i class="fa-solid fa-car"></i> &nbsp;`;
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[3].innerHTML = `<i class="fa-solid fa-umbrella-beach"></i> &nbsp;`;
+
+        const mapCode = 'c7712bd410adc36bffd17d7e8a7611e4';
+        $.ajax({
+            url: `https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=${mapCode}&units=metric&lang=kr`,
+            dataType: 'json',
+            success: showWeather,
+        })
+
+        function showWeather(data){
+            console.log(data);
+
+            let temperature = data.main.temp;
+            let weather = data.weather[0].description;
+            let icon = data.weather[0].icon;
+            $(".section-row-second .container-text .fonts-description").html(`${parseInt(temperature)}°C, ${weather}`);
+            $(".section-row-second .container-content").eq(2).css('background-image', `url(http://openweathermap.org/img/wn/${icon}@4x.png)`);
+        }
     </script>
 </body>
 </html>
