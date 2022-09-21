@@ -10,13 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
     
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Fullpage.js -->
-    <link rel="stylesheet" href="css/fullpage.min.css">
-    <script src="js/fullpage.min.js"></script>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <script src="js/jquery.fullPage.js"></script>
     
     <!-- Swiper.js -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -25,16 +28,15 @@
     <!-- Site Custom -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
-        <!-- <div class="header-popped"></div> -->
-
-        <!-- HEADER UTILITY -->
-        <div id="header-utility">
-            <!-- Search form -->
+        <div id="header-utility" class="container">
             <div class="search-wrapper">
-                <input type="text" name="sitesearch" id="sitesearch">
-                <button></button>
+                <form action="javascript:void(0);">
+                    <input type="text" name="sitesearch" id="sitesearch">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
             </div>
             <div class="utility-menu">
                 <a href="#!">로그인</a>
@@ -44,11 +46,9 @@
             </div>
         </div>
 
-        <!-- HEADER NAVIGATOR -->
-        <div id="header-navigator">
-            <!-- Logo -->
+
+        <div id="header-navigator" class="container">
             <h1><a href="#!"><img src="img/logo.png" alt=""></a></h1>
-            <!-- Navigator -->
             <ul class="navigator">
                 <li><a href="#!">의료정보</a></li>
                 <li><a href="#!">조회·신청</a></li>
@@ -56,9 +56,7 @@
                 <li><a href="#!">국민소통</a></li>
                 <li><a href="#!">기관소식</a></li>
             </ul>
-            <!-- Background - Full Dropdown Menu -->
             <div class="background-fulldrop"></div>
-            <!-- Sitemap -->
             <button>전체메뉴</button>
         </div>
     </header>
@@ -66,81 +64,163 @@
     <div id="fullpage">
 
         <!-- Section 01 -->
-        <section id="section-01" class="section">
-            <div class="backgrounds swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url(img/section-1st-visual01.jpg);">
-                        <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
-                        <h2>건강보험심사평가원</h2>
+        <div id="section-01" class="section" data-anchor="page-1">
+                <div class="backgrounds swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url(img/section-1st-visual01.jpg);">
+                            <div class="title container">
+                                <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
+                                <h2>건강보험심사평가원</h2>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url(img/section-1st-visual02.jpg);">
+                            <div class="title container">
+                                <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
+                                <h2>건강보험심사평가원</h2>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url(img/section-1st-visual03.jpg);">
+                            <div class="title container">
+                                <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
+                                <h2>건강보험심사평가원</h2>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-slide" style="background-image: url(img/section-1st-visual02.jpg);">
-                        <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
-                        <h2>건강보험심사평가원</h2>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url(img/section-1st-visual03.jpg);">
-                        <h4>보건의료를 가치있게, 온 국민을 건강하게</h4>
-                        <h2>건강보험심사평가원</h2>
+                    
+                    <div class="panel container">
+                        <div class="wrapper-frequent">
+                            <div class="categories">
+                                <a href="#!" class="on">국민</a>
+                                <a href="#!">기관</a>
+                            </div>
+                            <ul class="buttons">
+                                <li>
+                                    <a href="#!">
+                                        <img src="img/capsule.png" alt="알약">
+                                        <p>내가 먹는 약!<br>한눈에</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <img src="img/capsule.png" alt="알약">
+                                        <p>내가 먹는 약!<br>한눈에</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <img src="img/capsule.png" alt="알약">
+                                        <p>내가 먹는 약!<br>한눈에</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <img src="img/capsule.png" alt="알약">
+                                        <p>내가 먹는 약!<br>한눈에</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <img src="img/capsule.png" alt="알약">
+                                        <p>내가 먹는 약!<br>한눈에</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <img src="img/capsule.png" alt="알약">
+                                        <p>내가 먹는 약!<br>한눈에</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            
+        </div>
+      
+
+        <div id="section-02" class="section" data-anchor="page-2">
+            <div class="container">
+                <h3>HIRA Clip</h3>
+                <p>다양한 의료정보 서비스를 이용하세요.</p>
+
+                <ul class="infomation">
+                    <li>
+                        <a href="#!">
+                            <img src="img/capsule.png" alt="">
+                            <span>HIRA 소통채널</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <img src="img/capsule.png" alt="">
+                            <span>보건연구 · 빅데이터</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <img src="img/capsule.png" alt="">
+                            <span>정책 · 정보</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <img src="img/capsule.png" alt="">
+                            <span>건강정보</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="notice">
+                    <li>
+                        <a href="#!">
+                            <p>심평정보통</p>
+                            <span>의료 정책 · 사업 정보 채널</span>
+                            <p>호흡기환자진료센터 (원스톱진료기관) 등 안내</p>
+
+                            <p class="thumbnail">
+                                <img src="img/notice_thumbnail01.png" alt="">
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <p>심평정보통</p>
+                            <span>의료 정책 · 사업 정보 채널</span>
+                            <p>호흡기환자진료센터 (원스톱진료기관) 등 안내</p>
+
+                            <p class="thumbnail">
+                                <img src="img/notice_thumbnail01.png" alt="">
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <p>심평정보통</p>
+                            <span>의료 정책 · 사업 정보 채널</span>
+                            <p>호흡기환자진료센터 (원스톱진료기관) 등 안내</p>
+
+                            <p class="thumbnail">
+                                <img src="img/notice_thumbnail01.png" alt="">
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <p>심평정보통</p>
+                            <span>의료 정책 · 사업 정보 채널</span>
+                            <p>호흡기환자진료센터 (원스톱진료기관) 등 안내</p>
+
+                            <p class="thumbnail">
+                                <img src="img/notice_thumbnail01.png" alt="">
+                            </p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="panel container">
-                <div class="swiper-pagination"></div>
-                <div class="wrapper-frequent">
-                    <div class="categories">
-                        <a href="#!">국민</a>
-                        <a href="#!">기관</a>
-                    </div>
-                    <ul class="buttons">
-                        <li>
-                            <a href="#!">
-                                <img src="img/capsule.png" alt="알약">
-                                <p>내가 먹는 약! 한눈에</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                <img src="img/capsule.png" alt="알약">
-                                <p>내가 먹는 약! 한눈에</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                <img src="img/capsule.png" alt="알약">
-                                <p>내가 먹는 약! 한눈에</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                <img src="img/capsule.png" alt="알약">
-                                <p>내가 먹는 약! 한눈에</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                <img src="img/capsule.png" alt="알약">
-                                <p>내가 먹는 약! 한눈에</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                <img src="img/capsule.png" alt="알약">
-                                <p>내가 먹는 약! 한눈에</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <script>
-            const sct01Swiper = new Swiper('#section-01 .swiper', {
-                loop: true,
-                autoplay: {
-                    delay: 6000,
-                    disableOnInteraction: true,
-                },
-            });
-        </script>
+        </div>
 
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

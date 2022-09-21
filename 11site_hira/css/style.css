@@ -15,17 +15,58 @@ a {
 
 header {
   position: fixed;
+  z-index: 2000;
+  width: 100%;
+  background-color: black;
+}
+header #header-utility {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header #header-utility a {
+  color: white;
+}
+header #header-utility button {
+  background: none;
+  border: none;
+  color: white;
+}
+header #header-navigator {
+  display: flex;
+  align-items: center;
+}
+header #header-navigator .navigator {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+header #header-navigator .navigator > li > a {
+  display: block;
+  color: white;
+  padding: 2rem 0.5rem;
+}
+header #header-navigator .background-fulldrop {
+  display: none;
+}
+header #header-navigator > button {
+  padding: 1rem 0.5rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.4039215686);
+  color: white;
 }
 
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .backgrounds {
   width: 100vw;
   height: 100vh;
-  position: absolute;
 }
 .backgrounds .swiper-slide {
   background-repeat: no-repeat;
@@ -36,11 +77,69 @@ header {
 #section-01 {
   position: relative;
 }
+#section-01 .swiper-wrapper .swiper-slide .title {
+  position: relative;
+  top: 40%;
+  color: white;
+}
+#section-01 .swiper-wrapper .swiper-slide .title h4 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+#section-01 .swiper-wrapper .swiper-slide .title h2 {
+  font-size: 2.5rem;
+}
 #section-01 .panel {
   position: relative;
   z-index: 100;
-  bottom: 6rem;
+  bottom: 40%;
+}
+#section-01 .panel .wrapper-frequent .categories {
+  margin-bottom: 1.5rem;
+}
+#section-01 .panel .wrapper-frequent .categories a {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+#section-01 .panel .wrapper-frequent .categories a:last-child {
+  transform: translateX(-2.75rem);
+}
+#section-01 .panel .wrapper-frequent .categories a.on {
+  background-color: #7777ff;
+  color: white;
+  z-index: 50;
 }
 #section-01 .panel .wrapper-frequent .buttons {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  width: auto;
+  max-width: 1280px;
+}
+#section-01 .panel .wrapper-frequent .buttons li {
+  background-color: white;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+}
+#section-01 .panel .wrapper-frequent .buttons li a {
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#section-02 {
+  padding-top: 12rem;
+}
+#section-02 .container > h3, #section-02 .container > p {
+  text-align: center;
+}
+#section-02 .container > h3 {
+  font-size: 2.25rem;
 }/*# sourceMappingURL=style.css.map */
