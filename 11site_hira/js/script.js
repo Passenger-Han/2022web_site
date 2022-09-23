@@ -11,10 +11,11 @@ const sct01Swiper = new Swiper('#section-01 .swiper', {
 // page-3 Swipers
 const sct03Swiper01 = new Swiper ('#section-03 .banner-wrapper .swiper', {
     slidesPerView: 1,
-    allowTouchMove: false,
+    allowTouchMove: true,
 
     pagination: {
         el: '#section-03 .banner-wrapper .swiper-pagination',
+        type: 'fraction',
         clickable: true,
     },
 })
@@ -33,6 +34,9 @@ const sct03Swiper02 = new Swiper ('#section-03 .sns-wrapper .swiper', {
 // Fullpage initialization
 $('#fullpage').fullpage({
     menu: 'header',
-    anchors: ['page-1', 'page-2', 'page-3', 'page-4'],
+    showActiveTooltip: true,
+    // anchors: ['page-1', 'page-2', 'page-3', 'page-4'],
     navigation: true,
 });
+
+$('#fp-nav ul > li:last-child').css('display', 'none');
