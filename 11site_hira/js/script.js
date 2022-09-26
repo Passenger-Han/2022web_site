@@ -1,3 +1,52 @@
+// navigator full-drop submenu
+$('header #header-navigator .navigator').on('mouseenter', function(){
+    $('header #header-navigator .navigator .submenu').css({
+        'display': 'block',
+    });
+    $('.background-fulldrop').css({
+        'display': 'block',
+    });
+    $('.background-overlay').css({
+        'display': 'block',
+    });
+});
+
+$('header #header-utility').on('mouseenter', function(){
+    $('header #header-navigator .navigator .submenu').css({
+        'display': 'none',
+    });
+    $('.background-fulldrop').css({
+        'display': 'none',
+    });
+    $('.background-overlay').css({
+        'display': 'none',
+    });
+});
+
+$('.background-overlay').on('mouseenter', function(){
+    $('header #header-navigator .navigator .submenu').css({
+        'display': 'none',
+    });
+    $('.background-fulldrop').css({
+        'display': 'none',
+    });
+    $('.background-overlay').css({
+        'display': 'none',
+    });
+});
+
+// $('header .background-fulldrop').on('mouseleave', function(){
+//     $('header #header-navigator .navigator .submenu').css({
+//         'display': 'none',
+//     });
+//     $('.background-fulldrop').css({
+//         'display': 'none',
+//     });
+//     $('.background-overlay').css({
+//         'display': 'none',
+//     });
+// });
+
 // page-1 Swiper
 const sct01Swiper = new Swiper('#section-01 .swiper', {
     loop: true,
@@ -37,6 +86,7 @@ $('#fullpage').fullpage({
     showActiveTooltip: true,
     // anchors: ['page-1', 'page-2', 'page-3', 'page-4'],
     navigation: true,
+    normalScrollElements: '#section-04 .guideline-menu .guideline-list',
 });
 
 $('#fp-nav ul > li:last-child').css('display', 'none');

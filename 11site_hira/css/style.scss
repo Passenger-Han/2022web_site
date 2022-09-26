@@ -1,4 +1,9 @@
 $navigator-backcolor: #000000;
+$submenu-height: 525px;
+
+:root {
+    --submenu-height: #{$submenu-height};
+}
 
 * {
     margin: 0; padding: 0; box-sizing: border-box;
@@ -68,35 +73,65 @@ header {
                     display: block;
 
                     width: 100%;
+                    padding: 2rem 0rem;
 
+                    text-indent: 1rem;
                     color: #FFFFFFFF;
-                    padding: 2rem 0.5rem;
                 }
 
                 .submenu {
+                    display: none;
                     position: absolute;
                     top: 100%;
                     left: 0;
+                    width: 100%;
+                    height: var(--submenu-height, 550px);
 
-                    a {
-                        color: #FFFFFFFF;
+                    li {
+                        width: 100%;
+
+                        a {
+                            display: block;
+                            padding: 1rem;
+                            color: #000000FF;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #00000023;
                     }
                 }
             }
         }
 
-        .background-fulldrop {
-            display: none;
-        }
-
+        
         > button {
             padding: 1rem 0.5rem;
             background: none;
             border: 1px solid #FFFFFF67;
             color: #FFFFFFFF;
-
         }
     }
+    
+    .background-fulldrop {
+        display: none;
+        background-color: #FFFFFFFF;
+        background-image: url(../img/Navigator-icon.png);
+        background-repeat: no-repeat;
+        background-position: 18% 50%;
+        height: var(--submenu-height, 550px);
+    }
+}
+
+.background-overlay {
+    display: none;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000045;
 }
 
 .container {
@@ -869,7 +904,7 @@ footer {
 
                 .outlink, .certificated {
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     gap: 0.25rem;
                 }
             }

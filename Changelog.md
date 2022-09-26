@@ -1,3 +1,8 @@
+20220926 18:13
+    - 11site_HIRA
+        - Sorry, forgot writing the log.
+    - I reckon I should learn how to write .markdown efficient and stylish.
+
 20220825 18:15
     - 10site_bootstrap
         - 1.0 ..?
