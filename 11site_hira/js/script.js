@@ -1,14 +1,31 @@
+// resize checkers
+let resizeDelay = 300; // ms
+let resizeTimer = null;
+
+$(window).on('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function(){
+        if (window.innerWidth >= 960){
+            $('header #header-navigator .navigator').show();
+        } else {
+            $('header #header-navigator .navigator').hide();
+        }
+    }, resizeDelay);
+})
+
 // navigator full-drop submenu
 $('header #header-navigator .navigator').on('mouseenter', function(){
-    $('header #header-navigator .navigator .submenu').css({
-        'display': 'block',
-    });
-    $('.background-fulldrop').css({
-        'display': 'block',
-    });
-    $('.background-overlay').css({
-        'display': 'block',
-    });
+    if (window.innerWidth >= 960){
+        $('header #header-navigator .navigator .submenu').css({
+            'display': 'block',
+        });
+        $('.background-fulldrop').css({
+            'display': 'block',
+        });
+        $('.background-overlay').css({
+            'display': 'block',
+        });
+    }
 });
 
 $('header #header-utility').on('mouseenter', function(){
@@ -53,6 +70,31 @@ $('.background-sitemap').on('click', function(){
     });
 });
 
+// page-1 latest board
+$('#section-01 .panel a').on('click', function(){
+    $('#section-01 .panel .categories a').removeClass('on');
+    $('#section-01 .panel .categories a').eq($(this).index()).addClass('on');
+    loadButtons($('#section-01 .panel a').index(this));
+});
+
+function loadButtons(index){
+    $('#section-01 .panel .buttons').removeClass('on')
+    $('#section-01 .panel .buttons').eq(index).addClass('on')
+}
+
+// page-2
+$('#section-02 .information li').on('click', function(){
+    $('#section-02 .information li').removeClass('on');
+    $('#section-02 .information li').eq($(this).index()).addClass('on');
+    loadInformation($('#section-02 .information li').index(this));
+});
+
+function loadInformation(index){
+    $('#section-02 .notice').removeClass('on')
+    $('#section-02 .notice').eq(index).addClass('on')
+}
+
+
 // page-3 latest board
 $('#section-03 .news-menu a').on('click', function(){
     $('#section-03 .news-menu a').removeClass('on');
@@ -90,6 +132,11 @@ function loadGuidelineVisual(index){
     $('#section-04 .guideline-visual li').eq(index).addClass('on')
 }
 
+// footer outlink
+$('footer .footer-upper .footer-sitemap').on('click', function(){
+    $('footer .footer-upper .footer-sitemap ul').toggleClass('on');
+})
+
 // page-1 Swiper
 const sct01Swiper = new Swiper('#section-01 .swiper', {
     loop: true,
@@ -114,32 +161,53 @@ const sct03Swiper01 = new Swiper ('#section-03 .banner-wrapper .swiper', {
 
 const sct03Swiper0201 = new Swiper ('#section-03 .sns-wrapper .swiper01', {
     // loop: true,
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 16,
 
     pagination: {
         el: '#section-03 .sns-wrapper .swiper-pagination',
         clickable: true,
+    },
+
+    breakpoints: {
+        960: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+        }
     },
 });
 const sct03Swiper0202 = new Swiper ('#section-03 .sns-wrapper .swiper02', {
     // loop: true,
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 16,
 
     pagination: {
         el: '#section-03 .sns-wrapper .swiper-pagination',
         clickable: true,
     },
+
+    breakpoints: {
+        960: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+        }
+    },
 });
 const sct03Swiper0203 = new Swiper ('#section-03 .sns-wrapper .swiper03', {
     // loop: true,
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 16,
 
     pagination: {
         el: '#section-03 .sns-wrapper .swiper-pagination',
         clickable: true,
+    },
+
+    breakpoints: {
+        960: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+        }
     },
 });
 
@@ -150,6 +218,7 @@ $('#fullpage').fullpage({
     // anchors: ['page-1', 'page-2', 'page-3', 'page-4'],
     navigation: true,
     normalScrollElements: '#section-04 .guideline-menu .guideline-list, .sitemap',
+    responsiveWidth: 960,
 });
 
 $('#fp-nav ul > li:last-child').css('display', 'none');
