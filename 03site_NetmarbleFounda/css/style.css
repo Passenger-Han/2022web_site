@@ -340,3 +340,18 @@ img {
     border: 0px solid #fff;
     background: #fff;
 }
+
+/* patches */
+.thumbnail {
+    width: 100%;
+    padding-top: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info_post ul li {
+    float: unset;
+    margin-right: unset;
+    /* user-select: none; */
+}

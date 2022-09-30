@@ -588,6 +588,10 @@ header .background-fulldrop {
 #section-04 .container .service-wrapper .introduce-wrapper .introduce-leader p {
   font-size: 1.2rem;
 }
+#section-04 .container .service-wrapper .introduce-wrapper .introduce-leader p span {
+  font-size: inherit;
+  font-weight: bold;
+}
 #section-04 .container .service-wrapper .introduce-wrapper .introduce-leader::before {
   content: "";
   display: block;
@@ -596,7 +600,7 @@ header .background-fulldrop {
   background-image: url(../img/introduce-leader-bglayer-person.png);
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: 95% 125%;
+  background-position: 95% -100%;
   top: 0;
   left: 0;
   right: 0;
@@ -643,55 +647,54 @@ header .background-fulldrop {
   display: flex;
   gap: 1.75rem;
 }
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu, #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual {
+#section-04 .container .service-wrapper .guideline-wrapper .patched-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#section-04 .container .service-wrapper .guideline-wrapper .patched-wrapper h4 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+#section-04 .container .service-wrapper .guideline-wrapper .patched-wrapper, #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual {
   flex-basis: 50%;
 }
 #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu {
-  text-align: right;
-}
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu h4 {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-}
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list {
-  position: relative;
-  height: 300px;
-  overflow-y: scroll;
-}
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list::before {
-  content: "";
-  display: block;
-  width: 1px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2705882353);
-  position: absolute;
-  z-index: 0;
-  right: 7px;
 }
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list p {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 1.5rem;
-  font-size: 1.0625rem;
-  color: #ababab;
+#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list .swiper-slide {
+  width: 100% !important;
+  display: flex;
+  gap: 4%;
+  flex-direction: column;
+  align-items: stretch;
+}
+#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list .swiper-slide p {
+  flex-basis: 16%;
+  display: flex;
+  align-items: center;
+  text-indent: 0.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.137254902);
+  color: rgba(0, 0, 0, 0.6666666667);
+}
+#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list .swiper-slide p.on {
+  background: #7777ff;
+  color: white;
+}
+#section-04 .container .service-wrapper .guideline-wrapper .navigation-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 12%);
+  padding: 0.25rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.337254902);
+  border-radius: 0.75rem;
   cursor: pointer;
 }
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list p.on, #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list p:hover {
-  color: #7777ff;
-  font-weight: bold;
-}
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list p:last-child {
-  margin-bottom: initial;
-}
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-pagination {
-  margin-top: 1.5rem;
-}
-#section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-pagination a {
-  padding: 0.125rem 1.25rem;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.137254902);
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.2156862745);
-  border-radius: 16px;
+#section-04 .container .service-wrapper .guideline-wrapper .navigation-button.navigation-next {
+  transform: translate(108%, 12%);
 }
 #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual {
   padding: 1.75rem;
@@ -702,11 +705,11 @@ header .background-fulldrop {
 }
 #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual li {
   display: none;
+  gap: 2rem;
 }
 #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual li.on {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual li h4 {
   font-size: 1.5rem;
@@ -753,6 +756,7 @@ footer .footer-upper .footer-menu li {
   position: relative;
 }
 footer .footer-upper .footer-menu li a {
+  display: block;
   font-weight: bold;
   color: #909095;
 }
@@ -963,6 +967,7 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
   }
   #section-04 .container {
     padding: 0;
+    border: none;
   }
   #section-04 .container .service-wrapper {
     flex-direction: column;
@@ -974,40 +979,52 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
     background-position: 95% 0%;
   }
   #section-04 .container .service-wrapper .guideline-wrapper {
+    display: flex;
     flex-direction: column;
-    gap: unset;
   }
-  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu, #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual {
-    flex-basis: unset;
-  }
-  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu {
-    order: 2;
-  }
-  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu h4 {
-    text-align: center;
-  }
-  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list {
-    display: flex;
+  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list .swiper-slide {
+    height: auto;
+    gap: 0.25rem;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    overflow-y: initial;
+    align-items: stretch;
   }
-  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list::before {
-    content: "";
-    display: none;
+  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list .swiper-slide p {
+    padding: 1rem 0;
   }
-  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list p {
-    margin-bottom: unset;
-    padding: 0.5rem;
-    flex-grow: 1;
-    flex-basis: 40%;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.2039215686);
-    color: black;
+  #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual li {
+    gap: 0.5rem;
   }
-  #section-04 .container .service-wrapper .guideline-wrapper .guideline-menu .guideline-list p span {
-    display: none;
+  #section-04 .container .service-wrapper .guideline-wrapper .guideline-visual li h4 {
+    font-size: 1.25rem;
+  }
+  footer .footer-upper .container .footer-menu {
+    gap: 0;
+    flex-wrap: wrap;
+    flex-grow: 0.6;
+    flex-basis: 25%;
+  }
+  footer .footer-upper .container .footer-menu li {
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
+  footer .footer-upper .container .footer-menu li::after {
+    content: none;
+  }
+  footer .footer-upper .container .footer-menu li a {
+    padding: 0.625rem 0;
+  }
+  footer .footer-upper .container .footer-sitemap {
+    flex-grow: 0.25;
+    flex-basis: 25%;
+  }
+  footer .footer-upper .container .footer-sitemap ul li {
+    padding: 0.75rem 1rem;
+  }
+  footer .footer-lower .container {
+    flex-direction: column;
+  }
+  footer .footer-lower .container .footer-text {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

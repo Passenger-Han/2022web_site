@@ -745,7 +745,7 @@ header {
                 flex-direction: column;
                 gap: 1.75rem;
 
-                .introduce-leader, .introduce-company {
+                .introduce-leader,.introduce-company {
                     flex-basis: 50%;
                 }
 
@@ -764,6 +764,11 @@ header {
 
                     p {
                         font-size: 1.2rem;
+
+                        span {
+                            font-size: inherit;
+                            font-weight: bold;
+                        }
                     }
 
                     &::before {
@@ -774,7 +779,7 @@ header {
                         background-image: url(../img/introduce-leader-bglayer-person.png);
                         background-size: auto;
                         background-repeat: no-repeat;
-                        background-position: 95% 125%;
+                        background-position: 95% -100%;
                         top: 0;
                         left: 0;
                         right: 0;
@@ -839,71 +844,73 @@ header {
 
                 display: flex;
                 gap: 1.75rem;
-                
-                .guideline-menu, .guideline-visual {
-                    flex-basis: 50%;
-                }
-                
-                .guideline-menu {
-                    text-align: right;
+
+                .patched-wrapper {
+                    position: relative;
+
+                    display: flex;
+                    flex-direction: column;
 
                     h4 {
                         font-size: 1.75rem;
                         margin-bottom: 1.5rem;
+                        text-align: right;
                     }
+                }
+                
+                .patched-wrapper, .guideline-visual {
+                    flex-basis: 50%;
+                }
+                
+                
+                .guideline-menu {
+                    height: 100%;
 
                     .guideline-list {
-                        position: relative;
 
-                        height: 300px;
-                        overflow-y: scroll;
+                        .swiper-slide {
+                            width: 100% !important;
 
-                        &::before {
-                            content: '';
-                            display: block;
-                            width: 1px;
-                            height: 100%;
-                            background-color: #00000045;
-                            position: absolute;
-                            z-index: 0;
-                            right: 7px;
-                        }
+                            display: flex;
+                            gap: 4%;
+                            flex-direction: column;
+                            align-items: stretch;
 
-                        p {
-                            position: relative;
-                            z-index: 2;
+                            p {
+                                // flex-grow: 1;
+                                flex-basis: 16%;
 
-                            margin-bottom: 1.5rem;
+                                display: flex;
+                                align-items: center;
 
-                            font-size: 1.0625rem;
-                            // font-weight: 700;
-                            color: #ABABABFF;
-
-                            cursor: pointer;
-
-                            &.on, &:hover {
-                                color: #7777FFFF;
+                                text-indent: 0.5rem;
                                 font-weight: bold;
-                            }
-
-                            &:last-child {
-                                margin-bottom: initial;
+                                background: #00000023;
+                                color: #000000AA;
+                                
+                                &.on {
+                                    background: #7777FFFF;
+                                    color: #FFFFFFFF;
+                                }
                             }
                         }
                     }
+                }
 
-                    .guideline-pagination {
-                        margin-top: 1.5rem;
-                        
-                        a {
-                            padding: 0.125rem 1.25rem;
+                .navigation-button {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0, 12%);
 
-                            box-shadow: 4px 4px 4px #00000023;
+                    padding: 0.25rem 1rem;
+                    border: 1px solid #00000056;
+                    border-radius: 0.75rem;
 
-                            background-color: #FFFFFFFF;
-                            border: 1px solid #00000037;
-                            border-radius: 16px;
-                        }
+                    cursor: pointer;
+
+                    &.navigation-next {
+                        transform: translate(108%, 12%);
                     }
                 }
 
@@ -917,11 +924,11 @@ header {
 
                     li {
                         display: none;
+                        gap: 2rem;
 
                         &.on {
                             display: flex;
                             flex-direction: column;
-                            gap: 2rem;
 
                         }
 
@@ -985,6 +992,7 @@ footer {
                 position: relative;
 
                 a {
+                    display: block;
                     font-weight: bold;
                     color: #909095FF;
                 }
@@ -1300,6 +1308,7 @@ footer {
     #section-04 {
         .container {
             padding: 0;
+            border: none;
 
             .service-wrapper {
                 flex-direction: column;
@@ -1317,55 +1326,83 @@ footer {
                 }
 
                 .guideline-wrapper {
+                    display: flex;
                     flex-direction: column;
-                    gap: unset;
-
-                    .guideline-menu, .guideline-visual {
-                        flex-basis: unset;
-                    }
 
                     .guideline-menu {
-                        order: 2;
 
-                        h4 {
-                            text-align: center;
-                        }
-                        
                         .guideline-list {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 0.75rem;
-                            overflow-y: initial;
+                            .swiper-slide {
+                                height: auto;
+                                gap: 0.25rem;
+                                flex-wrap: wrap;
+                                align-items: stretch;
 
-                            &::before {
-                                content: '';
-                                display: none;
-                            }
-
-                            p {
-                                margin-bottom: unset;
-                                padding: 0.5rem;
-
-                                flex-grow: 1;
-                                flex-basis: 40%;
-                                text-align: left;
-
-                                display: flex;
-                                // justify-content: center;
-                                align-items: center;
-
-                                background-color: #00000034;
-                                color: #000000FF;
-
-                                span {
-                                    display: none;
+                                p {
+                                    padding: 1rem 0;
                                 }
                             }
                         }
                     }
 
                     .guideline-visual {
+                        li {
+                            gap: 0.5rem;
+
+                            h4 {
+                                font-size: 1.25rem;
+                            }
+                        }
                     }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-upper {
+            .container {
+                .footer-menu {
+                    gap: 0;
+                    flex-wrap: wrap;
+
+                    flex-grow: 0.6;
+                    flex-basis: 25%;
+                    
+                    li {
+                        flex-shrink: 1;
+                        flex-basis: 50%;
+
+                        &::after {
+                            content: none;
+                        }
+
+                        a {
+                            padding: 0.625rem 0;
+                        }
+                    }
+                }
+
+                .footer-sitemap {
+                    flex-grow: 0.25;
+                    flex-basis: 25%;
+
+                    ul {
+                        li {
+                            padding: 0.75rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-lower {
+            .container {
+                flex-direction: column;
+
+                .footer-text {
+                    flex-direction: column;
+                    gap: 0.5rem;
                 }
             }
         }

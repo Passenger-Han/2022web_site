@@ -151,7 +151,7 @@ const sct01Swiper = new Swiper('#section-01 .swiper', {
 const sct03Swiper01 = new Swiper ('#section-03 .banner-wrapper .swiper', {
     slidesPerView: 1,
     allowTouchMove: true,
-
+    
     pagination: {
         el: '#section-03 .banner-wrapper .swiper-pagination',
         type: 'fraction',
@@ -210,6 +210,17 @@ const sct03Swiper0203 = new Swiper ('#section-03 .sns-wrapper .swiper03', {
         }
     },
 });
+
+// page-4 Swiper
+const sct04Swiper01 = new Swiper ('#section-04 .swiper', {
+    allowTouchMove: false,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    navigation: {
+        prevEl: '#section-04 .navigation-prev',
+        nextEl: '#section-04 .navigation-next',
+    },
+})
 
 // Fullpage initialization
 $('#fullpage').fullpage({

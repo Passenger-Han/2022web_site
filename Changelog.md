@@ -1,3 +1,7 @@
+20220930 18:20
+    - 11site_Hira
+        - should check 'page-4 guideline-visual' script..
+
 20220926 18:13
     - 11site_HIRA
         - Sorry, forgot writing the log.

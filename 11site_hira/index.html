@@ -31,7 +31,7 @@
 
 <body>
     <header>
-        <div id="header-utility" class="container">
+        <!-- <div id="header-utility" class="container">
             <div class="search-wrapper">
                 <form action="javascript:void(0);">
                     <input type="text" name="sitesearch" id="sitesearch">
@@ -44,7 +44,7 @@
                 <a href="#!">인증센터</a>
                 <a href="#!">Language</a>
             </div>
-        </div>
+        </div> -->
 
 
         <div id="header-navigator" class="container">
@@ -1277,7 +1277,7 @@
                 <div class="service-wrapper">
                     <div class="introduce-wrapper">
                         <div class="introduce-leader">
-                            <p>건강보험심사평가원장<br><b>김선민</b>입니다.</p>
+                            <p>건강보험심사평가원장<br><span>김선민</span>입니다.</p>
                             <div class="button">
                                 <a href="javascript:void(0);">인사말</a>
                                 <a href="javascript:void(0);">CEO 메시지</a>
@@ -1287,7 +1287,7 @@
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="image">
-                                        <img src="img/capsule.png" alt="">
+                                        <img src="img/person.png" alt="">
                                     </div>
                                     <p>조직도</p>
                                 </a>
@@ -1295,17 +1295,17 @@
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="image">
-                                        <img src="img/capsule.png" alt="">
+                                        <img src="img/location.png" alt="">
                                     </div>
-                                    <p>조직도</p>
+                                    <p>오시는길</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="image">
-                                        <img src="img/capsule.png" alt="">
+                                        <img src="img/monitor.png" alt="">
                                     </div>
-                                    <p>조직도</p>
+                                    <p>HIRA 사보</p>
                                 </a>
                             </li>
                         </ul>
@@ -1313,28 +1313,39 @@
 
                     
                     <div class="guideline-wrapper">
-                        <div class="guideline-menu">
+                        <div class="patched-wrapper">
                             <h4>주요연계업무</h4>
+                            <div class="guideline-menu swiper">
+                            
+                                <div class="guideline-list swiper-wrapper">
+                                    
+                                    <div class="swiper-slide">
+                                        <p class="on">요양기관 업무포털</p>
+                                        <p>보건의료자원 통합신고포털</p>
+                                        <p>e-평가시스템</p>
+                                        <p>보건의료 빅데이터개방시스템</p>
+                                    </div>
 
-                            <div class="guideline-list">
-                                <p class="on">1 요양기관업무포털 <span>●</span></p>
-                                <p>2 보건의료자원 통합신고포털 <span>●</span></p>
-                                <p>3 e-평가시스템 <span>●</span></p>
-                                <p>4 보건의료 빅데이터개방시스템 <span>●</span></p>
-                                <p>5 비대면 심사자문 업무포털 시스템 <span>●</span></p>
-                                <p>6 의약품관리종합정보센터 <span>●</span></p>
-                                <p>7 HIRA OAK 리포지터리 <span>●</span></p>
-                                <p>8 건강보험심사평가원 학술지 HIRA Research <span>●</span></p>
-                                <p>9 헬프라인 익명신고 <span>●</span></p>
-                                <p>10 청구방법 및 급여기준 조회시스템 <span>●</span></p>
-                                <p>11 거짓청구요양기관명단 <span>●</span></p>
+                                    <div class="swiper-slide">
+                                        <p>비대면 심사자문 업무포털 시스템</p>
+                                        <p>의약품관리종합정보센터</p>
+                                        <p>HIRA OAK 리포지터리</p>
+                                        <p>건강보험심사평가원 학술지 HIRA Research</p>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <p>헬프라인 익명신고</p>
+                                        <p>청구방법 및 급여기준 조회시스템</p>
+                                        <p>거짓청구요양기관명단</p>
+                                    </div>
+
+                                </div>
                             </div>
 
-                            <!-- <div class="guideline-pagination">
-                                <a href="javascript:void(0);">↑</a>
-                                <a href="javascript:void(0);">↓</a>
-                            </div> -->
+                            <div class="navigation-button navigation-prev"><i class="fa-solid fa-arrow-left"></i></div>
+                            <div class="navigation-button navigation-next"><i class="fa-solid fa-arrow-right"></i></div>
                         </div>
+
                         <ul class="guideline-visual">
                             <li class="on">
                                 <h4>요양기관업무포털</h4>
@@ -1410,7 +1421,7 @@
 
         <footer class="section fp-auto-height">
             <div class="footer-upper">
-                <div class="container">
+                <div class="container mobile-pad">
                     <ul class="footer-menu">
                         <li><a href="javascript:void(0);">고객지원</a></li>
                         <li><a href="javascript:void(0);">이용약관</a></li>
@@ -1421,7 +1432,7 @@
                         <li><a href="javascript:void(0);">인증센터</a></li>
                     </ul>
                     <div class="footer-sitemap">
-                        관련사이트 바로가기 ↑
+                        관련사이트 바로가기
                         <ul>
                             <li><a href="javascript:void(0);">보건복지부</a></li>
                             <li><a href="javascript:void(0);">국민건강보험공단</a></li>
@@ -1440,7 +1451,7 @@
                 </div>
             </div>
             <div class="footer-lower">
-                <div class="container">
+                <div class="container mobile-pad">
                     <div class="image">
                         <img src="img/footer-logo.png" alt="">
                     </div>
