@@ -951,6 +951,12 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
     flex-basis: 40%;
     border-radius: initial;
   }
+  #section-01 .panel .wrapper-frequent .buttons li a img {
+    width: 100%;
+    max-width: 34px;
+    height: auto;
+    max-height: unset;
+  }
   #section-02 {
     padding-top: 3rem;
   }

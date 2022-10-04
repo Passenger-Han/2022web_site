@@ -189,6 +189,7 @@ const sct03Swiper0201 = new Swiper ('#section-03 .sns-wrapper .swiper01', {
 
     pagination: {
         el: '#section-03 .sns-wrapper .swiper-pagination',
+        type: 'fraction',
         clickable: true,
     },
 
@@ -206,6 +207,7 @@ const sct03Swiper0202 = new Swiper ('#section-03 .sns-wrapper .swiper02', {
 
     pagination: {
         el: '#section-03 .sns-wrapper .swiper-pagination',
+        type: 'fraction',
         clickable: true,
     },
 
@@ -223,6 +225,7 @@ const sct03Swiper0203 = new Swiper ('#section-03 .sns-wrapper .swiper03', {
 
     pagination: {
         el: '#section-03 .sns-wrapper .swiper-pagination',
+        type: 'fraction',
         clickable: true,
     },
 
