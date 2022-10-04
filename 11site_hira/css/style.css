@@ -270,9 +270,10 @@ header.nonTransparent #header-navigator > button {
   color: rgba(0, 0, 0, 0.7882352941);
 }
 #section-01 .panel .wrapper-frequent .buttons li a img {
-  width: auto;
+  width: 100%;
+  max-width: 34px;
+  height: auto;
   max-height: 34px;
-  height: 100%;
 }
 
 #section-02 .container > h3, #section-02 .container > p {
@@ -935,9 +936,15 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
   #section-01 .swiper-wrapper .swiper-slide .title {
     top: 10%;
   }
+  #section-01 .swiper-wrapper .swiper-slide .title h2 {
+    font-size: 2.125rem;
+  }
+  #section-01 .swiper-wrapper .swiper-slide .title h4 {
+    font-size: 1.25rem;
+  }
   #section-01 .panel {
     width: 100%;
-    bottom: 70%;
+    bottom: 72%;
   }
   #section-01 .panel .wrapper-frequent {
     width: 100%;
@@ -950,12 +957,6 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
     flex-grow: 1;
     flex-basis: 40%;
     border-radius: initial;
-  }
-  #section-01 .panel .wrapper-frequent .buttons li a img {
-    width: 100%;
-    max-width: 34px;
-    height: auto;
-    max-height: unset;
   }
   #section-02 {
     padding-top: 3rem;
