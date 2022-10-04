@@ -11,6 +11,7 @@ $submenu-height: 525px;
 
 body {
     letter-spacing: -0.0625rem;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 li {
@@ -22,12 +23,15 @@ a {
     text-decoration: initial;
 }
 
+.rounding {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 header {
     position: fixed;
     z-index: 2000;
     width: 100%;
-
-    background-color: #000000FF;
 
     #header-utility {
         padding: 0.5rem;
@@ -75,6 +79,7 @@ header {
                     width: 100%;
                     padding: 2rem 0rem;
 
+                    font-size: 1.4rem;
                     text-indent: 1rem;
                     color: #FFFFFFFF;
                 }
@@ -121,6 +126,21 @@ header {
         background-position: 18% 50%;
         height: var(--submenu-height, 550px);
     }
+
+    
+    &.nonTransparent {
+        background-color: #FFFFFFFF;
+        border-bottom: 1px solid #00000034;
+        box-shadow: 0 4px 24px #0000001A;
+
+        #header-navigator {
+            h1 {}
+            .navigator > li > a, button {color: #000000FF;}
+            > button {
+                border: 1px solid #000000FF;
+            }
+        }
+    }
 }
 
 .background-overlay, .background-sitemap {
@@ -145,7 +165,7 @@ header {
     transform: translate(-50%, -50%);
 
     width: 100%;
-    height: 90vh;
+    height: 82vh;
     padding: 3rem;
     background-color: #FFFFFFFF;
     overflow-y: scroll;
@@ -160,6 +180,8 @@ header {
 
             > a {
                 flex-basis: 10%;
+                font-weight: bold;
+                font-size: 1.2rem;
             }
 
             .sitemap-depth02-wrapper {
@@ -176,18 +198,21 @@ header {
 
                     &:last-child {
                         margin-right: auto;
+                        // margin-left: 0.333rem;
                     }
 
                     a {
                         display: block;
                         padding: 0.75rem;
+                        color: #000000AA;
+                        font-size: 0.9375rem;
                     }
 
                     .depth02-title {
                         a {
                             font-weight: bold;
                             color: #000000FF;
-                            background-color: #00000067;
+                            background-color: #00000023;
                         }
                     }
                 }
@@ -254,7 +279,7 @@ header {
                     border-radius: 1.75rem;
 
                     color: #FFFFFF;
-                    font-weight: 900;
+                    font-weight: 500;
 
                     &:last-child {
                         transform: translateX(-3rem);
@@ -303,7 +328,7 @@ header {
                         align-items: center;
                         text-align: center;
 
-                        font-weight: bold;
+                        font-weight: 500;
                         color: #000000C9;
 
                         img {
@@ -319,7 +344,6 @@ header {
 }
 
 #section-02 {
-    padding-top: 3rem;
 
     .container {
         > h3, > p {
@@ -420,7 +444,7 @@ header {
                             }
 
                             p {
-                                color: #00000067;
+                                color: #000000BC;
                             }
                         }
                     }
@@ -451,7 +475,6 @@ header {
 }
 
 #section-03 {
-    padding-top: 3rem;
     background-color: #E8F0F5FF;
 
     .container {
@@ -714,8 +737,6 @@ header {
 }
 
 #section-04 {
-    padding-top: 3rem;
-
     background-image: url(../img/section-4th-background.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -752,9 +773,10 @@ header {
                 .introduce-leader {
                     position: relative;
 
-                    padding: 1.75rem;
+                    padding: 2.5rem 1.75rem;
 
                     display: flex;
+                    gap: 1rem;
                     flex-direction: column;
                     justify-content: space-evenly;
 
@@ -779,7 +801,7 @@ header {
                         background-image: url(../img/introduce-leader-bglayer-person.png);
                         background-size: auto;
                         background-repeat: no-repeat;
-                        background-position: 95% -100%;
+                        background-position: 95% 102%;
                         top: 0;
                         left: 0;
                         right: 0;
@@ -810,6 +832,7 @@ header {
                     justify-content: center;
                     align-items: center;
                     gap: 2rem;
+                    padding: 2rem 0;
 
                     background-color: #EAEFF7FF;
 
@@ -875,6 +898,7 @@ header {
                             gap: 4%;
                             flex-direction: column;
                             align-items: stretch;
+                            justify-content: space-between;
 
                             p {
                                 // flex-grow: 1;
@@ -884,7 +908,7 @@ header {
                                 align-items: center;
 
                                 text-indent: 0.5rem;
-                                font-weight: bold;
+                                font-weight: 500;
                                 background: #00000023;
                                 color: #000000AA;
                                 
@@ -1016,6 +1040,7 @@ footer {
 
         .footer-sitemap {
             position: relative;
+            z-index: 6000;
 
             padding: 0.5rem 1rem;
             
@@ -1180,6 +1205,8 @@ footer {
     * {font-size: 14px;}
 
     header {
+        padding: 1rem;
+
         #header-navigator {
             justify-content: space-between;
         }
@@ -1234,7 +1261,7 @@ footer {
     }
 
     #section-02 {
-        padding-top: unset;
+        padding-top: 3rem;
 
         .container {
             .information {
@@ -1257,6 +1284,8 @@ footer {
     }
 
     #section-03 {
+        padding-top: 3rem;
+
         .container {
             .news {
                 flex-direction: column;
@@ -1306,6 +1335,8 @@ footer {
     }
 
     #section-04 {
+        padding-top: 3rem;
+
         .container {
             padding: 0;
             border: none;
