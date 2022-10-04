@@ -929,6 +929,7 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
   }
   .backgrounds {
     width: 100%;
+    height: 108vh;
   }
   .backgrounds .swiper-slide {
     background-position: initial initial;
@@ -982,6 +983,7 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
   }
   #section-03 .container .news .news-wrapper .news-menu {
     justify-content: space-between;
+    gap: 0.25rem;
   }
   #section-03 .container .news .banner-wrapper {
     width: unset;

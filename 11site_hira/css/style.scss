@@ -1224,6 +1224,7 @@ footer {
 
     .backgrounds {
         width: 100%;
+        height: 108vh;
 
         .swiper-slide {
             background-position: initial initial;
@@ -1306,6 +1307,7 @@ footer {
                 .news-wrapper {
                     .news-menu {
                         justify-content: space-between;
+                        gap: 0.25rem;
                     }
                 }
 
