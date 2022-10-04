@@ -933,11 +933,11 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
     background-position: initial initial;
   }
   #section-01 .swiper-wrapper .swiper-slide .title {
-    top: 22%;
+    top: 10%;
   }
   #section-01 .panel {
     width: 100%;
-    bottom: 50%;
+    bottom: 70%;
   }
   #section-01 .panel .wrapper-frequent {
     width: 100%;
