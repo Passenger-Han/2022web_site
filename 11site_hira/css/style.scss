@@ -103,7 +103,7 @@ header {
                     }
 
                     &:hover {
-                        background-color: #00000023;
+                        background-color: #00000008;
                     }
                 }
             }
@@ -213,6 +213,23 @@ header {
                             font-weight: bold;
                             color: #000000FF;
                             background-color: #00000023;
+                            
+                            &:hover, &.on {
+                                color: #FFFFFFFF;
+                                background-color: #7777FFFF;
+                                position: relative;
+
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 63px;
+                                    height: 68px;
+                                    background-image: url(../img/sitemap-menu-depth02-on.png);
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                }
+                            }
                         }
                     }
                 }

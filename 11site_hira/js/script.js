@@ -1,4 +1,4 @@
-// resize check
+// resize check (not used)
 let resizeDelay = 300; // ms
 let resizeTimer = null;
 
@@ -248,7 +248,7 @@ const sct04Swiper01 = new Swiper ('#section-04 .swiper', {
     },
 })
 
-// Fullpage initialization
+// Fullpage.js fullpage initialization
 $('#fullpage').fullpage({
     menu: 'header',
     showActiveTooltip: true,
@@ -279,4 +279,5 @@ $('#fullpage').fullpage({
     }
 });
 
+// disable Fullpage.js footer tooltip
 $('#fp-nav ul > li:last-child').css('display', 'none');
