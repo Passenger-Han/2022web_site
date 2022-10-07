@@ -1,4 +1,9 @@
 ----------------
+### 20221007 18:20
+ 11site_Hira
+* Have to make scripts for close-button in sitemap at mobile devices..
+   
+----------------
 ### 20221006 18:10
  11site_Hira
 * Need to refine sitemap for mobile devices..

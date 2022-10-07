@@ -92,6 +92,31 @@ $('.background-sitemap').on('click', function(){
     sitemapOpened = false;
 });
 
+// Sitemap at mobile devices
+$('.sitemap .sitemap-depth01 > li > a').on('click', function(event){
+    event.stopPropagation();
+    // 이벤트 발생 대상을 li 로 하면 메뉴 아무거나 눌러도 결국 닫힌다..
+    // 근데 closest()를 매개변수 없이는 못써..? 이거 반 쪽짜리야? 그냥 바로 위에꺼 고르면 되는거 아니야?
+    
+    if ($(this).closest('li').find('.sitemap-depth02-wrapper').hasClass('active')){
+        $(this).closest('li').find('.sitemap-depth02-wrapper').removeClass('active');
+    } else {
+        $('.sitemap-depth02-wrapper').removeClass('active');
+        $('.sitemap-depth02').removeClass('active');
+        $(this).closest('li').find('.sitemap-depth02-wrapper').addClass('active');
+    }
+});
+
+$('.sitemap-depth01 > li .sitemap-depth02-wrapper .depth02-title').on('click', function(event){
+    event.stopPropagation();
+    if ($(this).closest('ul').hasClass('active')){
+        $(this).closest('ul').removeClass('active');
+    } else {
+        $('.sitemap-depth02').removeClass('active');
+        $(this).closest('ul').addClass('active');
+    }
+});
+
 // page-1 latest board
 $('#section-01 .panel .categories a').on('click', function(){
     $('#section-01 .panel .categories a').removeClass('on');

@@ -1239,6 +1239,54 @@ footer {
         display: none;
     }
 
+    .sitemap {
+        padding: 3rem 0;
+
+        .sitemap-close {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+        
+        .sitemap-depth01 {
+            > li {
+                flex-direction: column;
+
+                > a {
+                    font-size: unset;
+                    padding: 0.75rem;
+                    background-color: #00000067;
+                    color: #FFFFFFFF;
+                }
+
+                .sitemap-depth02-wrapper {
+                    // display: block; // DON'T USE FLEXBOX IN HERE!!!
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    .sitemap-depth02 {
+                        li {
+                            display: none;
+
+                            &.depth02-title {
+                                display: initial !important;
+                            }
+                        }
+
+                        &.active {
+                            li {
+                                display: initial;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .backgrounds {
         width: 100%;
         height: 108vh;

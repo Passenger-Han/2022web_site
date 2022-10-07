@@ -942,6 +942,38 @@ footer .footer-lower .container .footer-icon .outlink .blog:hover {
   .no-small {
     display: none;
   }
+  .sitemap {
+    padding: 3rem 0;
+  }
+  .sitemap .sitemap-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  .sitemap .sitemap-depth01 > li {
+    flex-direction: column;
+  }
+  .sitemap .sitemap-depth01 > li > a {
+    font-size: unset;
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.4039215686);
+    color: white;
+  }
+  .sitemap .sitemap-depth01 > li .sitemap-depth02-wrapper {
+    display: none;
+  }
+  .sitemap .sitemap-depth01 > li .sitemap-depth02-wrapper.active {
+    display: block;
+  }
+  .sitemap .sitemap-depth01 > li .sitemap-depth02-wrapper .sitemap-depth02 li {
+    display: none;
+  }
+  .sitemap .sitemap-depth01 > li .sitemap-depth02-wrapper .sitemap-depth02 li.depth02-title {
+    display: initial !important;
+  }
+  .sitemap .sitemap-depth01 > li .sitemap-depth02-wrapper .sitemap-depth02.active li {
+    display: initial;
+  }
   .backgrounds {
     width: 100%;
     height: 108vh;
