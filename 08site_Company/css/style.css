@@ -404,6 +404,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; letter-spacing: 
     overflow: hidden;
     display: flex;
     gap: 72px;
+    background-color: #FFFFFF;
 }
 
 #sct03 .wrap-scroll .scroll-list {
